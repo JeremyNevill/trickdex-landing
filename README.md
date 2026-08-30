@@ -1,53 +1,52 @@
 # wakeboard.com — Landing Page
 
-Static landing page for **wakeboard.com**, the trick log built for the dock.
+Marketing landing page for **www.wakeboard.com** — the top of the funnel for
+TrickDex. It lures riders in, then hands off to the app at
+**app.wakeboard.com** (every CTA points there).
 
-A single self-contained `index.html` — no build step, no dependencies, no
-framework runtime to install. Deploys as-is to any static host.
+Built with **Next.js (static export)** — pre-rendered HTML for fast first paint
+and SEO, no client-side compilation. Deploys to Vercel as static files.
 
-## Local preview
-
-Open `index.html` directly in a browser, or serve the folder:
-
-```bash
-npx serve .
-# or
-python3 -m http.server 8000
-```
-
-## Deploy to Vercel
-
-This is a zero-config static deploy.
-
-### From the Vercel dashboard
-1. Push this repo to GitHub (see below).
-2. Go to [vercel.com/new](https://vercel.com/new) → **Import Git Repository**.
-3. Pick the repo. Leave **Framework Preset** as *Other* and all build settings empty.
-4. **Deploy.**
-
-### From the CLI
-```bash
-npm i -g vercel
-vercel        # preview
-vercel --prod # production
-```
-
-## Push to GitHub
+## Local development
 
 ```bash
-git init
-git add .
-git commit -m "Initial landing page"
-git branch -M main
-git remote add origin https://github.com/<you>/<repo>.git
-git push -u origin main
+npm install
+npm run dev        # http://localhost:3001
 ```
 
-## Files
+## Build
+
+```bash
+npm run build      # static export to ./out
+npx serve out      # preview the production build
+```
+
+## Structure
 
 ```
-deploy/
-├── index.html   # the landing page — fully self-contained
-├── README.md    # this file
-└── .gitignore
+app/
+  layout.tsx     # fonts + SEO/OG metadata
+  page.tsx       # the landing page (all sections)
+  globals.css    # container, nav, marquee animation, responsive rules
+components/
+  ui.tsx         # buttons, logo, icons, shared tokens (APP_URL, fonts)
+  Phone.tsx      # phone frame wrapping a real app screenshot
+public/
+  shots/         # hero screenshots — SEE shots/README.md (placeholders for now)
+  favicon.*, apple-touch-icon.png, og-image.png
+design-source/
+  original-design-export.html   # the Claude Design export this was ported from
 ```
+
+## Before going live
+
+- [ ] Replace placeholder hero screenshots in `public/shots/` with real captures
+      from app.wakeboard.com (see `public/shots/README.md`).
+- [ ] Point the `www.wakeboard.com` domain at this Vercel project.
+- [ ] Confirm the brand primary (`--td-primary` in `globals.css`) still matches
+      the app's `--primary` in `trickdex-web/src/app/globals.css` (#2563eb).
+
+## Deploy
+
+Zero-config Vercel deploy (framework preset: Next.js). Pushing to `main`
+triggers a production build once the Vercel project is wired to this repo.

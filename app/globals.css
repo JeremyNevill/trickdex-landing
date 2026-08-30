@@ -1,0 +1,92 @@
+:root {
+  /* Brand primary — kept in sync with the trickdex-web app (globals.css --primary). */
+  --td-primary: #2563eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f8fafc;
+  color: #0f172a;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.nav-link {
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: color 140ms ease, background 140ms ease;
+}
+.nav-link:hover {
+  color: #0f172a;
+  background: rgba(15, 23, 42, 0.04);
+}
+
+.footer-link {
+  color: #64748b;
+  text-decoration: none;
+  transition: color 140ms ease;
+}
+.footer-link:hover {
+  color: var(--td-primary);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+
+/* Responsive: collapse the two-column grids on smaller screens. */
+@media (max-width: 900px) {
+  .hero-grid,
+  .pillar-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  .hero-visual {
+    height: 520px !important;
+  }
+  .steps-grid,
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .nav-links-secondary {
+    display: none !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .steps-grid,
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .stats-grid > div {
+    border-right: none !important;
+    border-bottom: 1px solid #e2e8f0;
+  }
+}
