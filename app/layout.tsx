@@ -19,9 +19,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 const SITE_URL = "https://www.wakeboard.com";
-const TITLE = "wakeboard.com — your wakeboard trick bag";
+const TITLE = "wakeboard.com — the wakeboard trick list";
 const DESCRIPTION =
-  "Build your wakeboard trick bag, train with plans, and log every session — landed, learning or bailed. A complete, searchable trick database, free during open beta.";
+  "The complete wakeboard trick list. Search every trick by name, alias or WKB number, read what it is and watch a clip — then track and log it in the wakeboard.com app.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

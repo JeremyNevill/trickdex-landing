@@ -2,6 +2,9 @@ import type { CSSProperties, ReactNode } from "react";
 
 export const APP_URL = "https://app.wakeboard.com";
 
+/** Deep-link into the app on a specific trick (add-to-bag / log). */
+export const appTrickUrl = (trickId: number) => `${APP_URL}/tricks/${trickId}`;
+
 // Font stacks — resolve to the CSS variables set by next/font in layout.tsx.
 export const FONT_DISPLAY = "var(--font-space-grotesk), sans-serif";
 export const FONT_BODY = "var(--font-inter), system-ui, sans-serif";
