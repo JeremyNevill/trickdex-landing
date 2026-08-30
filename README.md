@@ -34,9 +34,11 @@ components/
 public/
   shots/         # hero screenshots — SEE shots/README.md (placeholders for now)
   favicon.*, apple-touch-icon.png, og-image.png
-design-source/
-  original-design-export.html   # the Claude Design export this was ported from
 ```
+
+> The original Claude Design export this was ported from is kept in git history
+> (removed from the tree so a mis-configured static deploy can't serve it in
+> place of the Next.js build).
 
 ## Before going live
 
