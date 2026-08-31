@@ -1,51 +1,14 @@
 /**
- * Build-time trick data layer.
+ * Trick data layer.
  *
- * Pages through the live trick API and fetches each trick's detail so the whole
- * index can be emitted as static HTML. Nothing here runs at request time — it
- * is called from generateStaticParams / server components during `next build`.
- *
- * API origin is the OKE backend the app itself uses. www.wakeboard.com/api is
- * NOT used: that domain points at Vercel (this landing), so it can't serve the
- * API. Override with TRICKS_API_BASE when api.wakeboard.com exists.
+ * Reads the committed snapshot at data/tricks.json — NOT a live API. That means
+ * `next build` (locally and on Vercel) needs no network access. The snapshot is
+ * refreshed out-of-band by `npm run snapshot` (scripts/snapshot-tricks.mjs),
+ * which is the only code that talks to the API. Everything here runs at build
+ * time (generateStaticParams / server components), never at request time.
  */
 
-import fs from "node:fs";
-import path from "node:path";
-import tls from "node:tls";
-import { Agent, setGlobalDispatcher } from "undici";
-
-const API_BASE =
-  process.env.TRICKS_API_BASE?.replace(/\/$/, "") ??
-  "https://www.wakeboard.co.uk/api/v1";
-
-// The OKE ingress serves an incomplete TLS chain (leaf only, missing the Sectigo
-// intermediate). Browsers/curl recover via AIA fetching; Node's fetch does not,
-// so it rejects the cert during `next build`. Supply the intermediate explicitly
-// alongside the system roots — this fixes verification WITHOUT disabling it.
-// Remove once the ingress serves a full chain (or the API moves to api.wakeboard.com).
-let dispatcherReady = false;
-function ensureTlsTrust() {
-  if (dispatcherReady) return;
-  dispatcherReady = true;
-  try {
-    const pem = fs.readFileSync(
-      path.join(process.cwd(), "certs", "sectigo-intermediate.pem"),
-      "utf-8",
-    );
-    setGlobalDispatcher(
-      new Agent({
-        connect: { ca: [...tls.rootCertificates, pem] },
-      }),
-    );
-  } catch {
-    // If the cert file is missing, fall back to default trust; the fetch will
-    // surface a clear TLS error rather than silently downgrading.
-  }
-}
-
-// This domain only surfaces wakeboard tricks.
-const SPORT_ID = 1;
+import snapshotJson from "@/data/tricks.json";
 
 // "BB …" entries are coaching/drill programme items (e.g. "BB - Floaty heelside
 // jumps", "BB - Switch landing drill"), not named tricks — keep them off the
@@ -84,19 +47,15 @@ export type Trick = TrickDetail & {
   aliases: string[]; // parsed from "(or Mobius)" etc.
 };
 
-async function getJson<T>(url: string): Promise<T> {
-  ensureTlsTrust();
-  const res = await fetch(url, {
-    headers: { Accept: "application/json" },
-    // Static export: all fetches run at build time and must be treated as
-    // static. "no-store" would mark the route dynamic and break the export.
-    cache: "force-cache",
-  });
-  if (!res.ok) {
-    throw new Error(`Trick API ${res.status} for ${url}`);
-  }
-  return (await res.json()) as T;
-}
+type Snapshot = {
+  generatedAt: string;
+  apiBase: string;
+  sportId: number;
+  count: number;
+  tricks: TrickDetail[];
+};
+
+const SNAPSHOT = snapshotJson as Snapshot;
 
 /** Extract a YouTube video id from a watch/short/embed URL, or null. */
 export function youTubeId(uri: string): string | null {
@@ -210,36 +169,26 @@ function enrich(detail: TrickDetail): Trick {
   return { ...detail, displayName, aliases, slug: toSlug(displayName) };
 }
 
-/** Page through the full wakeboard trick list. */
-export async function getAllTrickList(): Promise<TrickListItem[]> {
-  const pageSize = 100;
-  const first = await getJson<{
-    data: TrickListItem[];
-    meta: { totalPages: number };
-  }>(`${API_BASE}/tricks?page=1&pageSize=${pageSize}&sportId=${SPORT_ID}`);
+// All snapshot tricks minus the excluded (BB drill) entries.
+const INCLUDED: TrickDetail[] = SNAPSHOT.tricks.filter(
+  (t) => !isExcludedTrick(t.name),
+);
 
-  const items = [...first.data];
-  for (let page = 2; page <= first.meta.totalPages; page++) {
-    const next = await getJson<{ data: TrickListItem[] }>(
-      `${API_BASE}/tricks?page=${page}&pageSize=${pageSize}&sportId=${SPORT_ID}`,
-    );
-    items.push(...next.data);
-  }
-  return items.filter((t) => !isExcludedTrick(t.name));
+/** The full wakeboard trick list (list-shape, excludes BB drills). */
+export async function getAllTrickList(): Promise<TrickListItem[]> {
+  return INCLUDED;
 }
 
-/** One trick's full detail, enriched with slug + aliases. */
+/** One trick's full detail, enriched with slug + aliases. Null if excluded/missing. */
 export async function getTrick(trickId: number): Promise<Trick> {
-  const detail = await getJson<TrickDetail>(`${API_BASE}/tricks/${trickId}`);
+  const detail = INCLUDED.find((t) => t.trickId === trickId);
+  if (!detail) throw new Error(`Trick ${trickId} not in snapshot`);
   return enrich(detail);
 }
 
 /** All tricks with detail — for the index and for generateStaticParams. */
 export async function getAllTricks(): Promise<Trick[]> {
-  const list = await getAllTrickList();
-  const tricks = await Promise.all(list.map((t) => getTrick(t.trickId)));
-  // Stable alphabetical order by display name for the index.
-  return tricks.sort((a, b) =>
+  return INCLUDED.map(enrich).sort((a, b) =>
     a.displayName.localeCompare(b.displayName, "en", { numeric: true }),
   );
 }
@@ -301,5 +250,3 @@ export function groupAlphabetically(all: Trick[]): {
   const groups = letters.map((letter) => ({ letter, tricks: map.get(letter)! }));
   return { groups, letters };
 }
-
-export { API_BASE };

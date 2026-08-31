@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start -p 3001",
     "lint": "next lint",
+    "snapshot": "node scripts/snapshot-tricks.mjs",
     "test": "next build && playwright test",
     "test:only": "playwright test"
   },

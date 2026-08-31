@@ -1,0 +1,4587 @@
+{
+  "generatedAt": "2026-08-31T22:04:50.182Z",
+  "apiBase": "https://www.wakeboard.co.uk/api/v1",
+  "sportId": 1,
+  "count": 359,
+  "tricks": [
+    {
+      "landedByCount": 1,
+      "media": [],
+      "trickId": 172,
+      "name": "009",
+      "description": "Toeside Frontside Osmosis 540 to Olé 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 153,
+      "name": "118",
+      "description": "Heelside Raley with a Frontside 720 performed by rotating the handle above the head (olé) (Double Hinterberger)",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 46,
+      "name": "3 to 1",
+      "description": "Heelside Frontside 360 rewind Backside 180",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 47,
+      "name": "3 to 3 or Zero",
+      "description": "Heelside Frontside 360 rewind Backside 360",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 1,
+      "media": [],
+      "trickId": 154,
+      "name": "313",
+      "description": "Heelside Raley with a handle pass Frontside 360",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 156,
+      "name": "315",
+      "description": "Heelside Raley with a handle pass Frontside 540",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 163,
+      "name": "90210",
+      "description": "Toeside Raley with a Frontside 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 130,
+      "name": "911",
+      "description": "Heelside Raley with a Shifty",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 86,
+      "name": "Back Mobe (or Mobius)",
+      "description": "Heelside Backroll with a handle pass Frontside 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 1,
+      "media": [],
+      "trickId": 351,
+      "name": "Back Mobe 540 ",
+      "description": "Heelside Backroll with a handle pass Frontside 540.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 1,
+      "media": [],
+      "trickId": 87,
+      "name": "Back Mobe 720",
+      "description": "Heelside Backroll with a handle pass Frontside 720.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 155,
+      "name": "Backside 313",
+      "description": "Heelside Raley with a handle pass Backside 360",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 161,
+      "name": "Batwing Blind 3",
+      "description": "Batwing with a handle pass Backside 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 160,
+      "name": "Batwing to Blind",
+      "description": "Batwing with a handle pass Backside 180.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 159,
+      "name": "Batwing ",
+      "description": "Toeside Raley with an Indy grab.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 369,
+      "name": "BB - 180 Drill 1",
+      "description": "180 Drill 1 - Slower than normal boat speed. Stay between the wakes.  Starting your toes near one wake, edge on your heels towards the other. Halfway across complete a heelside surface 180 pushing your back hip towards the handle, keeping both hands on the handle.  When you get to the second wake, initiate a turn back, flatten off then repeat the process switch  ",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 370,
+      "name": "BB - 360 Drill 1 ",
+      "description": "360 Drill 1 - Slower than normal boat speed. Stay between the wakes.  Starting your toes near one wake, edge on your heels towards the other. Halfway across complete a heelside surface 360 pushing your back hip towards the handle, keeping both hands on the handle as long as possible and continuing the rotation.  When you get to the second wake, initiate a turn back, flatten off and edge back on your toes.  Carry on back to the starting position and repeat.  Or add in a toeside surface 360 on your way back too. Do that whole drill switch too.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 372,
+      "name": "BB - Floaty heelside jumps - one wake",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 374,
+      "name": "BB - Floaty heelside jumps - one wake",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 379,
+      "name": "BB - Floaty heelside jumps - wake to wake",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 373,
+      "name": "BB - Floaty heelside jumps with indy grab\t - one wake",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 375,
+      "name": "BB - Floaty switch heelside jumps  - one wake",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 381,
+      "name": "BB - Floaty switch heelside jumps  - wake to wake\t",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 385,
+      "name": "BB - Floaty switch heelside jumps with indy grab  - wake to wake",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 377,
+      "name": "BB - Floaty switch heelside jumps with indy grab - one wake\t",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 376,
+      "name": "BB - Floaty switch toeside jumps  - one wake\t",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 386,
+      "name": "BB - Floaty switch toeside jumps with indy grab  - wake to wake",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 378,
+      "name": "BB - Floaty switch toeside jumps with indy grab - one wake\t",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 366,
+      "name": "BB - Floaty toeside jumps  - one wake\t",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 380,
+      "name": "BB - Floaty toeside jumps - wake to wake\t",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 384,
+      "name": "BB - Floaty toeside jumps with indy grab  - wake to wake",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 367,
+      "name": "BB - Floaty toeside jumps with indy grab - one wake",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 371,
+      "name": "BB - Switch landing drill",
+      "description": "BB - Switch landing drill - stay switch for the whole drill. As you edge from inside of the wake to the outside, focus on your position, keeping the weight over the board and the board on edge as you move away from the wakes.  Edge out no more than 3 - 4m.  Combine this with a line of floaty one wake switch jumps.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 368,
+      "name": "BB - Toeside edging drill",
+      "description": "Stay the side of the wakes you are for a normal foot forward heelside jump. Stay normal foot forwards.  Edge out in a strong toeside position, flatten off, edge back in on your heels to the wake, turn and flatten off. Repeat.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 383,
+      "name": "BB Floaty heelside jumps with indy grab - wake to wake",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 382,
+      "name": "BB -Floaty switch toeside jumps - wake to wake",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 150,
+      "name": "Bee Sting",
+      "description": "Heelside Vulcan with a grab like a Hoochie on the way down. (melon grab)",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 167,
+      "name": "Bel Air",
+      "description": "Air Tantrum i.e. Air Heelside back-flip.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 168,
+      "name": "Bel Air to Blind",
+      "description": "Air Tantrum with a Backside 180",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2389,
+          "title": "Big Johnson by JB O'Neill, USA",
+          "uri": "https://www.youtube.com/watch?v=h-7IAmOc8Hw",
+          "mediaType": "Youtube",
+          "photographer": null
+        }
+      ],
+      "trickId": 61,
+      "name": "Big Johnson",
+      "description": "Toeside Front Roll with a Frontside 720 performed by rotating the handle above the head (olé). Big Worm to Blind",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 85,
+      "name": "Big Mac",
+      "description": "Olé KGB.  KGB with the Backside 360 performed by rotating the handle above the head.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 4593,
+          "title": "Tino Ullsperger (Team Germany)  Big Worm at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/tFLtuymEtOQ?start=21323",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 176,
+      "name": "Big Worm",
+      "description": "Toeside Front Roll with a Frontside 540 performed by rotating the handle above the head (olé).",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 95,
+      "name": "Billion Dollar Baby",
+      "description": "Tantrum with a Frontside 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 89,
+      "name": "Blender",
+      "description": "Wrapped Heelside Backroll",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 128,
+      "name": "Blind Judge",
+      "description": "Heelside Raley with a Backside 180.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 67,
+      "name": "Blind Pete",
+      "description": "Toeside Backroll with a Backside 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 132,
+      "name": "Butter Fuko",
+      "description": "Heelside 911 with a Frontside 180",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 106,
+      "name": "Crook",
+      "description": "Whirlybird with a rewind 180 to Fakie",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 1,
+      "media": [],
+      "trickId": 50,
+      "name": "Crow Mobe",
+      "description": "Toeside Frontroll with a Frontside 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 52,
+      "name": "Crow Mobe 540",
+      "description": "Toeside Frontroll with a Frontside 540.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 54,
+      "name": "Crow Mobe 720",
+      "description": "Toeside Frontroll with a Frontside 720.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 55,
+      "name": "Crow Mobe 900",
+      "description": "Toeside Frontroll with a Frontside 900.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 60,
+      "name": "Diesel",
+      "description": "Toeside Front Roll with a Frontside 360 performed by rotating the handle above the head (olé).",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 88,
+      "name": "Discombobulator",
+      "description": "Wrapped Heelside Back Mobe 540.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 120,
+      "name": "Double Back Mobe",
+      "description": "Heelside Double Backroll with a Frontside 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 118,
+      "name": "Double Backroll",
+      "description": "Heelside Double Backroll.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 121,
+      "name": "Double Cab Mobe",
+      "description": "Switch Heelside Double Backroll with a Frontside 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 119,
+      "name": "Double Half Cab Roll",
+      "description": "Switch Heelside Double Backroll with a Frontside 180 to Normal Foot Forward",
+      "shortCode": "361",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 361,
+      "name": "Double Heelside Roll to Revert",
+      "description": "A Heelside Double Backroll with a Frontside 180 landing Switch. ",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 122,
+      "name": "Double Roll-to-Blind ",
+      "description": "Heelside Double Backroll with a Backside 180.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 145,
+      "name": "Double S-Bend (or S-Bend 720)",
+      "description": "Heelside Raley with a Backside 720 performed by rotating the handle above the head (olé).",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 126,
+      "name": "Double Toeside Backroll",
+      "description": "Double Toeside Backroll",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 1,
+      "media": [
+        {
+          "mediaId": 2395,
+          "title": "Jake Williams Dum Dum at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/TFb-GkvXLjE?start=8008",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 57,
+      "name": "Dum Dum",
+      "description": "Toeside Front Roll with a Backside 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 58,
+      "name": "Dum Dum 540",
+      "description": "Toeside Front Roll with a Backside 540.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 59,
+      "name": "Dum Dum 720",
+      "description": "Toeside Front Roll with a Backside 720.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 169,
+      "name": "Eggroll",
+      "description": "Air Scarecrow.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 1,
+      "media": [],
+      "trickId": 49,
+      "name": "Elephant",
+      "description": "Scarecrow to Fakie.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 112,
+      "name": "Fat Chance",
+      "description": "Switch Heelside Front Flip with a Frontside 360. (A Switch Slim Chance).",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 280,
+      "name": "Fat Chance 5",
+      "description": "Switch Heelside Front Flip with a Frontside 540",
+      "shortCode": "113",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 74,
+      "name": "Flavor Flip (or Number 2)",
+      "description": "Toeside Front Flip with a Backside 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 117,
+      "name": "Front Blind Mobe",
+      "description": "Heelside Front Flip with a Backside 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 107,
+      "name": "Front Flip",
+      "description": "Heelside approach. Forwards cartwheel, with the tail of the board coming up behind and over the head.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 109,
+      "name": "Front Flip to Fakie",
+      "description": "Heelside Front Flip with a Frontside 180.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 115,
+      "name": "Front to Blind",
+      "description": "Heelside Front Flip with a Backside 180.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 73,
+      "name": "Fruit Loop",
+      "description": "Toeside Front Flip with a Backside 180.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 68,
+      "name": "G-Spot (or Patriot Missile)",
+      "description": "Toeside Backroll to blind. i.e. Toeside Backroll with a Backside 180",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 179,
+      "name": "Half Cab (Switch Heelside 180)",
+      "description": "Switch Heelside Wake Jump with a Frontside 180",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 4604,
+          "title": "Trav Beaton Half Cab Front Flip/Switch Front Flip to Normal at EYWOA",
+          "uri": "https://player.vimeo.com/video/1029620005",
+          "mediaType": "Vimeo",
+          "photographer": "Steve Kulagin"
+        }
+      ],
+      "trickId": 110,
+      "name": "Half Cab Front Flip",
+      "description": "Switch Heelside Front Flip with a Frontside 180 landing Normal Foot Forward.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 1,
+      "media": [
+        {
+          "mediaId": 700,
+          "title": "Melissa Lock at the 2021 Malibu Practice CWSC",
+          "uri": "https://media.wakeboard.co.uk/2021MalibuPracticeCWSC/PhotoMarkOsmond/MelissaLock/A22B7414_2021_06_28_TeamGB_training_day_at_Tattershall_Melissa_Lock_by_Mark_Osmond.jpg",
+          "mediaType": "Photo",
+          "photographer": "Photo Mark Osmond"
+        },
+        {
+          "mediaId": 2404,
+          "title": "Mark Goldsmith Half Cab Roll at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/TFb-GkvXLjE?start=944",
+          "mediaType": "Youtube",
+          "photographer": " IWWF / Dave Averillo"
+        },
+        {
+          "mediaId": 4591,
+          "title": "Morgan Williams Half Cab Roll at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/tFLtuymEtOQ?start=23712",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 79,
+      "name": "Half Cab Roll",
+      "description": "Switch Heelside Backroll with a Frontside 180 to Normal Foot Forward",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 3
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 116,
+      "name": "Hasselhoff",
+      "description": "Switch Heelside Front Flip with a Backside 180.( A Switch Front to Blind).",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 147,
+      "name": "Heart Attack",
+      "description": "Heelside S-bend with a Backside 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 6,
+      "name": "Heelside",
+      "description": "Riding on the heelside edge of the board / approaching the wake from the outside of the wakes on the heelside edge of the board.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 17,
+      "name": "Heelside 1080",
+      "description": "Heelside Wake Jump with a Frontside spin of 1080 degree rotation.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 2,
+      "media": [
+        {
+          "mediaId": 2370,
+          "title": "Kate Waldron Switch Heelside 180 slob grab at LDB Wakeschool",
+          "uri": "https://player.vimeo.com/video/1036298746",
+          "mediaType": "Vimeo",
+          "photographer": "Mark Osmond"
+        },
+        {
+          "mediaId": 2378,
+          "title": "Jack Palmer Heelside 180 with melan grab at ISIS Waterski and Wakeboard",
+          "uri": "https://player.vimeo.com/video/1036333946",
+          "mediaType": "Vimeo",
+          "photographer": "Mark Osmond"
+        },
+        {
+          "mediaId": 2405,
+          "title": "Mark Osmond Heel 180 at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/TFb-GkvXLjE?start=2177",
+          "mediaType": "Youtube",
+          "photographer": "IWWF /"
+        },
+        {
+          "mediaId": 2415,
+          "title": "Olli Loder Method 180 at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/TFb-GkvXLjE?start=15377",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 9,
+      "name": "Heelside 180",
+      "description": "Heelside Wake Jump with a Frontside spin of 180 degree rotation.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 4
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2372,
+          "title": "Isabelle Lloyd Heelside 360 at Xtreme Wake",
+          "uri": "https://player.vimeo.com/video/1036307843",
+          "mediaType": "Vimeo",
+          "photographer": null
+        },
+        {
+          "mediaId": 2391,
+          "title": "Isabelle Lloyd Heel 3 at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/bP6hdeDT0xY?start=4472",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        },
+        {
+          "mediaId": 2406,
+          "title": "Aran McGuckin Heelside 360 nose grab at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/bP6hdeDT0xY?start=1074",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        },
+        {
+          "mediaId": 4586,
+          "title": "James Mathias Heelside 360 at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/6XxZraVmFcw?start=16707 ",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 11,
+      "name": "Heelside 360",
+      "description": "Heelside Wake Jump with a Frontside spin of 360 degree rotation.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 4
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2409,
+          "title": "Ross Phillips Wrapped Heelside Frontside 540 at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/1iiF2csMUoE?start=3516",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        },
+        {
+          "mediaId": 2412,
+          "title": "Jake Williams Switch Heel 5 at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/bP6hdeDT0xY?start=10913",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 12,
+      "name": "Heelside 540",
+      "description": "Heelside Wake Jump with a Frontside spin of 540 degree rotation.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 2
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 15,
+      "name": "Heelside 720",
+      "description": "Heelside Wake Jump with a Frontside spin of 720 degree rotation.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 16,
+      "name": "Heelside 900",
+      "description": "Heelside Wake Jump with a Frontside spin of 900 degree rotation.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 3,
+      "media": [
+        {
+          "mediaId": 2369,
+          "title": "Kate Waldron Heelside Backroll at LDB Wakeschool",
+          "uri": "https://player.vimeo.com/video/1036297242",
+          "mediaType": "Vimeo",
+          "photographer": "Mark Osmond"
+        },
+        {
+          "mediaId": 2384,
+          "title": "Charlotte Millward Backroll at 2024 IWWF World Wakeboard Championships, China",
+          "uri": "https://youtu.be/kQ2BilFUZ34?start=27107",
+          "mediaType": "Youtube",
+          "photographer": "IWWF"
+        },
+        {
+          "mediaId": 2401,
+          "title": "Callum Smith Heel backroll tail grab at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/TFb-GkvXLjE?start=15974",
+          "mediaType": "Youtube",
+          "photographer": " IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 75,
+      "name": "Heelside Backroll (or Heelside Progressive Backroll)",
+      "description": "Heelside backwards cartwheel, with the nose of the board coming up in front and over the head.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 3
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2345,
+          "title": "Heelside Backside 1080 - WKB37 - Luca Kidd",
+          "uri": "https://player.vimeo.com/video/1028592896",
+          "mediaType": "Vimeo",
+          "photographer": null
+        }
+      ],
+      "trickId": 37,
+      "name": "Heelside Backside 1080",
+      "description": "Heelside Wake Jump with a Backside spin of 1080 degree rotation.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 2,
+      "media": [
+        {
+          "mediaId": 2396,
+          "title": "Charlotte Millward Heelside backside 180 tail grab at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/TFb-GkvXLjE?start=14347",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 27,
+      "name": "Heelside Backside 180",
+      "description": "Heelside Wake Jump with a Backside spin of 180 degree rotation.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 2,
+      "media": [
+        {
+          "mediaId": 2367,
+          "title": "Ruby O'Dwyer Wrapped Heelbackside 360 at LDBWakeschool",
+          "uri": "https://player.vimeo.com/video/1036292955",
+          "mediaType": "Vimeo",
+          "photographer": "Mark Osmond"
+        },
+        {
+          "mediaId": 2375,
+          "title": "Scott O’Keefe Heelside Backside 360 at Ellingham",
+          "uri": "https://player.vimeo.com/video/1036329251",
+          "mediaType": "Vimeo",
+          "photographer": null
+        }
+      ],
+      "trickId": 28,
+      "name": "Heelside Backside 360",
+      "description": "Heelside Wake Jump with a Backside spin of 360 degree rotation.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 2
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 30,
+      "name": "Heelside Backside 360 over the line",
+      "description": "Heelside Wake Jump with a Backside spin of 360 degree rotation with the line passing underneath the board. Normally off axis.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 31,
+      "name": "Heelside Backside 540",
+      "description": "Heelside Wake Jump with a Backside spin of 540 degree rotation.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 35,
+      "name": "Heelside Backside 720",
+      "description": "Heelside Wake Jump with a Backside spin of 720 degree rotation.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 36,
+      "name": "Heelside Backside 900",
+      "description": "Heelside Wake Jump with a Backside spin of 900 degree rotation.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 4598,
+          "title": "Travis Beaton Heelside Chicken Salad Glide at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/6XxZraVmFcw?start=22492",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 348,
+      "name": "Heelside Chicken Salad Glide",
+      "description": "Heelside 911 with an Chicken Salad grab.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 4592,
+          "title": "Marley O’Toole Heelside Indy Glide at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/tFLtuymEtOQ?start=14074",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 134,
+      "name": "Heelside Indy Glide",
+      "description": "Heelside 911 with an Indy grab.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 131,
+      "name": "Heelside Method Glide",
+      "description": "Heelside 911 with a Method grab",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 1,
+      "media": [],
+      "trickId": 76,
+      "name": "Heelside Mexican Roll",
+      "description": "Also called Mexican Backroll.  A Heelside approach with the rider throwing their head and body forwards when they leave the wake. Sometimes referred to incorrectly as a Heelside frontroll.\r\nDifferent to a Heelside Progressive Backroll which is a backwards cartwheel, with the nose of the board coming up in front and over the head. ",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 136,
+      "name": "Heelside Nuclear Glide",
+      "description": "Heelside 911 with a Nuclear grab (back hand).",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2376,
+          "title": "Scott O’Keefe Heelside Roll to Revert at Ellingham",
+          "uri": "https://player.vimeo.com/video/1036329682",
+          "mediaType": "Vimeo",
+          "photographer": null
+        }
+      ],
+      "trickId": 77,
+      "name": "Heelside Roll to Revert",
+      "description": "A Heelside Backroll with a Frontside 180 landing Switch.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 10,
+      "name": "Heelside Shifty",
+      "description": "Heelside approach - jump with 90 degree rotation of board one way and then back, normally Frontside then Backside",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 135,
+      "name": "Heelside Stalefish Glide",
+      "description": "Heelside 911 with an Stalefish grab (back hand).",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 133,
+      "name": "Heelside Tail Glide",
+      "description": "Heelside 911 with a Tail grab (back hand).",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 1,
+      "media": [
+        {
+          "mediaId": 4582,
+          "title": "Libby Truman  Heelside Wake Jump at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/tFLtuymEtOQ?start=5274",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 177,
+      "name": "Heelside Wake Jump",
+      "description": "Heelside approach jump over the wake",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 152,
+      "name": "Hinterberger",
+      "description": "Heelside Raley with a frontside 360 performed by rotating the handle above the head (olé).",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 140,
+      "name": "Hoochie 313",
+      "description": "Hoochie Glide with a Frontside 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 142,
+      "name": "Hoochie Blind",
+      "description": "Hoochie Glide with a Backside 180.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 138,
+      "name": "Hoochie Glide",
+      "description": "Heelside Raley with a Method grab (front hand).",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 141,
+      "name": "Hoochie Krypt",
+      "description": "Hoochie Glide with a Frontside 180.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 8,
+      "name": "Inside Out",
+      "description": "A trick starting from between the wakes to outside the wakes.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 99,
+      "name": "Iron Cross",
+      "description": "Heelside Wrapped Tantrum with a Backside 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2413,
+          "title": "Travis Beaton KGB at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/1iiF2csMUoE?start=1094",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 80,
+      "name": "KGB",
+      "description": "Heelside Backroll with a Backside 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 83,
+      "name": "KGB 540",
+      "description": "Heelside Backroll with a Backside 540.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 84,
+      "name": "KGB 720",
+      "description": "Heelside Backroll with a Backside 720.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2400,
+          "title": "Jody Elliot Krypt at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/TFb-GkvXLjE?start=18020",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 129,
+      "name": "Krypt",
+      "description": "Heelside Raley with a Frontside 180 landing Switch. Originally named 'Kryp'",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 364,
+      "name": "Landing Blind ",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 97,
+      "name": "Moby 540",
+      "description": "Tantrum with a handle pass Backside 540.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 98,
+      "name": "Moby 720",
+      "description": "Tantrum with a handle pass backside 720.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2368,
+          "title": "Jake Williams Moby Dick at ISIS Waterski and Wakeboard",
+          "uri": "https://player.vimeo.com/video/1036293946",
+          "mediaType": "Vimeo",
+          "photographer": "Mark Osmond"
+        }
+      ],
+      "trickId": 96,
+      "name": "Moby Dick",
+      "description": "Tantrum with a handle pass Backside 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 173,
+      "name": "No-hander (or Suicide)",
+      "description": "Heelside Wake Jump where the handle is released and then hands put back",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 164,
+      "name": "Oh Really",
+      "description": "Toeside Raley with a Frontside 540 (Toeside 315)",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 3180,
+          "title": "Joseph Humphries OHH at the 2025 Midlands Nautique UK Wake Nationals Wakeboard",
+          "uri": "https://media.wakeboard.co.uk/2025MidlandsNautiqueUKWakeNationalsWakeboard/PhotosMantisProMedia/NAUTIQUE_WAKE_NATIONALS_2025_WM-476.jpg",
+          "mediaType": "Photo",
+          "photographer": "Photos Mantis Pro Media"
+        },
+        {
+          "mediaId": 4599,
+          "title": "Joe Humphries Other Hand Hoochie at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/6XxZraVmFcw?start=23892",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 139,
+      "name": "OHH (or Other Hand Hoochie)",
+      "description": "Hoochie Glide with a back hand grab on the Heelside Edge of the board.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 2
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 346,
+      "name": "Ollie",
+      "description": "Normal Foot Forward.  Jumping the board out of the water.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 347,
+      "name": "Ollie 180",
+      "description": "Normal Foot Forward. Jumping the board out of the water and performing a 180 whilst the board is in the air.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 4601,
+          "title": "Charlotte Millward Heelside Ollie Backside 180 at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/hEPYIHAJxfk?start=3474",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 349,
+      "name": "Ollie Heelside Backside 180",
+      "description": "Edge out Heelside.  Ollie and then Backside 180 whilst in air.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 355,
+      "name": "Ollie Toeside Backside 180",
+      "description": "Edge out Toeside.  Ollie and then Backside 180 whilst in air.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 174,
+      "name": "One Footer",
+      "description": "Jump where you have one foot out of the bindings and kick that leg out in the air",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 5,
+      "name": "One Wake",
+      "description": "Taking off from one wake and landing in between the wakes.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 34,
+      "name": "Orbital 540",
+      "description": "Heelside Backside 540 over the line.\r\nHeelside Wake Jump with a Backside spin of 540 degree rotation with the line passing underneath the board. ",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 137,
+      "name": "Oriental",
+      "description": "Heelside Raley with a Slob grab (front hand)",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 365,
+      "name": "Osmond",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2403,
+          "title": "Travis Beaton Pete Rose at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/1iiF2csMUoE?start=1155",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        },
+        {
+          "mediaId": 4597,
+          "title": "Travis Beaton Pete Rose at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/6XxZraVmFcw?start=22663 ",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 64,
+      "name": "Pete Rose (or Pete)",
+      "description": "Toeside Backroll with a Frontside 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 2
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 65,
+      "name": "Pete Rose 540",
+      "description": "Toeside Backroll with a Frontside 540.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2383,
+          "title": "Raley Wakeboard Trick Tips with Shaun Murray",
+          "uri": "https://youtu.be/hrKfSKIhOnw?si=sf99wrUOvz58DrHG",
+          "mediaType": "Youtube",
+          "photographer": "Shaun Murray"
+        },
+        {
+          "mediaId": 2392,
+          "title": "Marley O’Toole Raley at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/bP6hdeDT0xY?start=7244",
+          "mediaType": "Youtube",
+          "photographer": null
+        },
+        {
+          "mediaId": 4602,
+          "title": "Aran McGuckin Raley at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/tFLtuymEtOQ?start=26887",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 127,
+      "name": "Raley",
+      "description": "Heelside Wake Jump letting your legs go out behind you and above your head in a ‘superman’ position.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 3
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 114,
+      "name": "Remix ",
+      "description": "Wrapped Slim Chance. Heelside Wrapped Front Flip with a Frontside 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2411,
+          "title": "Travis Beaton Roll to Blind at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/TFb-GkvXLjE?start=19341",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 78,
+      "name": "Roll to Blind",
+      "description": "Heelside Backroll with a Backside 180.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2387,
+          "title": "Rotary Dial by Mike Dowdy, USA",
+          "uri": "https://www.youtube.com/watch?v=Yk066-pRmso",
+          "mediaType": "Youtube",
+          "photographer": "WakeU"
+        }
+      ],
+      "trickId": 90,
+      "name": "Rotary Dial",
+      "description": "Heelside off axis 720 partly inverted. A cross over between a Back Mobe and a 720.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2388,
+          "title": "Rotary Dial 900 by Mike Dowdy, USA",
+          "uri": "https://www.youtube.com/watch?v=dB2wtFyByNo",
+          "mediaType": "Youtube",
+          "photographer": null
+        }
+      ],
+      "trickId": 91,
+      "name": "Rotary Dial 900",
+      "description": "Heelside off axis 900 partly inverted. A cross-over between a Back Mobe and a 900. ",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 143,
+      "name": "S-Bend",
+      "description": "Heelside Raley with a Backside 360 performed by rotating the handle above the head (olé).",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 146,
+      "name": "S-Bend 7",
+      "description": "S-Bend 720.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 1,
+      "media": [
+        {
+          "mediaId": 2374,
+          "title": "Aran McGuckin Scarecrow",
+          "uri": "https://player.vimeo.com/video/1036328530",
+          "mediaType": "Vimeo",
+          "photographer": null
+        },
+        {
+          "mediaId": 2382,
+          "title": "Isabelle Lloyd Scarecrow at Xtreme Wake",
+          "uri": "https://player.vimeo.com/video/1036460872",
+          "mediaType": "Vimeo",
+          "photographer": null
+        },
+        {
+          "mediaId": 2385,
+          "title": "Charlotte Millward Scarecrow at 2024 IWWF World Wakeboard Championships, China",
+          "uri": "https://youtu.be/kQ2BilFUZ34?start=27118",
+          "mediaType": "Youtube",
+          "photographer": "IWWF"
+        },
+        {
+          "mediaId": 2416,
+          "title": "Rich Phillips Scarecrow with Melan grab at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/jz7N_GW6D0k?start=6308",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        },
+        {
+          "mediaId": 4585,
+          "title": "Isabelle Lloyd Scarecrow at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/tFLtuymEtOQ?start=6454",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        },
+        {
+          "mediaId": 4603,
+          "title": "Charlotte Millward Scarecrow at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/6XxZraVmFcw?start=8744",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 48,
+      "name": "Scarecrow",
+      "description": "Toeside Frontroll with a Frontside 180.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 6
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2364,
+          "title": "Jake Williams Skeezer at ISIS Wakeboard and Waterski",
+          "uri": "https://player.vimeo.com/video/1036109447",
+          "mediaType": "Vimeo",
+          "photographer": null
+        }
+      ],
+      "trickId": 51,
+      "name": "Skeezer",
+      "description": "Switch Crow Mobe.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 53,
+      "name": "Skeezer 540",
+      "description": "Switch Crow Mobe 540.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 223,
+      "name": "Skeezer 720",
+      "description": "Switch Crow Mobe 720.",
+      "shortCode": "54",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 224,
+      "name": "Skeezer 900",
+      "description": "Switch Crow Mobe 900.",
+      "shortCode": "55",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 165,
+      "name": "Skud",
+      "description": "Switch Toeside Raley with a Frontside 360 (Switch 90210).",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 111,
+      "name": "Slim Chance (or Front Mobe)",
+      "description": "Heelside Front Flip with a Frontside 360",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 113,
+      "name": "Slim Chance 5",
+      "description": "Heelside Front Flip with a Frontside 540",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 108,
+      "name": "Slowball",
+      "description": "Heelside slow Front Flip (with the body very straight",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 70,
+      "name": "Slurpee",
+      "description": "Wrapped Toeside Backroll with a Backside 360.(A wrapped Blind Pete).",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 148,
+      "name": "S-Mobe",
+      "description": "Heelside Raley with a 360 performed by rotating the handle above the head (olé) then a 360 handle pass",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 69,
+      "name": "Special K",
+      "description": "Wrapped Toeside Backroll with a Backside 180",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2390,
+          "title": "Speedball by Darin Shapiro, USA",
+          "uri": "https://www.youtube.com/watch?v=Y1dohXJwXxI",
+          "mediaType": "Youtube",
+          "photographer": null
+        }
+      ],
+      "trickId": 123,
+      "name": "Speedball",
+      "description": "Heelside double Front Flip.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 105,
+      "name": "Spiderman",
+      "description": "Heelside Tantrum with a Backside 360 performed by rotating the handle above the head (olé) with back hand. (Other hand whirlybird) ",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 171,
+      "name": "Square Raley (or Air Air Raley)",
+      "description": "Heelside Raley without using the wake",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 144,
+      "name": "S-to-Blind",
+      "description": "S-Bend with a Backside 180, landing blind.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 151,
+      "name": "Suicide Raley",
+      "description": "Raley in which the rider lets go with both hands mid-air and then grabs the handle before landing",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 2,
+      "name": "Surface 180",
+      "description": "Frontside 180 sliding the board.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 1,
+      "media": [],
+      "trickId": 3,
+      "name": "Surface 360",
+      "description": "Frontside 360 sliding the board.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 357,
+      "name": "Surface Backside 180",
+      "description": "Backside 180 sliding the board.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 1,
+      "media": [],
+      "trickId": 358,
+      "name": "Surface Backside 360",
+      "description": "Backside 360 sliding the board.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 339,
+      "name": "Switch 009",
+      "description": "Switch Toeside Frontside Osmosis 540 to Olé 360",
+      "shortCode": "172",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 320,
+      "name": "Switch 118",
+      "description": "Switch Heelside Raley with a Frontside 720 performed by rotating the handle above the head (olé) (Double Hinterberger)",
+      "shortCode": "153",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 215,
+      "name": "Switch 3 to 1",
+      "description": "Switch Heelside Frontside 360 rewind Backside 180",
+      "shortCode": "46",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 216,
+      "name": "Switch 3 to 3 or  Zero",
+      "description": "Switch Heelside Frontside 360 rewind Backside 360",
+      "shortCode": "47",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 321,
+      "name": "Switch 313",
+      "description": "Switch Heelside Raley with a handle pass Frontside 360",
+      "shortCode": "154",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 323,
+      "name": "Switch 315",
+      "description": "Switch Heelside Raley with a handle pass Frontside 540",
+      "shortCode": "156",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 330,
+      "name": "Switch 90210",
+      "description": "Switch Toeside Raley with a Frontside 360.",
+      "shortCode": "163",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 297,
+      "name": "Switch 911",
+      "description": "Switch Heelside Raley with a Shifty",
+      "shortCode": "130",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 253,
+      "name": "Switch Back Mobe (or Mobius)",
+      "description": "Switch Heelside Backroll with a handle pass Frontside 360.",
+      "shortCode": "86",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 352,
+      "name": "Switch Back Mobe 540",
+      "description": "Switch Heelside Backroll with a handle pass Frontside 540.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 254,
+      "name": "Switch Back Mobe 720",
+      "description": "Switch Backroll with a handle pass Frontside 720.",
+      "shortCode": "87",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 322,
+      "name": "Switch Backside 313",
+      "description": "Switch Heelside Raley with a handle pass Backside 360",
+      "shortCode": "155",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 328,
+      "name": "Switch Batwing Blind 3",
+      "description": "Switch Batwing with a handle pass Backside 360.",
+      "shortCode": "161",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 327,
+      "name": "Switch Batwing to Blind",
+      "description": "Switch Batwing with a handle pass Backside 180.",
+      "shortCode": "160",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 326,
+      "name": "Switch Batwing ",
+      "description": "Switch Toeside Raley with an Indy grab.",
+      "shortCode": "159",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 317,
+      "name": "Switch Bee Sting",
+      "description": "Switch Heelside Vulcan with a grab like a Hoochie on the way down. (melon grab)",
+      "shortCode": "150",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 334,
+      "name": "Switch Bel Air",
+      "description": "Switch Air Tantrum i.e. Air Heelside back-flip.",
+      "shortCode": "167",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 335,
+      "name": "Switch Bel Air to Blind",
+      "description": "Switch Air Tantrum with a Backside 180",
+      "shortCode": "168",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 230,
+      "name": "Switch Big Johnson",
+      "description": "Switch Front Roll with a Frontside 720 performed by rotating the handle above the head (olé). Switch Big Worm to Blind",
+      "shortCode": "61",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 252,
+      "name": "Switch Big Mac",
+      "description": "Switch Olé KGB.  Switch KGB with the Backside 360 performed by rotating the handle above the head.",
+      "shortCode": "85",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 342,
+      "name": "Switch Big Worm",
+      "description": "Switch Front Roll with a Frontside 540 performed by rotating the handle above the head (olé).",
+      "shortCode": "176",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 262,
+      "name": "Switch Billion Dollar Baby",
+      "description": "Switch Tantrum with a Frontside 360.",
+      "shortCode": "95",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 256,
+      "name": "Switch Blender",
+      "description": "Switch Wrapped Heelside Backroll",
+      "shortCode": "89",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 295,
+      "name": "Switch Blind Judge",
+      "description": "Switch Heelside Raley with a Backside 180.",
+      "shortCode": "128",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 236,
+      "name": "Switch Blind Pete",
+      "description": "Switch Toeside Backroll with a Backside 360.",
+      "shortCode": "67",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 299,
+      "name": "Switch Butter Fuko",
+      "description": "Switch Heelside 911 with a Frontside 180",
+      "shortCode": "132",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 273,
+      "name": "Switch Crook",
+      "description": "Switch Whirlybird with a rewind 180 to Normal Foot Forward.",
+      "shortCode": "106",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 229,
+      "name": "Switch Diesel",
+      "description": "Switch Toeside Front Roll with a Frontside 360 performed by rotating the handle above the head (olé).",
+      "shortCode": "60",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 255,
+      "name": "Switch Discombobulator",
+      "description": "Switch Wrapped Heelside Back Mobe 540.",
+      "shortCode": "88",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 287,
+      "name": "Switch Double Back Mobe",
+      "description": "Switch Heelside Double Backroll with a Frontside 360.",
+      "shortCode": "120",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 285,
+      "name": "Switch Double Backroll",
+      "description": "Switch Heelside Double Backroll.",
+      "shortCode": "118",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 289,
+      "name": "Switch Double Roll-to-Blind ",
+      "description": "Switch Heelside Double Backroll with a Backside 180.",
+      "shortCode": "122",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 312,
+      "name": "Switch Double S-Bend (or Switch S-Bend 720)",
+      "description": "Switch Heelside Raley with a Backside 720 performed by rotating the handle above the head (olé).",
+      "shortCode": "145",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 293,
+      "name": "Switch Double Toeside Backroll",
+      "description": "Switch Double Toeside Backroll",
+      "shortCode": "126",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 226,
+      "name": "Switch Dum Dum",
+      "description": "Switch Toeside Front Toll with a Backside 360.",
+      "shortCode": "57",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 227,
+      "name": "Switch Dum Dum 540",
+      "description": "Switch Toeside Front Roll with a Backside 540.",
+      "shortCode": "58",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 228,
+      "name": "Switch Dum Dum 720",
+      "description": "Switch Toeside Front Roll with a Backside 720.",
+      "shortCode": "59",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 336,
+      "name": "Switch Eggroll",
+      "description": "Switch Air Scarecrow.",
+      "shortCode": "169",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 218,
+      "name": "Switch Elephant",
+      "description": "Switch Scarecrow to Normal Foot Forward.",
+      "shortCode": "49",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 243,
+      "name": "Switch Flavor Flip (or Switch Number 2)",
+      "description": "Switch Toeside Front Flip with a Backside 360.",
+      "shortCode": "74",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 284,
+      "name": "Switch Front Blind Mobe",
+      "description": "Switch Heelside Front Flip with a Backside 360.",
+      "shortCode": "117",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 274,
+      "name": "Switch Front Flip",
+      "description": "Switch Heelside approach. Forwards cartwheel, with the tail of the board coming up behind and over the head.",
+      "shortCode": "107",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 276,
+      "name": "Switch Front Flip to Fakie",
+      "description": "Switch Heelside Front Flip with a Frontside 180.\r\n\r\nLands Normal Foot Forward so 'to Fakie' is strictly incorrect. ",
+      "shortCode": "109",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 282,
+      "name": "Switch Front to Blind",
+      "description": "Switch Heelside Front Flip with a Backside 180.",
+      "shortCode": "115",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 242,
+      "name": "Switch Fruit Loop",
+      "description": "Switch Toeside Front Flip with a Backside 180.",
+      "shortCode": "73",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 237,
+      "name": "Switch G-Spot (or Patriot Missile)",
+      "description": "Switch Toeside Backroll to blind. i.e. Switch Toeside Backroll with a Backside 180.",
+      "shortCode": "68",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 314,
+      "name": "Switch Heart Attack",
+      "description": "Switch Heelside S-bend with a Backside 360.",
+      "shortCode": "147",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 183,
+      "name": "Switch Heelside",
+      "description": "Riding Switch on the heel edge of the board / approaching the wake from the outside of the wakes on the Switch heel edge of the board.",
+      "shortCode": "6",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 192,
+      "name": "Switch Heelside 1080",
+      "description": "Switch Heelside Wake Jump with a Frontside spin of 1080 degree rotation.",
+      "shortCode": "17",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 4584,
+          "title": "Mark Osmond Heelside 180 to  Switch Heelside 180 at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/hEPYIHAJxfk?start=16657",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 186,
+      "name": "Switch Heelside 180",
+      "description": "Switch Heelside Wake Jump with a Frontside spin of 180 degree rotation.",
+      "shortCode": "9",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 3,
+      "media": [
+        {
+          "mediaId": 2363,
+          "title": "2024 Jake Williams Switch Heelside 360 melan grab landing wrapped at ISIS Wakeboard and Waterski",
+          "uri": "https://player.vimeo.com/video/1036108185",
+          "mediaType": "Vimeo",
+          "photographer": null
+        }
+      ],
+      "trickId": 188,
+      "name": "Switch Heelside 360",
+      "description": "Switch Heelside Wake Jump with a Frontside spin of 360 degree rotation.",
+      "shortCode": "11",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 4589,
+          "title": "Charlie Lloyd Switch Heelside 540 at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/tFLtuymEtOQ?start=12592",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        },
+        {
+          "mediaId": 4590,
+          "title": "Marley O’Toole Switch Heelside 540 at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/tFLtuymEtOQ?start=14025",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 189,
+      "name": "Switch Heelside 540",
+      "description": "Switch Heelside Wake Jump with a Frontside spin of 540 degree rotation.",
+      "shortCode": "12",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 2
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 190,
+      "name": "Switch Heelside 720",
+      "description": "Switch Heelside Wake Jump with a Frontside spin of 720 degree rotation.",
+      "shortCode": "15",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 191,
+      "name": "Switch Heelside 900",
+      "description": "Switch Heelside Wake Jump with a Frontside spin of 900 degree rotation.",
+      "shortCode": "16",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2377,
+          "title": "Mark Osmond Heelside Backroll to Switch Heelside Backroll at ISIS Waterski and Wakeboard",
+          "uri": "https://player.vimeo.com/video/1036331485",
+          "mediaType": "Vimeo",
+          "photographer": null
+        }
+      ],
+      "trickId": 244,
+      "name": "Switch Heelside Backroll (or Switch Heelside Progressive Backroll)",
+      "description": "Switch Heelside backwards cartwheel, with the nose of the board coming up in front and over the head.",
+      "shortCode": "75",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 208,
+      "name": "Switch Heelside Backside 1080",
+      "description": "Switch Heelside Wake Jump with a Backside spin of 1080 degree rotation.",
+      "shortCode": "37",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 201,
+      "name": "Switch Heelside Backside 180",
+      "description": "Switch Heelside Wake Jump with a Backside spin of 180 degree rotation.",
+      "shortCode": "27",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 202,
+      "name": "Switch Heelside Backside 360",
+      "description": "Switch Heelside Wake Jump with a Backside spin of 360 degree rotation.",
+      "shortCode": "28",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 203,
+      "name": "Switch Heelside Backside 360 over the line",
+      "description": "Switch Heelside Wake Jump with a Backside spin of 360 degree rotation with the line passing underneath the board.  Normally off axis.",
+      "shortCode": "30",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 204,
+      "name": "Switch Heelside Backside 540",
+      "description": "Switch Heelside Wake Jump with a Backside spin of 540 degree rotation.",
+      "shortCode": "31",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 206,
+      "name": "Switch Heelside Backside 720",
+      "description": "Switch Heelside Wake Jump with a Backside spin of 720 degree rotation.",
+      "shortCode": "35",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 207,
+      "name": "Switch Heelside Backside 900",
+      "description": "Switch Heelside Wake Jump with a Backside spin of 900 degree rotation.",
+      "shortCode": "36",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 301,
+      "name": "Switch Heelside Indy Glide",
+      "description": "Switch Heelside 911 with an Indy grab (front hand).",
+      "shortCode": "134",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 298,
+      "name": "Switch Heelside Method Glide",
+      "description": "Switch Heelside 911 with a Method grab",
+      "shortCode": "131",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 245,
+      "name": "Switch Heelside Mexican Roll",
+      "description": "Also called Switch Mexican Backroll.  A Switch Heelside approach with the rider throwing their head and body forwards when they leave the wake. Sometimes referred to incorrectly as a Heelside frontroll.\r\nDifferent to a Heelside Progressive Backroll which is a backwards cartwheel, with the nose of the board coming up in front and over the head. ",
+      "shortCode": "76",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 303,
+      "name": "Switch Heelside Nuclear Glide",
+      "description": "Switch Heelside 911 with a Nuclear grab (back hand).",
+      "shortCode": "136",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 246,
+      "name": "Switch Heelside Roll to Revert",
+      "description": "Switch A heelside backroll with a frontside 180.",
+      "shortCode": "77",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 187,
+      "name": "Switch Heelside Shifty",
+      "description": "Switch Heelside approach - jump with 90 degree rotation of board one way and then back, normally Frontside then Backside",
+      "shortCode": "10",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 302,
+      "name": "Switch Heelside Stalefish Glide",
+      "description": "Switch Heelside 911 with an Stalefish grab (back hand).",
+      "shortCode": "135",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 300,
+      "name": "Switch Heelside Tail Glide",
+      "description": "Switch Heelside 911 with a Tail grab (back hand).",
+      "shortCode": "133",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 2,
+      "media": [],
+      "trickId": 343,
+      "name": "Switch Heelside Wake Jump",
+      "description": "Switch Heelside approach jump over the wake",
+      "shortCode": "177",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 319,
+      "name": "Switch Hinterberger",
+      "description": "Switch Heelside Raley with a Frontside 360 performed by rotating the handle above the head (olé).",
+      "shortCode": "152",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 307,
+      "name": "Switch Hoochie 313",
+      "description": "Switch Hoochie Glide with a Frontside 360.",
+      "shortCode": "140",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 309,
+      "name": "Switch Hoochie Blind",
+      "description": "Switch Hoochie Glide with a Backside 180.",
+      "shortCode": "142",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 305,
+      "name": "Switch Hoochie Glide",
+      "description": "Switch Heelside Raley with a Method grab (front hand).",
+      "shortCode": "138",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 308,
+      "name": "Switch Hoochie Krypt",
+      "description": "Switch Hoochie Glide with a Frontside 180.",
+      "shortCode": "141",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 185,
+      "name": "Switch Inside Out",
+      "description": "Switch A trick starting from between the wakes to outside the wakes.",
+      "shortCode": "8",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 266,
+      "name": "Switch Iron Cross",
+      "description": "Switch Heelside Wrapped Tantrum with a Backside 360.",
+      "shortCode": "99",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 249,
+      "name": "Switch KGB",
+      "description": "Switch Heelside Backroll with a Backside 360.",
+      "shortCode": "80",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 250,
+      "name": "Switch KGB 540",
+      "description": "Switch Heelside Backroll with a Backside 540.",
+      "shortCode": "83",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 251,
+      "name": "Switch KGB 720",
+      "description": "Switch Heelside Backroll with a Backside 720.",
+      "shortCode": "84",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 296,
+      "name": "Switch Krypt",
+      "description": "Switch Heelside Raley with a Frontside 180, landing Normal Foot Forward. ",
+      "shortCode": "129",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 264,
+      "name": "Switch Moby 540",
+      "description": "Switch Tantrum with a handle pass Backside 540.",
+      "shortCode": "97",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 265,
+      "name": "Switch Moby 720",
+      "description": "Switch Tantrum with a handle pass Backside 720.",
+      "shortCode": "98",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 263,
+      "name": "Switch Moby Dick",
+      "description": "Switch Tantrum with a handle pass Backside 360.",
+      "shortCode": "96",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 340,
+      "name": "Switch No-hander (or Suicide)",
+      "description": "Switch Heelside Wake Jump where the handle is released and then hands put back",
+      "shortCode": "173",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 331,
+      "name": "Switch Oh Really",
+      "description": "Switch Toeside Raley with a Frontside 540 (Toeside 315)",
+      "shortCode": "164",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 306,
+      "name": "Switch OHH (or Other Hand Hoochie)",
+      "description": "Switch Hoochie Glide with a back hand grab on the Heelside Edge of the board.",
+      "shortCode": "139",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 354,
+      "name": "Switch Ollie",
+      "description": "Switch.  Jumping the board out of the water.",
+      "shortCode": "346",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 353,
+      "name": "Switch Ollie 180",
+      "description": "Switch. Jumping the board out of the water and performing a 180 whilst the board is in the air.",
+      "shortCode": "347",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 1,
+      "media": [],
+      "trickId": 350,
+      "name": "Switch Ollie Heelside Backside 180",
+      "description": "Edge out Switch Heelside.  Ollie and then Backside 180 whilst in air.\r\n",
+      "shortCode": "349",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 356,
+      "name": "Switch Ollie Toeside Backside 180",
+      "description": "Edge out Switch Toeside.  Ollie and then Backside 180 whilst in air.",
+      "shortCode": "355",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 341,
+      "name": "Switch One Footer",
+      "description": "Switch Jump where you have one foot out of the bindings and kick that leg out in the air",
+      "shortCode": "174",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 182,
+      "name": "Switch One Wake",
+      "description": "Switch, taking off from one wake and landing in between the wakes.",
+      "shortCode": "5",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 205,
+      "name": "Switch Orbital 540",
+      "description": "Switch Heelside Backside 540 over the line.\r\nSwitch Heelside Wake Jump with a Backside spin of 540 degree rotation with the line passing underneath the board. ",
+      "shortCode": "34",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 304,
+      "name": "Switch Oriental",
+      "description": "Switch Heelside Raley with a Slob grab (front hand)",
+      "shortCode": "137",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 233,
+      "name": "Switch Pete Rose (or Pete)",
+      "description": "Switch Toeside Backroll with a Frontside 360.",
+      "shortCode": "64",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 234,
+      "name": "Switch Pete Rose 540",
+      "description": "Switch Toeside Backroll with a Frontside 540.",
+      "shortCode": "65",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 294,
+      "name": "Switch Raley",
+      "description": "Switch Heelside Wake Jump letting your legs go out behind you and above your head in a ‘superman’ position.",
+      "shortCode": "127",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 281,
+      "name": "Switch Remix ",
+      "description": "Wrapped Fat Chance.  Switch Heelside Wrapped Front Flip with a Frontside 360.\r\n",
+      "shortCode": "114",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 247,
+      "name": "Switch Roll to Blind",
+      "description": "Switch Heelside Backroll with a Backside 180.\r\n\r\nSome call this a Skeletor.",
+      "shortCode": "78",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 257,
+      "name": "Switch Rotary Dial",
+      "description": "Switch Heelside off axis 720 partly inverted. A cross over between a Back Mobe and a 720.",
+      "shortCode": "90",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 258,
+      "name": "Switch Rotary Dial 900",
+      "description": "Switch Heelside off axis 900 partly inverted. A cross-over between a Back Mobe and a 900. ",
+      "shortCode": "91",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 310,
+      "name": "Switch S-Bend",
+      "description": "Switch Heelside Raley with a Backside 360 performed by rotating the handle above the head (olé).",
+      "shortCode": "143",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 313,
+      "name": "Switch S-Bend 7",
+      "description": "Switch S-Bend 720.",
+      "shortCode": "146",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 4594,
+          "title": "Olli Loder Switch scarecrow at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/6XxZraVmFcw?start=24618 ",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        },
+        {
+          "mediaId": 4596,
+          "title": "Jake Williams Switch Scarecrow at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/tFLtuymEtOQ?start=20955 ",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 217,
+      "name": "Switch Scarecrow",
+      "description": "Switch Toeside Frontroll with a Frontside 180.",
+      "shortCode": "48",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 2
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 275,
+      "name": "Switch Slowball",
+      "description": "Switch Heelside slow Front Flip (with the body very straight)",
+      "shortCode": "108",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 239,
+      "name": "Switch Slurpee",
+      "description": "Switch Wrapped Toeside Backroll with a Backside 360.(A wrapped Blind Pete).",
+      "shortCode": "70",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 315,
+      "name": "Switch S-Mobe",
+      "description": "Switch Heelside Raley with a 360 performed by rotating the handle above the head (olé) then a 360 handle pass",
+      "shortCode": "148",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 238,
+      "name": "Switch Special K",
+      "description": "Switch Wrapped Toeside Backroll with a Backside 180",
+      "shortCode": "69",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 290,
+      "name": "Switch Speedball",
+      "description": "Switch Heelside double Front Flip.",
+      "shortCode": "123",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 272,
+      "name": "Switch Spiderman",
+      "description": "Switch Heelside Tantrum with a Backside 360 performed by rotating the handle above the head (olé) with back hand. (Other hand whirlybird) ",
+      "shortCode": "105",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 338,
+      "name": "Switch Square Raley (or Switch Air Air Raley)",
+      "description": "Switch Heelside Raley without using the wake",
+      "shortCode": "171",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 311,
+      "name": "Switch S-to-Blind",
+      "description": "Switch S-Bend with a Backside 180, landing blind.",
+      "shortCode": "144",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 318,
+      "name": "Switch Suicide Raley",
+      "description": "Switch Raley in which the rider lets go with both hands mid-air and then grabs the handle before landing",
+      "shortCode": "151",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 180,
+      "name": "Switch Surface 180",
+      "description": "Switch Frontside 180 sliding the board.",
+      "shortCode": "2",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 181,
+      "name": "Switch Surface 360",
+      "description": "Switch Frontside 360 sliding the board.",
+      "shortCode": "3",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 359,
+      "name": "Switch Surface Backside 180",
+      "description": "Switch Backside 180 sliding the board.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 360,
+      "name": "Switch Surface Backside 360",
+      "description": "Switch Backside 360 sliding the board.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 259,
+      "name": "Switch Tantrum",
+      "description": "Switch Heelside back flip",
+      "shortCode": "92",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 260,
+      "name": "Switch Tantrum to Blind ( or Switch T to B )",
+      "description": "Switch Tantrum with a Backside 180, landing blind.",
+      "shortCode": "93",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 261,
+      "name": "Switch Tantrum to Normal",
+      "description": "Switch Tantrum with Frontside 180. \r\n\r\nThis is the Switch equivalent of a Tantrum to Fakie.   The term ‘Fakie’ originated in Skateboarding and is not applied consistently in that sport, so to be clear here we have said ‘to Normal’ meaning landing ‘Normal Foot Forward’. \r\n\r\nSome would call this a 'Half Cab Tantrum'",
+      "shortCode": "94",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 291,
+      "name": "Switch Temper Tantrum",
+      "description": "Switch Double Tantrum.",
+      "shortCode": "124",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 184,
+      "name": "Switch Toeside",
+      "description": "Switch Riding on the toe edge of the board / approaching the wake from the outside of the wakes on the heel edge of the board.",
+      "shortCode": "7",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 200,
+      "name": "Switch Toeside 1080",
+      "description": "Switch Toeside Wake Jump with a Frontside spin of 1080 degree rotation.",
+      "shortCode": "26",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 1,
+      "media": [],
+      "trickId": 193,
+      "name": "Switch Toeside 180",
+      "description": "Switch Toeside Wake Jump with a Frontside spin of 180 degree rotation.",
+      "shortCode": "18",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 333,
+      "name": "Switch Toeside 313 Back",
+      "description": "Switch Toeside Raley with a backside 360.",
+      "shortCode": "166",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 195,
+      "name": "Switch Toeside 360",
+      "description": "Switch Toeside Wake Jump with a Frontside spin of 360 degree rotation.",
+      "shortCode": "20",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 196,
+      "name": "Switch Toeside 540",
+      "description": "Switch Toeside Wake Jump with a Frontside spin of 540 degree rotation.",
+      "shortCode": "21",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2366,
+          "title": "Jake Williams Switch Toeside 720 at ISIS Wakeboard and Waterski",
+          "uri": "https://player.vimeo.com/video/1036292069",
+          "mediaType": "Vimeo",
+          "photographer": null
+        }
+      ],
+      "trickId": 197,
+      "name": "Switch Toeside 720",
+      "description": "Switch Toeside Wake Jump with a Frontside spin of 720 degree rotation.",
+      "shortCode": "23",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 199,
+      "name": "Switch Toeside 900",
+      "description": "Switch Toeside Wake Jump with a Frontside spin of 900 degree rotation.",
+      "shortCode": "25",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 231,
+      "name": "Switch Toeside Backroll",
+      "description": "Switch Toeside approach; leave the wake and perform a back flip, with the board coming up in front and over the head.",
+      "shortCode": "62",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 232,
+      "name": "Switch Toeside Backroll to Normal",
+      "description": "Switch Toeside Backroll with a Frontside 180 landing Normal Foot Forward.\r\n\r\nThis is the Switch version of the Toeside Backroll to Revert. The term ‘Revert’ originated in Skateboarding and is not applied consistently in that sport, so to be clear here we have said ‘to Normal’ meaning landing ‘Normal Foot Forward’. \r\n\r\nAnd whilst the Switch version of the Heelside Backroll is a Half Cab Roll we have not seen Toeside tricks from Normal to  Switch referred to as Half Cabs.\r\n",
+      "shortCode": "63",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 214,
+      "name": "Switch Toeside Backside 1080",
+      "description": "Switch Toeside Wake Jump with a Backside spin of 1080 degree rotation.",
+      "shortCode": "45",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 209,
+      "name": "Switch Toeside Backside 180",
+      "description": "Switch Toeside Wake Jump with a Backside spin of 180 degree rotation.",
+      "shortCode": "38",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 210,
+      "name": "Switch Toeside Backside 360",
+      "description": "Switch Toeside Wake Jump with a Backside spin of 360 degree rotation.",
+      "shortCode": "40",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 211,
+      "name": "Switch Toeside Backside 540",
+      "description": "Switch Toeside Wake Jump with a Backside spin of 540 degree rotation.",
+      "shortCode": "42",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 212,
+      "name": "Switch Toeside Backside 720",
+      "description": "Switch Toeside Wake Jump with a Backside spin of 720 degree rotation.",
+      "shortCode": "43",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 213,
+      "name": "Switch Toeside Backside 900",
+      "description": "Switch Toeside Wake Jump with a Backside spin of 900 degree rotation.",
+      "shortCode": "44",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 325,
+      "name": "Switch Toeside Blind Judge",
+      "description": "Switch Toeside Raley with a Backside 180.",
+      "shortCode": "158",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 240,
+      "name": "Switch Toeside Front Flip",
+      "description": "Switch Toeside approach. Forwards cartwheel, with the board coming up behind and over the head.",
+      "shortCode": "71",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 241,
+      "name": "Switch Toeside Front Flip to Normal",
+      "description": "Switch Toeside Front Flip with a Frontside 180.\r\n\r\nThis is the Switch version of the Toeside Front Flip to Fakie.  The term ‘Fakie’ originated in Skateboarding and is not applied consistently in that sport, so to be clear here we have said ‘to Normal’ meaning landing ‘Normal Foot Forward’.  ",
+      "shortCode": "72",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 198,
+      "name": "Switch Toeside Frontroll",
+      "description": "A Switch Toeside approach with the rider throwing their head and body forwards when they leave the wake and performing a front roll and landing with the same foot forward.",
+      "shortCode": "24",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 329,
+      "name": "Switch Toeside Krypt",
+      "description": "Switch Toeside Raley with a Frontside 180.",
+      "shortCode": "162",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 324,
+      "name": "Switch Toeside Raley",
+      "description": "Switch Toeside Wake Jump letting your legs go out behind you and above your head in a ‘superman’ position.",
+      "shortCode": "157",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 194,
+      "name": "Switch Toeside Shifty",
+      "description": "Switch Toeside Wake Jump with 90 degree rotation of board one way and then back, normally Frontside then Backside",
+      "shortCode": "19",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 363,
+      "name": "Switch Toeside Underflip",
+      "description": "Switch Toeside Backside 180 to Frontroll.  This has the same components as a Tootsie but looks different with the direction of the Frontroll seeming more backwards (as opposed to forwards for the Tootsie)  ",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 344,
+      "name": "Switch Toeside Wake Jump",
+      "description": "Switch Toeside approach jump over the wake",
+      "shortCode": "178",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 225,
+      "name": "Switch Tootsie Roll",
+      "description": "Switch Toeside Front Roll with a Backside 180.",
+      "shortCode": "56",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 292,
+      "name": "Switch Trifecta",
+      "description": "Switch Toeside Front Roll to Switch Scarecrow",
+      "shortCode": "125",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 337,
+      "name": "Switch Tweetybird",
+      "description": "Switch Air Whirlybird.",
+      "shortCode": "170",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 316,
+      "name": "Switch Vulcan",
+      "description": "Switch S-Bend to Normal Foot Forward. A Switch S-Bend with a frontside 180.",
+      "shortCode": "149",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 268,
+      "name": "Switch Whirlybird",
+      "description": "Switch Tantrum with a Backside 360 performed by rotating the handle above the head (olé) with front hand.",
+      "shortCode": "101",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 269,
+      "name": "Switch Whirlybird 540",
+      "description": "Switch Tantrum with a Backside 540 performed by rotating the handle above the head (olé) with front hand.",
+      "shortCode": "102",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 270,
+      "name": "Switch Whirlybird 720",
+      "description": "Switch Tantrum with a Backside 720 performed by rotating the handle above the head throughout (olé) with front hand.",
+      "shortCode": "103",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 271,
+      "name": "Switch Whirlydick",
+      "description": "Switch Whirlybird with a handle-passed Backside 360 after the first overhead Backside 360 (olé) spin.",
+      "shortCode": "104",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 267,
+      "name": "Switch Wrecking Ball",
+      "description": "Switch Heelside wrapped Tantrum with a Backside 360. (A wrapped Whirlybird).",
+      "shortCode": "100",
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 1,
+      "media": [
+        {
+          "mediaId": 899,
+          "title": "Travis Beaton - Tantrum WKB92 - at the 2022 Malibu Boats UK Wakeboard And Wakesurf Nationals",
+          "uri": "https://media.wakeboard.co.uk/2022MalibuBoatsUKWakeboardAndWakesurfNationals/PhotoMantisProMedia/TravisBeaton/159-MALIBU_WAKEBOARD UK_NATIONALS_2022-207TravisBeatonBYMANTISPROMEDIA.jpg",
+          "mediaType": "Photo",
+          "photographer": "Photo Mantis Pro Media"
+        },
+        {
+          "mediaId": 2344,
+          "title": "Tantrum - WKB92 - Charlie Lloyd",
+          "uri": "https://player.vimeo.com/video/1028585217",
+          "mediaType": "Vimeo",
+          "photographer": "Video Jay Lloyd"
+        },
+        {
+          "mediaId": 2371,
+          "title": "Isabelle Lloyd Tantrum at Xtreme Wake",
+          "uri": "https://player.vimeo.com/video/1036307299",
+          "mediaType": "Vimeo",
+          "photographer": null
+        },
+        {
+          "mediaId": 2393,
+          "title": "Ollie Phillips Tantrum at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/Q6xMb_5Y2W4?start=2839",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        },
+        {
+          "mediaId": 2402,
+          "title": "Scott Lees Tantrum at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/TFb-GkvXLjE?start=17746",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 92,
+      "name": "Tantrum",
+      "description": "Heelside back flip",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 5
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 4600,
+          "title": "Joe Humphries Tantrum to Blind at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/6XxZraVmFcw?start=23997",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 93,
+      "name": "Tantrum to Blind ( or T to B )",
+      "description": "Tantrum with a Backside 180, landing blind.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 94,
+      "name": "Tantrum to Fakie",
+      "description": "Tantrum with Frontside 180 landing Switch.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 124,
+      "name": "Temper Tantrum",
+      "description": "Double Tantrum.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 7,
+      "name": "Toeside",
+      "description": "Riding on the toeside edge of the board / approaching the wake from the outside of the wakes on the toeside edge of the board.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 26,
+      "name": "Toeside 1080",
+      "description": "Toeside Wake Jump with a Frontside spin of 1080 degree rotation.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 1,
+      "media": [
+        {
+          "mediaId": 2408,
+          "title": "Kate Waldron Toe180 at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/jz7N_GW6D0k?start=3771",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        },
+        {
+          "mediaId": 4583,
+          "title": "Lily Williams Toeside 180 at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/6XxZraVmFcw?start=10794",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 18,
+      "name": "Toeside 180",
+      "description": "Toeside Wake Jump with a Frontside spin of 180 degree rotation.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 2
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 166,
+      "name": "Toeside 313 Back",
+      "description": "Toeside Raley with a backside 360.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 1,
+      "media": [
+        {
+          "mediaId": 2399,
+          "title": "Olli Loder Toeside 360 at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/TFb-GkvXLjE?start=15407",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 20,
+      "name": "Toeside 360",
+      "description": "Toeside Wake Jump with a Frontside spin of 360 degree rotation.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 1,
+      "media": [
+        {
+          "mediaId": 2373,
+          "title": "Aran McGuckin Toeside 540",
+          "uri": "https://player.vimeo.com/video/1036327733",
+          "mediaType": "Vimeo",
+          "photographer": null
+        },
+        {
+          "mediaId": 2410,
+          "title": "Rich Phillips Toe 5 at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/jz7N_GW6D0k?start=6274",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 21,
+      "name": "Toeside 540",
+      "description": "Toeside Wake Jump with a Frontside spin of 540 degree rotation.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 2
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 23,
+      "name": "Toeside 720",
+      "description": "Toeside Wake Jump with a Frontside spin of 1080 degree rotation.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 25,
+      "name": "Toeside 900",
+      "description": "Toeside Wake Jump with a Frontside spin of 900 degree rotation.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 1,
+      "media": [
+        {
+          "mediaId": 2380,
+          "title": "Jack Palmer Toeside Backroll at ISIS Waterski and Wakeboard",
+          "uri": "https://player.vimeo.com/video/1036341415",
+          "mediaType": "Vimeo",
+          "photographer": null
+        },
+        {
+          "mediaId": 2407,
+          "title": "Jack Palmer Toeside backroll at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/bP6hdeDT0xY?start=1461",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        },
+        {
+          "mediaId": 4587,
+          "title": "Addison Newton Toeside Backroll at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/6XxZraVmFcw?start=17051",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 62,
+      "name": "Toeside Backroll",
+      "description": "Toeside approach; leave the wake and perform a back flip, with the board coming up in front and over the head.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 3
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 4588,
+          "title": "Charlie Lloyd Toeside Backroll to Revert at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/tFLtuymEtOQ?start=12505",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        },
+        {
+          "mediaId": 4595,
+          "title": "Olli Loder Toeside Backroll to Revert at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/6XxZraVmFcw?start=24627",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 63,
+      "name": "Toeside Backroll to Revert",
+      "description": "Toeside Backroll with a Frontside 180.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 2
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 45,
+      "name": "Toeside Backside 1080",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 3,
+      "media": [
+        {
+          "mediaId": 2381,
+          "title": "Mark Osmond Cuffed Toeside Backside 180 to Switch Cuffed Toeside Backside 180 at LDB Wakeschool",
+          "uri": "https://player.vimeo.com/video/1036366020",
+          "mediaType": "Vimeo",
+          "photographer": "Kate Waldron"
+        }
+      ],
+      "trickId": 38,
+      "name": "Toeside Backside 180",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2397,
+          "title": "Melissa Lock Cuffed Toeside Backside 360 at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/TFb-GkvXLjE?start=14624",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 40,
+      "name": "Toeside Backside 360",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 42,
+      "name": "Toeside Backside 540",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 43,
+      "name": "Toeside Backside 720",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 44,
+      "name": "Toeside Backside 900",
+      "description": null,
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 158,
+      "name": "Toeside Blind Judge",
+      "description": "Toeside Raley with a Backside 180.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 71,
+      "name": "Toeside Front Flip",
+      "description": "Toeside approach. Forwards cartwheel, with the board coming up behind and over the head.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 72,
+      "name": "Toeside Front Flip to Fakie",
+      "description": "Toeside Front Flip with a Frontside 180.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2379,
+          "title": "Jack Palmer Toeside Frontroll at ISIS Waterski and Wakeboard",
+          "uri": "https://player.vimeo.com/video/1036339893",
+          "mediaType": "Vimeo",
+          "photographer": null
+        },
+        {
+          "mediaId": 2429,
+          "title": "'Toeside Front Roll' Article from July/August 2024 BWSW Magazine",
+          "uri": "https://cdn.wakeboard.co.uk/downloads/2024/2024_-_Toeside_Front_Roll.pdf",
+          "mediaType": "PDF",
+          "photographer": "Mark Osmond"
+        }
+      ],
+      "trickId": 24,
+      "name": "Toeside Frontroll",
+      "description": "A Toeside approach with the rider throwing their head and body forwards when they leave the wake and performing a front roll and landing with the same foot forward.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 2
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 162,
+      "name": "Toeside Krypt",
+      "description": "Toeside Raley with a Frontside 180.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 157,
+      "name": "Toeside Raley",
+      "description": "Toeside Wake Jump letting your legs go out behind you and above your head in a ‘superman’ position.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2414,
+          "title": "Jake Williams Toeside shifty with Stalefish grab at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/Q6xMb_5Y2W4?start=6974",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 19,
+      "name": "Toeside Shifty",
+      "description": "Toeside Wake Jump with 90 degree rotation of board one way and then back, normally Frontside then Backside",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 362,
+      "name": "Toeside Underflip",
+      "description": "Toeside Backside 180 to Frontroll.  This has the same components as a Tootsie but looks different with the direction of the Frontroll seeming more backwards (as opposed to forwards for the Tootsie).  ",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 1,
+      "media": [
+        {
+          "mediaId": 4580,
+          "title": "Holly Mathias Toeside Wake Jump at 2025 IWWF Europe & Africa Wakeboard Championships, Spain",
+          "uri": "https://youtu.be/6LOlBrXr0lo?start=296",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 178,
+      "name": "Toeside Wake Jump",
+      "description": "Toeside approach jump over the wake",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2365,
+          "title": "Jake Williams Tootsie Roll at ISIS Wakeboard and Waterski",
+          "uri": "https://player.vimeo.com/video/1036291274",
+          "mediaType": "Vimeo",
+          "photographer": null
+        },
+        {
+          "mediaId": 2394,
+          "title": "Charlie Lloyd Tootsie Roll at 2024 IWWF Europe & Africa Wakeboard Championships, France",
+          "uri": "https://youtu.be/bP6hdeDT0xY?start=10730",
+          "mediaType": "Youtube",
+          "photographer": "IWWF / Dave Averillo"
+        }
+      ],
+      "trickId": 56,
+      "name": "Tootsie Roll",
+      "description": "Toeside Front Roll with a Backside 180.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 2
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 125,
+      "name": "Trifecta",
+      "description": "Toeside Front Roll to Scarecrow",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 170,
+      "name": "Tweetybird",
+      "description": "Air Whirlybird.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 149,
+      "name": "Vulcan",
+      "description": "S-Bend to fakie. An S-Bend with a Frontside 180.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 101,
+      "name": "Whirlybird",
+      "description": "Tantrum with a Backside 360 performed by rotating the handle above the head (olé) with front hand.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 102,
+      "name": "Whirlybird 540",
+      "description": "Tantrum with a Backside 540 performed by rotating the handle above the head (olé) with front hand.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [
+        {
+          "mediaId": 2386,
+          "title": "David O Caoimh, Ireland, Whirlybird 720 at Stew Mackie's Chain of Wakes, Florida",
+          "uri": "https://www.youtube.com/watch?v=WWO-zTjmfrg",
+          "mediaType": "Youtube",
+          "photographer": null
+        }
+      ],
+      "trickId": 103,
+      "name": "Whirlybird 720",
+      "description": "Tantrum with a Backside 720 performed by rotating the handle above the head throughout (olé) with front hand.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 1
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 104,
+      "name": "Whirlydick",
+      "description": "Whirlybird with a handle-passed Backside 360 after the first overhead Backside 360 (olé) spin.",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 100,
+      "name": "Wrecking Ball",
+      "description": "Heelside wrapped Tantrum with a Backside 360. (A wrapped Whirlybird).",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    },
+    {
+      "landedByCount": 0,
+      "media": [],
+      "trickId": 66,
+      "name": "X-Mobe",
+      "description": "Switch toeside backroll with a frontside 360. (A switch Pete Rose).",
+      "shortCode": null,
+      "sportId": 1,
+      "sportName": "Wakeboard",
+      "mediaCount": 0
+    }
+  ]
+}
