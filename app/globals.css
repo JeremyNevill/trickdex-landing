@@ -29,6 +29,17 @@ body {
   padding-right: 24px;
 }
 
+/* Visible keyboard focus for every interactive element (the UI is inline-styled,
+   so this is the single source of focus indication). */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--td-primary);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
 .nav-link {
   color: #475569;
   font-size: 14px;
@@ -52,41 +63,54 @@ body {
   color: var(--td-primary);
 }
 
-@keyframes marquee {
-  from {
-    transform: translateX(0);
+/* Card-style links (trick cards, related chips, A–Z jump links) — hover/active
+   feedback so the card grid reads as interactive. */
+.card-link {
+  transition: border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+}
+.card-link:hover {
+  border-color: var(--td-primary) !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+}
+.card-link:active {
+  transform: translateY(1px);
+}
+
+.jump-link {
+  transition: border-color 140ms ease, background 140ms ease, color 140ms ease;
+}
+.jump-link:hover {
+  border-color: var(--td-primary) !important;
+  color: var(--td-primary) !important;
+}
+
+/* Solid CTA buttons — subtle lift on hover. */
+.btn-primary {
+  transition: transform 120ms ease, box-shadow 140ms ease, filter 140ms ease;
+}
+.btn-primary:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.32);
+}
+.btn-primary:active {
+  transform: scale(0.985);
+}
+
+/* Respect reduced-motion: no smooth-scroll or transitions for users who ask. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-  to {
-    transform: translateX(-33.333%);
+  * {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
   }
 }
 
-/* Responsive: collapse the two-column grids on smaller screens. */
-@media (max-width: 900px) {
-  .hero-grid,
-  .pillar-grid {
-    grid-template-columns: 1fr !important;
-    gap: 40px !important;
-  }
-  .hero-visual {
-    height: 520px !important;
-  }
-  .steps-grid,
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-  .nav-links-secondary {
-    display: none !important;
-  }
-}
-
+/* Tighten container padding on narrow screens so card grids keep a gutter. */
 @media (max-width: 560px) {
-  .steps-grid,
-  .stats-grid {
-    grid-template-columns: 1fr !important;
-  }
-  .stats-grid > div {
-    border-right: none !important;
-    border-bottom: 1px solid #e2e8f0;
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }

@@ -4,11 +4,13 @@ import {
   getAllTricks,
   getTrick,
   isExcludedTrick,
+  jsonLdScript,
   resolveMedia,
   trickIdFromSlug,
   trickPath,
   type Trick,
 } from "@/lib/tricks";
+import { relatedTricks } from "@/lib/related";
 import { FONT_DISPLAY, FONT_MONO, Icon, appTrickUrl } from "@/components/ui";
 import { SiteHeader, SiteFooter } from "@/components/chrome";
 
@@ -49,8 +51,19 @@ export async function generateMetadata({
     title,
     description,
     alternates: { canonical },
-    openGraph: { title, description, url: canonical, type: "article" },
-    twitter: { card: "summary", title, description },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      type: "article",
+      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/og-image.png"],
+    },
   };
 }
 
@@ -73,6 +86,10 @@ export default async function TrickPage({
 
   const resolvedMedia = resolveMedia(trick.media);
 
+  // Related tricks — computed from the full set (see lib/related.ts).
+  const allTricks = await getAllTricks();
+  const related = relatedTricks(trick, allTricks);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -90,6 +107,9 @@ export default async function TrickPage({
       name: "wakeboard.com",
       url: "https://www.wakeboard.com",
     },
+    relatedLink: related.map(
+      (r) => `https://www.wakeboard.com${trickPath(r.trickId, r.slug)}`,
+    ),
   };
 
   return (
@@ -97,7 +117,7 @@ export default async function TrickPage({
       <SiteHeader />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(jsonLd) }}
       />
       <main className="container" style={{ padding: "40px 0 96px", maxWidth: 760 }}>
         <a
@@ -219,6 +239,7 @@ export default async function TrickPage({
         {/* Quiet conversion point: signup happens in the app, at the moment of intent. */}
         <div style={{ marginTop: 40, paddingTop: 28, borderTop: "1px solid #e2e8f0" }}>
           <a
+            className="btn-primary"
             href={appTrickUrl(trick.trickId)}
             style={{
               display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 20px",
@@ -227,12 +248,42 @@ export default async function TrickPage({
               boxShadow: "0 6px 16px rgba(37, 99, 235, 0.22)",
             }}
           >
-            Log this in the app {Icon.arrow(14)}
+            Track this trick in the free app {Icon.arrow(14)}
           </a>
-          <p style={{ margin: "12px 0 0", fontSize: 13, color: "#94a3b8" }}>
-            Track it as learning, landed or consistent — and log your sessions.
+          <p style={{ margin: "12px 0 0", fontSize: 13, color: "#64748b" }}>
+            Mark it learning, landed or consistent — and log your sessions on wakeboard.com.
           </p>
         </div>
+
+        {related.length > 0 && (
+          <div style={{ marginTop: 44, paddingTop: 28, borderTop: "1px solid #e2e8f0" }}>
+            <h2 style={{ margin: "0 0 16px", fontFamily: FONT_MONO, fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--td-primary)", fontWeight: 600 }}>
+              Related tricks
+            </h2>
+            <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 10 }}>
+              {related.map((r) => (
+                <li key={r.trickId}>
+                  <a
+                    className="card-link"
+                    href={trickPath(r.trickId, r.slug)}
+                    style={{
+                      display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10,
+                      padding: "12px 16px", borderRadius: 12, border: "1px solid #e2e8f0",
+                      background: "#fff", textDecoration: "none",
+                    }}
+                  >
+                    <span style={{ fontFamily: FONT_DISPLAY, fontSize: 15, fontWeight: 700, letterSpacing: "-0.01em", color: "#0f172a" }}>
+                      {r.displayName}
+                    </span>
+                    <span style={{ fontFamily: FONT_MONO, fontSize: 10, color: "#94a3b8", whiteSpace: "nowrap" }}>
+                      WKB{r.trickId}
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </main>
       <SiteFooter />
     </>

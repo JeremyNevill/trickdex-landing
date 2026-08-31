@@ -125,6 +125,10 @@ export type ResolvedMedia =
 export function resolveMedia(media: TrickMedia[]): ResolvedMedia[] {
   const out: ResolvedMedia[] = [];
   for (const m of media) {
+    // Only ever emit http(s) media URLs. Blocks a malicious/typo'd API value
+    // like a javascript: URI from becoming a photo src or PDF href.
+    if (!/^https?:\/\//i.test(m.uri)) continue;
+
     const yt = youTubeId(m.uri);
     if (yt) {
       out.push({
@@ -182,6 +186,19 @@ export function trickPath(trickId: number, slug: string): string {
   return `/tricks/wkb${trickId}-${slug}`;
 }
 
+/**
+ * Serialize an object for embedding in a <script type="application/ld+json">
+ * block via dangerouslySetInnerHTML. JSON.stringify does NOT escape <, >, & —
+ * so a trick name/description containing "</script>" could break out and inject.
+ * Escape those to their unicode forms (valid JSON, inert in HTML).
+ */
+export function jsonLdScript(data: unknown): string {
+  return JSON.stringify(data)
+    .replace(/</g, "\\u003c")
+    .replace(/>/g, "\\u003e")
+    .replace(/&/g, "\\u0026");
+}
+
 /** Extract the trick id from a wkb{id}-{slug} route param. */
 export function trickIdFromSlug(routeSlug: string): number | null {
   const m = routeSlug.match(/^wkb(\d+)/i);
@@ -225,6 +242,64 @@ export async function getAllTricks(): Promise<Trick[]> {
   return tricks.sort((a, b) =>
     a.displayName.localeCompare(b.displayName, "en", { numeric: true }),
   );
+}
+
+/**
+ * "Start here" — a hand-picked set of well-known, human-recognisable tricks by
+ * WKB id (verified to exist). Ordered roughly foundational → iconic. Not a
+ * popularity rank (no bag/search data yet) — just classics for first-time
+ * visitors. Any id missing from the live data is skipped gracefully.
+ */
+export const CLASSIC_TRICK_IDS = [
+  75, // Heelside Backroll
+  62, // Toeside Backroll
+  127, // Raley
+  92, // Tantrum
+  48, // Scarecrow
+  49, // Elephant
+  159, // Batwing
+  101, // Whirlybird
+  80, // KGB
+  64, // Pete Rose
+  50, // Crow Mobe
+  128, // Blind Judge
+  78, // Roll to Blind
+  143, // S-Bend
+  111, // Slim Chance
+];
+
+/** The classic tricks, in curated order, from an already-loaded set. */
+export function pickClassics(all: Trick[]): Trick[] {
+  const byId = new Map(all.map((t) => [t.trickId, t]));
+  return CLASSIC_TRICK_IDS.map((id) => byId.get(id)).filter(
+    (t): t is Trick => Boolean(t),
+  );
+}
+
+/** First-letter group key for the A–Z index (non-letters bucket under "#"). */
+export function alphaKey(displayName: string): string {
+  const c = displayName.trim().charAt(0).toUpperCase();
+  return /[A-Z]/.test(c) ? c : "#";
+}
+
+/**
+ * Group an alphabetically-sorted trick list into A–Z sections. Returns groups
+ * in order, plus the list of letters that actually have tricks (for jump links).
+ */
+export function groupAlphabetically(all: Trick[]): {
+  groups: { letter: string; tricks: Trick[] }[];
+  letters: string[];
+} {
+  const map = new Map<string, Trick[]>();
+  for (const t of all) {
+    const k = alphaKey(t.displayName);
+    (map.get(k) ?? map.set(k, []).get(k)!).push(t);
+  }
+  // "#" first, then A–Z.
+  const order = (k: string) => (k === "#" ? "" : k);
+  const letters = [...map.keys()].sort((a, b) => order(a).localeCompare(order(b)));
+  const groups = letters.map((letter) => ({ letter, tricks: map.get(letter)! }));
+  return { groups, letters };
 }
 
 export { API_BASE };

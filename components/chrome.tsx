@@ -18,6 +18,7 @@ export function SiteHeader() {
       >
         <a href="/" style={{ textDecoration: "none" }}><Logo /></a>
         <a
+          className="btn-primary"
           href={APP_URL}
           style={{
             display: "inline-flex", alignItems: "center", gap: 8, padding: "9px 16px",
@@ -41,7 +42,7 @@ export function SiteFooter() {
       >
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
           <Logo size={18} />
-          <span style={{ fontFamily: FONT_MONO, fontSize: 11, color: "#94a3b8", letterSpacing: "0.08em", whiteSpace: "nowrap" }}>
+          <span style={{ fontFamily: FONT_MONO, fontSize: 11, color: "#64748b", letterSpacing: "0.08em", whiteSpace: "nowrap" }}>
             the wakeboard trick list
           </span>
         </div>
@@ -50,7 +51,7 @@ export function SiteFooter() {
           <a href="https://wakeboard.co.uk" className="footer-link">WakeboardUK</a>
           <a href="mailto:hello@wakeboard.com" className="footer-link">Contact</a>
         </div>
-        <p style={{ margin: 0, fontSize: 12, color: "#94a3b8" }}>© 2026 wakeboard.com</p>
+        <p style={{ margin: 0, fontSize: 12, color: "#64748b" }}>© 2026 wakeboard.com</p>
       </div>
     </footer>
   );
