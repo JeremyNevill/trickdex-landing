@@ -1,6 +1,14 @@
 :root {
   /* Brand primary — kept in sync with the trickdex-web app (globals.css --primary). */
   --td-primary: #2563eb;
+  --td-primary-dark: #1d4ed8;
+  --td-ink: #0f172a;
+  --td-muted: #64748b;
+  --td-line: #e2e8f0;
+  /* Reusable elevation tokens so cards/inputs/buttons share one shadow language. */
+  --td-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --td-shadow-md: 0 6px 18px rgba(15, 23, 42, 0.08);
+  --td-shadow-lg: 0 14px 34px rgba(15, 23, 42, 0.10);
 }
 
 * {
@@ -66,22 +74,78 @@ input:focus-visible,
 /* Card-style links (trick cards, related chips, A–Z jump links) — hover/active
    feedback so the card grid reads as interactive. */
 .card-link {
-  transition: border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+  position: relative;
+  box-shadow: var(--td-shadow-sm);
+  transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
 }
 .card-link:hover {
-  border-color: var(--td-primary) !important;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+  border-color: color-mix(in oklch, var(--td-primary) 55%, var(--td-line)) !important;
+  box-shadow: var(--td-shadow-md);
+  transform: translateY(-2px);
 }
 .card-link:active {
-  transform: translateY(1px);
+  transform: translateY(0);
+  box-shadow: var(--td-shadow-sm);
+}
+
+/* Search input — soft resting shadow, primary focus ring. */
+.search-input {
+  box-shadow: var(--td-shadow-sm);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+.search-input:hover {
+  border-color: color-mix(in oklch, var(--td-primary) 40%, var(--td-line));
+}
+.search-input:focus {
+  outline: none;
+  border-color: var(--td-primary);
+  box-shadow: 0 0 0 4px color-mix(in oklch, var(--td-primary) 14%, transparent);
 }
 
 .jump-link {
-  transition: border-color 140ms ease, background 140ms ease, color 140ms ease;
+  box-shadow: var(--td-shadow-sm);
+  transition: border-color 140ms ease, background 140ms ease, color 140ms ease, transform 140ms ease;
 }
 .jump-link:hover {
   border-color: var(--td-primary) !important;
   color: var(--td-primary) !important;
+  transform: translateY(-1px);
+}
+
+/* Sticky A–Z bar — sits just under the header while scanning the list. */
+.az-bar {
+  position: sticky;
+  top: 65px;
+  z-index: 40;
+  margin: 0 -24px 28px;
+  padding: 12px 24px;
+  background: rgba(248, 250, 252, 0.82);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+@media (max-width: 560px) {
+  .az-bar {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* Gradient underline accent for section/letter headers. */
+.letter-head {
+  position: relative;
+}
+.letter-head::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 40px;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--td-primary), color-mix(in oklch, var(--td-primary) 30%, transparent));
 }
 
 /* Solid CTA buttons — subtle lift on hover. */

@@ -31,7 +31,13 @@ export function TrickCard({ trick }: { trick: Trick }) {
           <span style={{ fontFamily: FONT_DISPLAY, fontSize: 17, fontWeight: 700, letterSpacing: "-0.015em", color: "#0f172a" }}>
             {trick.displayName}
           </span>
-          <span style={{ fontFamily: FONT_MONO, fontSize: 11, color: "#64748b", whiteSpace: "nowrap" }}>
+          <span
+            style={{
+              fontFamily: FONT_MONO, fontSize: 10.5, fontWeight: 600, color: "#64748b",
+              background: "#f1f5f9", border: "1px solid #e8edf3",
+              padding: "2px 7px", borderRadius: 999, whiteSpace: "nowrap", flexShrink: 0,
+            }}
+          >
             WKB{trick.trickId}
           </span>
         </div>

@@ -53,13 +53,14 @@ export function TrickSearch({ total }: { total: number }) {
           {Icon.search(18)}
         </span>
         <input
+          className="search-input"
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search tricks by name, alias or WKB number…"
           aria-label="Search tricks"
           style={{
-            width: "100%", padding: "14px 18px 14px 48px", borderRadius: 14,
+            width: "100%", padding: "15px 18px 15px 48px", borderRadius: 14,
             border: "1px solid #e2e8f0", background: "#fff", fontSize: 15,
             color: "#0f172a",
           }}
