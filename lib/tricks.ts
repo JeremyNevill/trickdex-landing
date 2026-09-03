@@ -65,6 +65,28 @@ export function youTubeId(uri: string): string | null {
   return m ? m[1] : null;
 }
 
+/**
+ * Extract a YouTube start offset in whole seconds, or null. Handles the forms
+ * that appear on share/deep links: `start=NN` (embed param) and `t=` / `#t=` as
+ * either a plain number of seconds or a `1h2m3s` / `90s` duration. The API only
+ * accepts integer seconds, so a duration is summed and a plain number floored.
+ */
+export function youTubeStart(uri: string): number | null {
+  const m = uri.match(/[?&#](?:start|t)=([0-9hms]+)/i);
+  if (!m) return null;
+  const v = m[1];
+  if (/^\d+$/.test(v)) return Number(v); // plain seconds
+  const parts = v.match(/(\d+)\s*([hms])/gi);
+  if (!parts) return null;
+  let secs = 0;
+  for (const p of parts) {
+    const n = Number(p.match(/\d+/)![0]);
+    const unit = p.slice(-1).toLowerCase();
+    secs += unit === "h" ? n * 3600 : unit === "m" ? n * 60 : n;
+  }
+  return secs || null;
+}
+
 /** Extract a Vimeo numeric id from a vimeo URL, or null. */
 export function vimeoId(uri: string): string | null {
   const m = uri.match(/vimeo\.com\/(?:video\/)?(\d+)/);
@@ -90,11 +112,13 @@ export function resolveMedia(media: TrickMedia[]): ResolvedMedia[] {
 
     const yt = youTubeId(m.uri);
     if (yt) {
-      out.push({
-        kind: "youtube",
-        embed: `https://www.youtube-nocookie.com/embed/${yt}`,
-        media: m,
-      });
+      // Preserve a deep-link start time (e.g. ?start=18020 on a long stream) so
+      // the clip opens at the trick, not at 0:00.
+      const start = youTubeStart(m.uri);
+      const embed = start
+        ? `https://www.youtube-nocookie.com/embed/${yt}?start=${start}`
+        : `https://www.youtube-nocookie.com/embed/${yt}`;
+      out.push({ kind: "youtube", embed, media: m });
       continue;
     }
     const vim = vimeoId(m.uri);
