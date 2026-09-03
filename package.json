@@ -5,7 +5,8 @@
   "description": "www.wakeboard.com — the public wakeboard trick list.",
   "scripts": {
     "dev": "next dev -p 3001",
-    "build": "next build",
+    "build": "node scripts/gen-redirects.mjs && next build",
+    "gen:redirects": "node scripts/gen-redirects.mjs",
     "start": "next start -p 3001",
     "lint": "next lint",
     "snapshot": "node scripts/snapshot-tricks.mjs",
