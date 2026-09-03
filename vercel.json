@@ -1,16 +1,25 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "buildCommand": "next build",
+  "buildCommand": "node scripts/gen-redirects.mjs && next build",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
         {
           "key": "Content-Security-Policy",
           "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; font-src 'self'; frame-src https://www.youtube-nocookie.com https://player.vimeo.com; connect-src 'self' https://plausible.io; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'"
@@ -20,8 +29,5103 @@
     {
       "source": "/_next/static/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/Tricks",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tricks",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/172",
+      "destination": "/tricks/wkb172-009",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/172",
+      "destination": "/tricks/wkb172-009",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/153",
+      "destination": "/tricks/wkb153-118",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/153",
+      "destination": "/tricks/wkb153-118",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/46",
+      "destination": "/tricks/wkb46-3-to-1",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/46",
+      "destination": "/tricks/wkb46-3-to-1",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/47",
+      "destination": "/tricks/wkb47-3-to-3-or-zero",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/47",
+      "destination": "/tricks/wkb47-3-to-3-or-zero",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/154",
+      "destination": "/tricks/wkb154-313",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/154",
+      "destination": "/tricks/wkb154-313",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/156",
+      "destination": "/tricks/wkb156-315",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/156",
+      "destination": "/tricks/wkb156-315",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/163",
+      "destination": "/tricks/wkb163-90210",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/163",
+      "destination": "/tricks/wkb163-90210",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/130",
+      "destination": "/tricks/wkb130-911",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/130",
+      "destination": "/tricks/wkb130-911",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/86",
+      "destination": "/tricks/wkb86-back-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/86",
+      "destination": "/tricks/wkb86-back-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/351",
+      "destination": "/tricks/wkb351-back-mobe-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/351",
+      "destination": "/tricks/wkb351-back-mobe-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/87",
+      "destination": "/tricks/wkb87-back-mobe-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/87",
+      "destination": "/tricks/wkb87-back-mobe-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/155",
+      "destination": "/tricks/wkb155-backside-313",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/155",
+      "destination": "/tricks/wkb155-backside-313",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/161",
+      "destination": "/tricks/wkb161-batwing-blind-3",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/161",
+      "destination": "/tricks/wkb161-batwing-blind-3",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/160",
+      "destination": "/tricks/wkb160-batwing-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/160",
+      "destination": "/tricks/wkb160-batwing-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/159",
+      "destination": "/tricks/wkb159-batwing",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/159",
+      "destination": "/tricks/wkb159-batwing",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/150",
+      "destination": "/tricks/wkb150-bee-sting",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/150",
+      "destination": "/tricks/wkb150-bee-sting",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/167",
+      "destination": "/tricks/wkb167-bel-air",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/167",
+      "destination": "/tricks/wkb167-bel-air",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/168",
+      "destination": "/tricks/wkb168-bel-air-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/168",
+      "destination": "/tricks/wkb168-bel-air-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/61",
+      "destination": "/tricks/wkb61-big-johnson",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/61",
+      "destination": "/tricks/wkb61-big-johnson",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/85",
+      "destination": "/tricks/wkb85-big-mac",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/85",
+      "destination": "/tricks/wkb85-big-mac",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/176",
+      "destination": "/tricks/wkb176-big-worm",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/176",
+      "destination": "/tricks/wkb176-big-worm",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/95",
+      "destination": "/tricks/wkb95-billion-dollar-baby",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/95",
+      "destination": "/tricks/wkb95-billion-dollar-baby",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/89",
+      "destination": "/tricks/wkb89-blender",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/89",
+      "destination": "/tricks/wkb89-blender",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/128",
+      "destination": "/tricks/wkb128-blind-judge",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/128",
+      "destination": "/tricks/wkb128-blind-judge",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/67",
+      "destination": "/tricks/wkb67-blind-pete",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/67",
+      "destination": "/tricks/wkb67-blind-pete",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/132",
+      "destination": "/tricks/wkb132-butter-fuko",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/132",
+      "destination": "/tricks/wkb132-butter-fuko",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/106",
+      "destination": "/tricks/wkb106-crook",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/106",
+      "destination": "/tricks/wkb106-crook",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/50",
+      "destination": "/tricks/wkb50-crow-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/50",
+      "destination": "/tricks/wkb50-crow-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/52",
+      "destination": "/tricks/wkb52-crow-mobe-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/52",
+      "destination": "/tricks/wkb52-crow-mobe-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/54",
+      "destination": "/tricks/wkb54-crow-mobe-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/54",
+      "destination": "/tricks/wkb54-crow-mobe-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/55",
+      "destination": "/tricks/wkb55-crow-mobe-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/55",
+      "destination": "/tricks/wkb55-crow-mobe-900",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/60",
+      "destination": "/tricks/wkb60-diesel",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/60",
+      "destination": "/tricks/wkb60-diesel",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/88",
+      "destination": "/tricks/wkb88-discombobulator",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/88",
+      "destination": "/tricks/wkb88-discombobulator",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/120",
+      "destination": "/tricks/wkb120-double-back-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/120",
+      "destination": "/tricks/wkb120-double-back-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/118",
+      "destination": "/tricks/wkb118-double-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/118",
+      "destination": "/tricks/wkb118-double-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/121",
+      "destination": "/tricks/wkb121-double-cab-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/121",
+      "destination": "/tricks/wkb121-double-cab-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/119",
+      "destination": "/tricks/wkb119-double-half-cab-roll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/119",
+      "destination": "/tricks/wkb119-double-half-cab-roll",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/361",
+      "destination": "/tricks/wkb361-double-heelside-roll-to-revert",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/361",
+      "destination": "/tricks/wkb361-double-heelside-roll-to-revert",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/122",
+      "destination": "/tricks/wkb122-double-roll-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/122",
+      "destination": "/tricks/wkb122-double-roll-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/145",
+      "destination": "/tricks/wkb145-double-s-bend",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/145",
+      "destination": "/tricks/wkb145-double-s-bend",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/126",
+      "destination": "/tricks/wkb126-double-toeside-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/126",
+      "destination": "/tricks/wkb126-double-toeside-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/57",
+      "destination": "/tricks/wkb57-dum-dum",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/57",
+      "destination": "/tricks/wkb57-dum-dum",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/58",
+      "destination": "/tricks/wkb58-dum-dum-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/58",
+      "destination": "/tricks/wkb58-dum-dum-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/59",
+      "destination": "/tricks/wkb59-dum-dum-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/59",
+      "destination": "/tricks/wkb59-dum-dum-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/169",
+      "destination": "/tricks/wkb169-eggroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/169",
+      "destination": "/tricks/wkb169-eggroll",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/49",
+      "destination": "/tricks/wkb49-elephant",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/49",
+      "destination": "/tricks/wkb49-elephant",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/112",
+      "destination": "/tricks/wkb112-fat-chance",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/112",
+      "destination": "/tricks/wkb112-fat-chance",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/280",
+      "destination": "/tricks/wkb280-fat-chance-5",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/280",
+      "destination": "/tricks/wkb280-fat-chance-5",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/74",
+      "destination": "/tricks/wkb74-flavor-flip",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/74",
+      "destination": "/tricks/wkb74-flavor-flip",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/117",
+      "destination": "/tricks/wkb117-front-blind-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/117",
+      "destination": "/tricks/wkb117-front-blind-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/107",
+      "destination": "/tricks/wkb107-front-flip",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/107",
+      "destination": "/tricks/wkb107-front-flip",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/109",
+      "destination": "/tricks/wkb109-front-flip-to-fakie",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/109",
+      "destination": "/tricks/wkb109-front-flip-to-fakie",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/115",
+      "destination": "/tricks/wkb115-front-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/115",
+      "destination": "/tricks/wkb115-front-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/73",
+      "destination": "/tricks/wkb73-fruit-loop",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/73",
+      "destination": "/tricks/wkb73-fruit-loop",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/68",
+      "destination": "/tricks/wkb68-g-spot",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/68",
+      "destination": "/tricks/wkb68-g-spot",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/179",
+      "destination": "/tricks/wkb179-half-cab-switch-heelside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/179",
+      "destination": "/tricks/wkb179-half-cab-switch-heelside-180",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/110",
+      "destination": "/tricks/wkb110-half-cab-front-flip",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/110",
+      "destination": "/tricks/wkb110-half-cab-front-flip",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/79",
+      "destination": "/tricks/wkb79-half-cab-roll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/79",
+      "destination": "/tricks/wkb79-half-cab-roll",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/116",
+      "destination": "/tricks/wkb116-hasselhoff",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/116",
+      "destination": "/tricks/wkb116-hasselhoff",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/147",
+      "destination": "/tricks/wkb147-heart-attack",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/147",
+      "destination": "/tricks/wkb147-heart-attack",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/6",
+      "destination": "/tricks/wkb6-heelside",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/6",
+      "destination": "/tricks/wkb6-heelside",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/17",
+      "destination": "/tricks/wkb17-heelside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/17",
+      "destination": "/tricks/wkb17-heelside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/9",
+      "destination": "/tricks/wkb9-heelside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/9",
+      "destination": "/tricks/wkb9-heelside-180",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/11",
+      "destination": "/tricks/wkb11-heelside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/11",
+      "destination": "/tricks/wkb11-heelside-360",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/12",
+      "destination": "/tricks/wkb12-heelside-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/12",
+      "destination": "/tricks/wkb12-heelside-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/15",
+      "destination": "/tricks/wkb15-heelside-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/15",
+      "destination": "/tricks/wkb15-heelside-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/16",
+      "destination": "/tricks/wkb16-heelside-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/16",
+      "destination": "/tricks/wkb16-heelside-900",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/75",
+      "destination": "/tricks/wkb75-heelside-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/75",
+      "destination": "/tricks/wkb75-heelside-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/37",
+      "destination": "/tricks/wkb37-heelside-backside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/37",
+      "destination": "/tricks/wkb37-heelside-backside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/27",
+      "destination": "/tricks/wkb27-heelside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/27",
+      "destination": "/tricks/wkb27-heelside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/28",
+      "destination": "/tricks/wkb28-heelside-backside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/28",
+      "destination": "/tricks/wkb28-heelside-backside-360",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/30",
+      "destination": "/tricks/wkb30-heelside-backside-360-over-the-line",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/30",
+      "destination": "/tricks/wkb30-heelside-backside-360-over-the-line",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/31",
+      "destination": "/tricks/wkb31-heelside-backside-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/31",
+      "destination": "/tricks/wkb31-heelside-backside-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/35",
+      "destination": "/tricks/wkb35-heelside-backside-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/35",
+      "destination": "/tricks/wkb35-heelside-backside-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/36",
+      "destination": "/tricks/wkb36-heelside-backside-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/36",
+      "destination": "/tricks/wkb36-heelside-backside-900",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/348",
+      "destination": "/tricks/wkb348-heelside-chicken-salad-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/348",
+      "destination": "/tricks/wkb348-heelside-chicken-salad-glide",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/134",
+      "destination": "/tricks/wkb134-heelside-indy-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/134",
+      "destination": "/tricks/wkb134-heelside-indy-glide",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/131",
+      "destination": "/tricks/wkb131-heelside-method-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/131",
+      "destination": "/tricks/wkb131-heelside-method-glide",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/76",
+      "destination": "/tricks/wkb76-heelside-mexican-roll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/76",
+      "destination": "/tricks/wkb76-heelside-mexican-roll",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/136",
+      "destination": "/tricks/wkb136-heelside-nuclear-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/136",
+      "destination": "/tricks/wkb136-heelside-nuclear-glide",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/77",
+      "destination": "/tricks/wkb77-heelside-roll-to-revert",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/77",
+      "destination": "/tricks/wkb77-heelside-roll-to-revert",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/10",
+      "destination": "/tricks/wkb10-heelside-shifty",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/10",
+      "destination": "/tricks/wkb10-heelside-shifty",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/135",
+      "destination": "/tricks/wkb135-heelside-stalefish-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/135",
+      "destination": "/tricks/wkb135-heelside-stalefish-glide",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/133",
+      "destination": "/tricks/wkb133-heelside-tail-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/133",
+      "destination": "/tricks/wkb133-heelside-tail-glide",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/177",
+      "destination": "/tricks/wkb177-heelside-wake-jump",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/177",
+      "destination": "/tricks/wkb177-heelside-wake-jump",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/152",
+      "destination": "/tricks/wkb152-hinterberger",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/152",
+      "destination": "/tricks/wkb152-hinterberger",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/140",
+      "destination": "/tricks/wkb140-hoochie-313",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/140",
+      "destination": "/tricks/wkb140-hoochie-313",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/142",
+      "destination": "/tricks/wkb142-hoochie-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/142",
+      "destination": "/tricks/wkb142-hoochie-blind",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/138",
+      "destination": "/tricks/wkb138-hoochie-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/138",
+      "destination": "/tricks/wkb138-hoochie-glide",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/141",
+      "destination": "/tricks/wkb141-hoochie-krypt",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/141",
+      "destination": "/tricks/wkb141-hoochie-krypt",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/8",
+      "destination": "/tricks/wkb8-inside-out",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/8",
+      "destination": "/tricks/wkb8-inside-out",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/99",
+      "destination": "/tricks/wkb99-iron-cross",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/99",
+      "destination": "/tricks/wkb99-iron-cross",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/80",
+      "destination": "/tricks/wkb80-kgb",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/80",
+      "destination": "/tricks/wkb80-kgb",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/83",
+      "destination": "/tricks/wkb83-kgb-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/83",
+      "destination": "/tricks/wkb83-kgb-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/84",
+      "destination": "/tricks/wkb84-kgb-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/84",
+      "destination": "/tricks/wkb84-kgb-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/129",
+      "destination": "/tricks/wkb129-krypt",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/129",
+      "destination": "/tricks/wkb129-krypt",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/364",
+      "destination": "/tricks/wkb364-landing-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/364",
+      "destination": "/tricks/wkb364-landing-blind",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/97",
+      "destination": "/tricks/wkb97-moby-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/97",
+      "destination": "/tricks/wkb97-moby-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/98",
+      "destination": "/tricks/wkb98-moby-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/98",
+      "destination": "/tricks/wkb98-moby-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/96",
+      "destination": "/tricks/wkb96-moby-dick",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/96",
+      "destination": "/tricks/wkb96-moby-dick",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/173",
+      "destination": "/tricks/wkb173-no-hander",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/173",
+      "destination": "/tricks/wkb173-no-hander",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/164",
+      "destination": "/tricks/wkb164-oh-really",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/164",
+      "destination": "/tricks/wkb164-oh-really",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/139",
+      "destination": "/tricks/wkb139-ohh",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/139",
+      "destination": "/tricks/wkb139-ohh",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/346",
+      "destination": "/tricks/wkb346-ollie",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/346",
+      "destination": "/tricks/wkb346-ollie",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/347",
+      "destination": "/tricks/wkb347-ollie-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/347",
+      "destination": "/tricks/wkb347-ollie-180",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/349",
+      "destination": "/tricks/wkb349-ollie-heelside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/349",
+      "destination": "/tricks/wkb349-ollie-heelside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/355",
+      "destination": "/tricks/wkb355-ollie-toeside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/355",
+      "destination": "/tricks/wkb355-ollie-toeside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/174",
+      "destination": "/tricks/wkb174-one-footer",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/174",
+      "destination": "/tricks/wkb174-one-footer",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/5",
+      "destination": "/tricks/wkb5-one-wake",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/5",
+      "destination": "/tricks/wkb5-one-wake",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/34",
+      "destination": "/tricks/wkb34-orbital-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/34",
+      "destination": "/tricks/wkb34-orbital-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/137",
+      "destination": "/tricks/wkb137-oriental",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/137",
+      "destination": "/tricks/wkb137-oriental",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/365",
+      "destination": "/tricks/wkb365-osmond",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/365",
+      "destination": "/tricks/wkb365-osmond",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/64",
+      "destination": "/tricks/wkb64-pete-rose",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/64",
+      "destination": "/tricks/wkb64-pete-rose",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/65",
+      "destination": "/tricks/wkb65-pete-rose-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/65",
+      "destination": "/tricks/wkb65-pete-rose-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/127",
+      "destination": "/tricks/wkb127-raley",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/127",
+      "destination": "/tricks/wkb127-raley",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/114",
+      "destination": "/tricks/wkb114-remix",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/114",
+      "destination": "/tricks/wkb114-remix",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/78",
+      "destination": "/tricks/wkb78-roll-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/78",
+      "destination": "/tricks/wkb78-roll-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/90",
+      "destination": "/tricks/wkb90-rotary-dial",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/90",
+      "destination": "/tricks/wkb90-rotary-dial",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/91",
+      "destination": "/tricks/wkb91-rotary-dial-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/91",
+      "destination": "/tricks/wkb91-rotary-dial-900",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/143",
+      "destination": "/tricks/wkb143-s-bend",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/143",
+      "destination": "/tricks/wkb143-s-bend",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/146",
+      "destination": "/tricks/wkb146-s-bend-7",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/146",
+      "destination": "/tricks/wkb146-s-bend-7",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/48",
+      "destination": "/tricks/wkb48-scarecrow",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/48",
+      "destination": "/tricks/wkb48-scarecrow",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/51",
+      "destination": "/tricks/wkb51-skeezer",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/51",
+      "destination": "/tricks/wkb51-skeezer",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/53",
+      "destination": "/tricks/wkb53-skeezer-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/53",
+      "destination": "/tricks/wkb53-skeezer-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/223",
+      "destination": "/tricks/wkb223-skeezer-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/223",
+      "destination": "/tricks/wkb223-skeezer-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/224",
+      "destination": "/tricks/wkb224-skeezer-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/224",
+      "destination": "/tricks/wkb224-skeezer-900",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/165",
+      "destination": "/tricks/wkb165-skud",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/165",
+      "destination": "/tricks/wkb165-skud",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/111",
+      "destination": "/tricks/wkb111-slim-chance",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/111",
+      "destination": "/tricks/wkb111-slim-chance",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/113",
+      "destination": "/tricks/wkb113-slim-chance-5",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/113",
+      "destination": "/tricks/wkb113-slim-chance-5",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/108",
+      "destination": "/tricks/wkb108-slowball",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/108",
+      "destination": "/tricks/wkb108-slowball",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/70",
+      "destination": "/tricks/wkb70-slurpee",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/70",
+      "destination": "/tricks/wkb70-slurpee",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/148",
+      "destination": "/tricks/wkb148-s-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/148",
+      "destination": "/tricks/wkb148-s-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/69",
+      "destination": "/tricks/wkb69-special-k",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/69",
+      "destination": "/tricks/wkb69-special-k",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/123",
+      "destination": "/tricks/wkb123-speedball",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/123",
+      "destination": "/tricks/wkb123-speedball",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/105",
+      "destination": "/tricks/wkb105-spiderman",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/105",
+      "destination": "/tricks/wkb105-spiderman",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/171",
+      "destination": "/tricks/wkb171-square-raley",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/171",
+      "destination": "/tricks/wkb171-square-raley",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/144",
+      "destination": "/tricks/wkb144-s-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/144",
+      "destination": "/tricks/wkb144-s-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/151",
+      "destination": "/tricks/wkb151-suicide-raley",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/151",
+      "destination": "/tricks/wkb151-suicide-raley",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/2",
+      "destination": "/tricks/wkb2-surface-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/2",
+      "destination": "/tricks/wkb2-surface-180",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/3",
+      "destination": "/tricks/wkb3-surface-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/3",
+      "destination": "/tricks/wkb3-surface-360",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/357",
+      "destination": "/tricks/wkb357-surface-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/357",
+      "destination": "/tricks/wkb357-surface-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/358",
+      "destination": "/tricks/wkb358-surface-backside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/358",
+      "destination": "/tricks/wkb358-surface-backside-360",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/339",
+      "destination": "/tricks/wkb339-switch-009",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/339",
+      "destination": "/tricks/wkb339-switch-009",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/320",
+      "destination": "/tricks/wkb320-switch-118",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/320",
+      "destination": "/tricks/wkb320-switch-118",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/215",
+      "destination": "/tricks/wkb215-switch-3-to-1",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/215",
+      "destination": "/tricks/wkb215-switch-3-to-1",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/216",
+      "destination": "/tricks/wkb216-switch-3-to-3-or-zero",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/216",
+      "destination": "/tricks/wkb216-switch-3-to-3-or-zero",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/321",
+      "destination": "/tricks/wkb321-switch-313",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/321",
+      "destination": "/tricks/wkb321-switch-313",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/323",
+      "destination": "/tricks/wkb323-switch-315",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/323",
+      "destination": "/tricks/wkb323-switch-315",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/330",
+      "destination": "/tricks/wkb330-switch-90210",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/330",
+      "destination": "/tricks/wkb330-switch-90210",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/297",
+      "destination": "/tricks/wkb297-switch-911",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/297",
+      "destination": "/tricks/wkb297-switch-911",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/253",
+      "destination": "/tricks/wkb253-switch-back-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/253",
+      "destination": "/tricks/wkb253-switch-back-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/352",
+      "destination": "/tricks/wkb352-switch-back-mobe-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/352",
+      "destination": "/tricks/wkb352-switch-back-mobe-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/254",
+      "destination": "/tricks/wkb254-switch-back-mobe-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/254",
+      "destination": "/tricks/wkb254-switch-back-mobe-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/322",
+      "destination": "/tricks/wkb322-switch-backside-313",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/322",
+      "destination": "/tricks/wkb322-switch-backside-313",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/328",
+      "destination": "/tricks/wkb328-switch-batwing-blind-3",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/328",
+      "destination": "/tricks/wkb328-switch-batwing-blind-3",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/327",
+      "destination": "/tricks/wkb327-switch-batwing-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/327",
+      "destination": "/tricks/wkb327-switch-batwing-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/326",
+      "destination": "/tricks/wkb326-switch-batwing",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/326",
+      "destination": "/tricks/wkb326-switch-batwing",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/317",
+      "destination": "/tricks/wkb317-switch-bee-sting",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/317",
+      "destination": "/tricks/wkb317-switch-bee-sting",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/334",
+      "destination": "/tricks/wkb334-switch-bel-air",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/334",
+      "destination": "/tricks/wkb334-switch-bel-air",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/335",
+      "destination": "/tricks/wkb335-switch-bel-air-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/335",
+      "destination": "/tricks/wkb335-switch-bel-air-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/230",
+      "destination": "/tricks/wkb230-switch-big-johnson",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/230",
+      "destination": "/tricks/wkb230-switch-big-johnson",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/252",
+      "destination": "/tricks/wkb252-switch-big-mac",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/252",
+      "destination": "/tricks/wkb252-switch-big-mac",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/342",
+      "destination": "/tricks/wkb342-switch-big-worm",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/342",
+      "destination": "/tricks/wkb342-switch-big-worm",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/262",
+      "destination": "/tricks/wkb262-switch-billion-dollar-baby",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/262",
+      "destination": "/tricks/wkb262-switch-billion-dollar-baby",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/256",
+      "destination": "/tricks/wkb256-switch-blender",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/256",
+      "destination": "/tricks/wkb256-switch-blender",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/295",
+      "destination": "/tricks/wkb295-switch-blind-judge",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/295",
+      "destination": "/tricks/wkb295-switch-blind-judge",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/236",
+      "destination": "/tricks/wkb236-switch-blind-pete",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/236",
+      "destination": "/tricks/wkb236-switch-blind-pete",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/299",
+      "destination": "/tricks/wkb299-switch-butter-fuko",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/299",
+      "destination": "/tricks/wkb299-switch-butter-fuko",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/273",
+      "destination": "/tricks/wkb273-switch-crook",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/273",
+      "destination": "/tricks/wkb273-switch-crook",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/229",
+      "destination": "/tricks/wkb229-switch-diesel",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/229",
+      "destination": "/tricks/wkb229-switch-diesel",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/255",
+      "destination": "/tricks/wkb255-switch-discombobulator",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/255",
+      "destination": "/tricks/wkb255-switch-discombobulator",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/287",
+      "destination": "/tricks/wkb287-switch-double-back-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/287",
+      "destination": "/tricks/wkb287-switch-double-back-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/285",
+      "destination": "/tricks/wkb285-switch-double-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/285",
+      "destination": "/tricks/wkb285-switch-double-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/289",
+      "destination": "/tricks/wkb289-switch-double-roll-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/289",
+      "destination": "/tricks/wkb289-switch-double-roll-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/312",
+      "destination": "/tricks/wkb312-switch-double-s-bend",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/312",
+      "destination": "/tricks/wkb312-switch-double-s-bend",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/293",
+      "destination": "/tricks/wkb293-switch-double-toeside-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/293",
+      "destination": "/tricks/wkb293-switch-double-toeside-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/226",
+      "destination": "/tricks/wkb226-switch-dum-dum",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/226",
+      "destination": "/tricks/wkb226-switch-dum-dum",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/227",
+      "destination": "/tricks/wkb227-switch-dum-dum-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/227",
+      "destination": "/tricks/wkb227-switch-dum-dum-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/228",
+      "destination": "/tricks/wkb228-switch-dum-dum-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/228",
+      "destination": "/tricks/wkb228-switch-dum-dum-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/336",
+      "destination": "/tricks/wkb336-switch-eggroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/336",
+      "destination": "/tricks/wkb336-switch-eggroll",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/218",
+      "destination": "/tricks/wkb218-switch-elephant",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/218",
+      "destination": "/tricks/wkb218-switch-elephant",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/243",
+      "destination": "/tricks/wkb243-switch-flavor-flip",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/243",
+      "destination": "/tricks/wkb243-switch-flavor-flip",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/284",
+      "destination": "/tricks/wkb284-switch-front-blind-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/284",
+      "destination": "/tricks/wkb284-switch-front-blind-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/274",
+      "destination": "/tricks/wkb274-switch-front-flip",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/274",
+      "destination": "/tricks/wkb274-switch-front-flip",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/276",
+      "destination": "/tricks/wkb276-switch-front-flip-to-fakie",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/276",
+      "destination": "/tricks/wkb276-switch-front-flip-to-fakie",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/282",
+      "destination": "/tricks/wkb282-switch-front-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/282",
+      "destination": "/tricks/wkb282-switch-front-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/242",
+      "destination": "/tricks/wkb242-switch-fruit-loop",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/242",
+      "destination": "/tricks/wkb242-switch-fruit-loop",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/237",
+      "destination": "/tricks/wkb237-switch-g-spot",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/237",
+      "destination": "/tricks/wkb237-switch-g-spot",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/314",
+      "destination": "/tricks/wkb314-switch-heart-attack",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/314",
+      "destination": "/tricks/wkb314-switch-heart-attack",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/183",
+      "destination": "/tricks/wkb183-switch-heelside",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/183",
+      "destination": "/tricks/wkb183-switch-heelside",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/192",
+      "destination": "/tricks/wkb192-switch-heelside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/192",
+      "destination": "/tricks/wkb192-switch-heelside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/186",
+      "destination": "/tricks/wkb186-switch-heelside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/186",
+      "destination": "/tricks/wkb186-switch-heelside-180",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/188",
+      "destination": "/tricks/wkb188-switch-heelside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/188",
+      "destination": "/tricks/wkb188-switch-heelside-360",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/189",
+      "destination": "/tricks/wkb189-switch-heelside-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/189",
+      "destination": "/tricks/wkb189-switch-heelside-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/190",
+      "destination": "/tricks/wkb190-switch-heelside-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/190",
+      "destination": "/tricks/wkb190-switch-heelside-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/191",
+      "destination": "/tricks/wkb191-switch-heelside-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/191",
+      "destination": "/tricks/wkb191-switch-heelside-900",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/244",
+      "destination": "/tricks/wkb244-switch-heelside-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/244",
+      "destination": "/tricks/wkb244-switch-heelside-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/208",
+      "destination": "/tricks/wkb208-switch-heelside-backside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/208",
+      "destination": "/tricks/wkb208-switch-heelside-backside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/201",
+      "destination": "/tricks/wkb201-switch-heelside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/201",
+      "destination": "/tricks/wkb201-switch-heelside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/202",
+      "destination": "/tricks/wkb202-switch-heelside-backside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/202",
+      "destination": "/tricks/wkb202-switch-heelside-backside-360",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/203",
+      "destination": "/tricks/wkb203-switch-heelside-backside-360-over-the-line",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/203",
+      "destination": "/tricks/wkb203-switch-heelside-backside-360-over-the-line",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/204",
+      "destination": "/tricks/wkb204-switch-heelside-backside-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/204",
+      "destination": "/tricks/wkb204-switch-heelside-backside-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/206",
+      "destination": "/tricks/wkb206-switch-heelside-backside-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/206",
+      "destination": "/tricks/wkb206-switch-heelside-backside-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/207",
+      "destination": "/tricks/wkb207-switch-heelside-backside-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/207",
+      "destination": "/tricks/wkb207-switch-heelside-backside-900",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/301",
+      "destination": "/tricks/wkb301-switch-heelside-indy-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/301",
+      "destination": "/tricks/wkb301-switch-heelside-indy-glide",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/298",
+      "destination": "/tricks/wkb298-switch-heelside-method-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/298",
+      "destination": "/tricks/wkb298-switch-heelside-method-glide",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/245",
+      "destination": "/tricks/wkb245-switch-heelside-mexican-roll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/245",
+      "destination": "/tricks/wkb245-switch-heelside-mexican-roll",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/303",
+      "destination": "/tricks/wkb303-switch-heelside-nuclear-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/303",
+      "destination": "/tricks/wkb303-switch-heelside-nuclear-glide",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/246",
+      "destination": "/tricks/wkb246-switch-heelside-roll-to-revert",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/246",
+      "destination": "/tricks/wkb246-switch-heelside-roll-to-revert",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/187",
+      "destination": "/tricks/wkb187-switch-heelside-shifty",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/187",
+      "destination": "/tricks/wkb187-switch-heelside-shifty",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/302",
+      "destination": "/tricks/wkb302-switch-heelside-stalefish-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/302",
+      "destination": "/tricks/wkb302-switch-heelside-stalefish-glide",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/300",
+      "destination": "/tricks/wkb300-switch-heelside-tail-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/300",
+      "destination": "/tricks/wkb300-switch-heelside-tail-glide",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/343",
+      "destination": "/tricks/wkb343-switch-heelside-wake-jump",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/343",
+      "destination": "/tricks/wkb343-switch-heelside-wake-jump",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/319",
+      "destination": "/tricks/wkb319-switch-hinterberger",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/319",
+      "destination": "/tricks/wkb319-switch-hinterberger",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/307",
+      "destination": "/tricks/wkb307-switch-hoochie-313",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/307",
+      "destination": "/tricks/wkb307-switch-hoochie-313",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/309",
+      "destination": "/tricks/wkb309-switch-hoochie-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/309",
+      "destination": "/tricks/wkb309-switch-hoochie-blind",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/305",
+      "destination": "/tricks/wkb305-switch-hoochie-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/305",
+      "destination": "/tricks/wkb305-switch-hoochie-glide",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/308",
+      "destination": "/tricks/wkb308-switch-hoochie-krypt",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/308",
+      "destination": "/tricks/wkb308-switch-hoochie-krypt",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/185",
+      "destination": "/tricks/wkb185-switch-inside-out",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/185",
+      "destination": "/tricks/wkb185-switch-inside-out",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/266",
+      "destination": "/tricks/wkb266-switch-iron-cross",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/266",
+      "destination": "/tricks/wkb266-switch-iron-cross",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/249",
+      "destination": "/tricks/wkb249-switch-kgb",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/249",
+      "destination": "/tricks/wkb249-switch-kgb",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/250",
+      "destination": "/tricks/wkb250-switch-kgb-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/250",
+      "destination": "/tricks/wkb250-switch-kgb-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/251",
+      "destination": "/tricks/wkb251-switch-kgb-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/251",
+      "destination": "/tricks/wkb251-switch-kgb-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/296",
+      "destination": "/tricks/wkb296-switch-krypt",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/296",
+      "destination": "/tricks/wkb296-switch-krypt",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/264",
+      "destination": "/tricks/wkb264-switch-moby-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/264",
+      "destination": "/tricks/wkb264-switch-moby-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/265",
+      "destination": "/tricks/wkb265-switch-moby-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/265",
+      "destination": "/tricks/wkb265-switch-moby-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/263",
+      "destination": "/tricks/wkb263-switch-moby-dick",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/263",
+      "destination": "/tricks/wkb263-switch-moby-dick",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/340",
+      "destination": "/tricks/wkb340-switch-no-hander",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/340",
+      "destination": "/tricks/wkb340-switch-no-hander",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/331",
+      "destination": "/tricks/wkb331-switch-oh-really",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/331",
+      "destination": "/tricks/wkb331-switch-oh-really",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/306",
+      "destination": "/tricks/wkb306-switch-ohh",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/306",
+      "destination": "/tricks/wkb306-switch-ohh",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/354",
+      "destination": "/tricks/wkb354-switch-ollie",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/354",
+      "destination": "/tricks/wkb354-switch-ollie",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/353",
+      "destination": "/tricks/wkb353-switch-ollie-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/353",
+      "destination": "/tricks/wkb353-switch-ollie-180",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/350",
+      "destination": "/tricks/wkb350-switch-ollie-heelside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/350",
+      "destination": "/tricks/wkb350-switch-ollie-heelside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/356",
+      "destination": "/tricks/wkb356-switch-ollie-toeside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/356",
+      "destination": "/tricks/wkb356-switch-ollie-toeside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/341",
+      "destination": "/tricks/wkb341-switch-one-footer",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/341",
+      "destination": "/tricks/wkb341-switch-one-footer",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/182",
+      "destination": "/tricks/wkb182-switch-one-wake",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/182",
+      "destination": "/tricks/wkb182-switch-one-wake",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/205",
+      "destination": "/tricks/wkb205-switch-orbital-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/205",
+      "destination": "/tricks/wkb205-switch-orbital-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/304",
+      "destination": "/tricks/wkb304-switch-oriental",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/304",
+      "destination": "/tricks/wkb304-switch-oriental",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/233",
+      "destination": "/tricks/wkb233-switch-pete-rose",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/233",
+      "destination": "/tricks/wkb233-switch-pete-rose",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/234",
+      "destination": "/tricks/wkb234-switch-pete-rose-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/234",
+      "destination": "/tricks/wkb234-switch-pete-rose-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/294",
+      "destination": "/tricks/wkb294-switch-raley",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/294",
+      "destination": "/tricks/wkb294-switch-raley",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/281",
+      "destination": "/tricks/wkb281-switch-remix",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/281",
+      "destination": "/tricks/wkb281-switch-remix",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/247",
+      "destination": "/tricks/wkb247-switch-roll-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/247",
+      "destination": "/tricks/wkb247-switch-roll-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/257",
+      "destination": "/tricks/wkb257-switch-rotary-dial",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/257",
+      "destination": "/tricks/wkb257-switch-rotary-dial",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/258",
+      "destination": "/tricks/wkb258-switch-rotary-dial-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/258",
+      "destination": "/tricks/wkb258-switch-rotary-dial-900",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/310",
+      "destination": "/tricks/wkb310-switch-s-bend",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/310",
+      "destination": "/tricks/wkb310-switch-s-bend",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/313",
+      "destination": "/tricks/wkb313-switch-s-bend-7",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/313",
+      "destination": "/tricks/wkb313-switch-s-bend-7",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/217",
+      "destination": "/tricks/wkb217-switch-scarecrow",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/217",
+      "destination": "/tricks/wkb217-switch-scarecrow",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/275",
+      "destination": "/tricks/wkb275-switch-slowball",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/275",
+      "destination": "/tricks/wkb275-switch-slowball",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/239",
+      "destination": "/tricks/wkb239-switch-slurpee",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/239",
+      "destination": "/tricks/wkb239-switch-slurpee",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/315",
+      "destination": "/tricks/wkb315-switch-s-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/315",
+      "destination": "/tricks/wkb315-switch-s-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/238",
+      "destination": "/tricks/wkb238-switch-special-k",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/238",
+      "destination": "/tricks/wkb238-switch-special-k",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/290",
+      "destination": "/tricks/wkb290-switch-speedball",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/290",
+      "destination": "/tricks/wkb290-switch-speedball",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/272",
+      "destination": "/tricks/wkb272-switch-spiderman",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/272",
+      "destination": "/tricks/wkb272-switch-spiderman",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/338",
+      "destination": "/tricks/wkb338-switch-square-raley",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/338",
+      "destination": "/tricks/wkb338-switch-square-raley",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/311",
+      "destination": "/tricks/wkb311-switch-s-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/311",
+      "destination": "/tricks/wkb311-switch-s-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/318",
+      "destination": "/tricks/wkb318-switch-suicide-raley",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/318",
+      "destination": "/tricks/wkb318-switch-suicide-raley",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/180",
+      "destination": "/tricks/wkb180-switch-surface-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/180",
+      "destination": "/tricks/wkb180-switch-surface-180",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/181",
+      "destination": "/tricks/wkb181-switch-surface-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/181",
+      "destination": "/tricks/wkb181-switch-surface-360",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/359",
+      "destination": "/tricks/wkb359-switch-surface-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/359",
+      "destination": "/tricks/wkb359-switch-surface-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/360",
+      "destination": "/tricks/wkb360-switch-surface-backside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/360",
+      "destination": "/tricks/wkb360-switch-surface-backside-360",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/259",
+      "destination": "/tricks/wkb259-switch-tantrum",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/259",
+      "destination": "/tricks/wkb259-switch-tantrum",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/260",
+      "destination": "/tricks/wkb260-switch-tantrum-to-blind-or-switch-t-to-b",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/260",
+      "destination": "/tricks/wkb260-switch-tantrum-to-blind-or-switch-t-to-b",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/261",
+      "destination": "/tricks/wkb261-switch-tantrum-to-normal",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/261",
+      "destination": "/tricks/wkb261-switch-tantrum-to-normal",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/291",
+      "destination": "/tricks/wkb291-switch-temper-tantrum",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/291",
+      "destination": "/tricks/wkb291-switch-temper-tantrum",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/184",
+      "destination": "/tricks/wkb184-switch-toeside",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/184",
+      "destination": "/tricks/wkb184-switch-toeside",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/200",
+      "destination": "/tricks/wkb200-switch-toeside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/200",
+      "destination": "/tricks/wkb200-switch-toeside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/193",
+      "destination": "/tricks/wkb193-switch-toeside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/193",
+      "destination": "/tricks/wkb193-switch-toeside-180",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/333",
+      "destination": "/tricks/wkb333-switch-toeside-313-back",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/333",
+      "destination": "/tricks/wkb333-switch-toeside-313-back",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/195",
+      "destination": "/tricks/wkb195-switch-toeside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/195",
+      "destination": "/tricks/wkb195-switch-toeside-360",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/196",
+      "destination": "/tricks/wkb196-switch-toeside-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/196",
+      "destination": "/tricks/wkb196-switch-toeside-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/197",
+      "destination": "/tricks/wkb197-switch-toeside-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/197",
+      "destination": "/tricks/wkb197-switch-toeside-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/199",
+      "destination": "/tricks/wkb199-switch-toeside-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/199",
+      "destination": "/tricks/wkb199-switch-toeside-900",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/231",
+      "destination": "/tricks/wkb231-switch-toeside-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/231",
+      "destination": "/tricks/wkb231-switch-toeside-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/232",
+      "destination": "/tricks/wkb232-switch-toeside-backroll-to-normal",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/232",
+      "destination": "/tricks/wkb232-switch-toeside-backroll-to-normal",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/214",
+      "destination": "/tricks/wkb214-switch-toeside-backside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/214",
+      "destination": "/tricks/wkb214-switch-toeside-backside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/209",
+      "destination": "/tricks/wkb209-switch-toeside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/209",
+      "destination": "/tricks/wkb209-switch-toeside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/210",
+      "destination": "/tricks/wkb210-switch-toeside-backside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/210",
+      "destination": "/tricks/wkb210-switch-toeside-backside-360",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/211",
+      "destination": "/tricks/wkb211-switch-toeside-backside-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/211",
+      "destination": "/tricks/wkb211-switch-toeside-backside-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/212",
+      "destination": "/tricks/wkb212-switch-toeside-backside-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/212",
+      "destination": "/tricks/wkb212-switch-toeside-backside-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/213",
+      "destination": "/tricks/wkb213-switch-toeside-backside-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/213",
+      "destination": "/tricks/wkb213-switch-toeside-backside-900",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/325",
+      "destination": "/tricks/wkb325-switch-toeside-blind-judge",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/325",
+      "destination": "/tricks/wkb325-switch-toeside-blind-judge",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/240",
+      "destination": "/tricks/wkb240-switch-toeside-front-flip",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/240",
+      "destination": "/tricks/wkb240-switch-toeside-front-flip",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/241",
+      "destination": "/tricks/wkb241-switch-toeside-front-flip-to-normal",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/241",
+      "destination": "/tricks/wkb241-switch-toeside-front-flip-to-normal",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/198",
+      "destination": "/tricks/wkb198-switch-toeside-frontroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/198",
+      "destination": "/tricks/wkb198-switch-toeside-frontroll",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/329",
+      "destination": "/tricks/wkb329-switch-toeside-krypt",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/329",
+      "destination": "/tricks/wkb329-switch-toeside-krypt",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/324",
+      "destination": "/tricks/wkb324-switch-toeside-raley",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/324",
+      "destination": "/tricks/wkb324-switch-toeside-raley",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/194",
+      "destination": "/tricks/wkb194-switch-toeside-shifty",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/194",
+      "destination": "/tricks/wkb194-switch-toeside-shifty",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/363",
+      "destination": "/tricks/wkb363-switch-toeside-underflip",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/363",
+      "destination": "/tricks/wkb363-switch-toeside-underflip",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/344",
+      "destination": "/tricks/wkb344-switch-toeside-wake-jump",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/344",
+      "destination": "/tricks/wkb344-switch-toeside-wake-jump",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/225",
+      "destination": "/tricks/wkb225-switch-tootsie-roll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/225",
+      "destination": "/tricks/wkb225-switch-tootsie-roll",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/292",
+      "destination": "/tricks/wkb292-switch-trifecta",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/292",
+      "destination": "/tricks/wkb292-switch-trifecta",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/337",
+      "destination": "/tricks/wkb337-switch-tweetybird",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/337",
+      "destination": "/tricks/wkb337-switch-tweetybird",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/316",
+      "destination": "/tricks/wkb316-switch-vulcan",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/316",
+      "destination": "/tricks/wkb316-switch-vulcan",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/268",
+      "destination": "/tricks/wkb268-switch-whirlybird",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/268",
+      "destination": "/tricks/wkb268-switch-whirlybird",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/269",
+      "destination": "/tricks/wkb269-switch-whirlybird-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/269",
+      "destination": "/tricks/wkb269-switch-whirlybird-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/270",
+      "destination": "/tricks/wkb270-switch-whirlybird-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/270",
+      "destination": "/tricks/wkb270-switch-whirlybird-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/271",
+      "destination": "/tricks/wkb271-switch-whirlydick",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/271",
+      "destination": "/tricks/wkb271-switch-whirlydick",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/267",
+      "destination": "/tricks/wkb267-switch-wrecking-ball",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/267",
+      "destination": "/tricks/wkb267-switch-wrecking-ball",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/92",
+      "destination": "/tricks/wkb92-tantrum",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/92",
+      "destination": "/tricks/wkb92-tantrum",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/93",
+      "destination": "/tricks/wkb93-tantrum-to-blind-or-t-to-b",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/93",
+      "destination": "/tricks/wkb93-tantrum-to-blind-or-t-to-b",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/94",
+      "destination": "/tricks/wkb94-tantrum-to-fakie",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/94",
+      "destination": "/tricks/wkb94-tantrum-to-fakie",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/124",
+      "destination": "/tricks/wkb124-temper-tantrum",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/124",
+      "destination": "/tricks/wkb124-temper-tantrum",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/7",
+      "destination": "/tricks/wkb7-toeside",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/7",
+      "destination": "/tricks/wkb7-toeside",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/26",
+      "destination": "/tricks/wkb26-toeside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/26",
+      "destination": "/tricks/wkb26-toeside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/18",
+      "destination": "/tricks/wkb18-toeside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/18",
+      "destination": "/tricks/wkb18-toeside-180",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/166",
+      "destination": "/tricks/wkb166-toeside-313-back",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/166",
+      "destination": "/tricks/wkb166-toeside-313-back",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/20",
+      "destination": "/tricks/wkb20-toeside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/20",
+      "destination": "/tricks/wkb20-toeside-360",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/21",
+      "destination": "/tricks/wkb21-toeside-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/21",
+      "destination": "/tricks/wkb21-toeside-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/23",
+      "destination": "/tricks/wkb23-toeside-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/23",
+      "destination": "/tricks/wkb23-toeside-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/25",
+      "destination": "/tricks/wkb25-toeside-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/25",
+      "destination": "/tricks/wkb25-toeside-900",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/62",
+      "destination": "/tricks/wkb62-toeside-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/62",
+      "destination": "/tricks/wkb62-toeside-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/63",
+      "destination": "/tricks/wkb63-toeside-backroll-to-revert",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/63",
+      "destination": "/tricks/wkb63-toeside-backroll-to-revert",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/45",
+      "destination": "/tricks/wkb45-toeside-backside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/45",
+      "destination": "/tricks/wkb45-toeside-backside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/38",
+      "destination": "/tricks/wkb38-toeside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/38",
+      "destination": "/tricks/wkb38-toeside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/40",
+      "destination": "/tricks/wkb40-toeside-backside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/40",
+      "destination": "/tricks/wkb40-toeside-backside-360",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/42",
+      "destination": "/tricks/wkb42-toeside-backside-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/42",
+      "destination": "/tricks/wkb42-toeside-backside-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/43",
+      "destination": "/tricks/wkb43-toeside-backside-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/43",
+      "destination": "/tricks/wkb43-toeside-backside-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/44",
+      "destination": "/tricks/wkb44-toeside-backside-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/44",
+      "destination": "/tricks/wkb44-toeside-backside-900",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/158",
+      "destination": "/tricks/wkb158-toeside-blind-judge",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/158",
+      "destination": "/tricks/wkb158-toeside-blind-judge",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/71",
+      "destination": "/tricks/wkb71-toeside-front-flip",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/71",
+      "destination": "/tricks/wkb71-toeside-front-flip",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/72",
+      "destination": "/tricks/wkb72-toeside-front-flip-to-fakie",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/72",
+      "destination": "/tricks/wkb72-toeside-front-flip-to-fakie",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/24",
+      "destination": "/tricks/wkb24-toeside-frontroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/24",
+      "destination": "/tricks/wkb24-toeside-frontroll",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/162",
+      "destination": "/tricks/wkb162-toeside-krypt",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/162",
+      "destination": "/tricks/wkb162-toeside-krypt",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/157",
+      "destination": "/tricks/wkb157-toeside-raley",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/157",
+      "destination": "/tricks/wkb157-toeside-raley",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/19",
+      "destination": "/tricks/wkb19-toeside-shifty",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/19",
+      "destination": "/tricks/wkb19-toeside-shifty",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/362",
+      "destination": "/tricks/wkb362-toeside-underflip",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/362",
+      "destination": "/tricks/wkb362-toeside-underflip",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/178",
+      "destination": "/tricks/wkb178-toeside-wake-jump",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/178",
+      "destination": "/tricks/wkb178-toeside-wake-jump",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/56",
+      "destination": "/tricks/wkb56-tootsie-roll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/56",
+      "destination": "/tricks/wkb56-tootsie-roll",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/125",
+      "destination": "/tricks/wkb125-trifecta",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/125",
+      "destination": "/tricks/wkb125-trifecta",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/170",
+      "destination": "/tricks/wkb170-tweetybird",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/170",
+      "destination": "/tricks/wkb170-tweetybird",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/149",
+      "destination": "/tricks/wkb149-vulcan",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/149",
+      "destination": "/tricks/wkb149-vulcan",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/101",
+      "destination": "/tricks/wkb101-whirlybird",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/101",
+      "destination": "/tricks/wkb101-whirlybird",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/102",
+      "destination": "/tricks/wkb102-whirlybird-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/102",
+      "destination": "/tricks/wkb102-whirlybird-540",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/103",
+      "destination": "/tricks/wkb103-whirlybird-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/103",
+      "destination": "/tricks/wkb103-whirlybird-720",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/104",
+      "destination": "/tricks/wkb104-whirlydick",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/104",
+      "destination": "/tricks/wkb104-whirlydick",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/100",
+      "destination": "/tricks/wkb100-wrecking-ball",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/100",
+      "destination": "/tricks/wkb100-wrecking-ball",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/66",
+      "destination": "/tricks/wkb66-x-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/66",
+      "destination": "/tricks/wkb66-x-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/Tricks/Details/:id(366|367|368|369|370|371|372|373|374|375|376|377|378|379|380|381|382|383|384|385|386)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/details/:id(366|367|368|369|370|371|372|373|374|375|376|377|378|379|380|381|382|383|384|385|386)",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb172",
+      "destination": "/tricks/wkb172-009",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb153",
+      "destination": "/tricks/wkb153-118",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb46",
+      "destination": "/tricks/wkb46-3-to-1",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb47",
+      "destination": "/tricks/wkb47-3-to-3-or-zero",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb154",
+      "destination": "/tricks/wkb154-313",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb156",
+      "destination": "/tricks/wkb156-315",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb163",
+      "destination": "/tricks/wkb163-90210",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb130",
+      "destination": "/tricks/wkb130-911",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb86",
+      "destination": "/tricks/wkb86-back-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb351",
+      "destination": "/tricks/wkb351-back-mobe-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb87",
+      "destination": "/tricks/wkb87-back-mobe-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb155",
+      "destination": "/tricks/wkb155-backside-313",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb161",
+      "destination": "/tricks/wkb161-batwing-blind-3",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb160",
+      "destination": "/tricks/wkb160-batwing-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb159",
+      "destination": "/tricks/wkb159-batwing",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb150",
+      "destination": "/tricks/wkb150-bee-sting",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb167",
+      "destination": "/tricks/wkb167-bel-air",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb168",
+      "destination": "/tricks/wkb168-bel-air-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb61",
+      "destination": "/tricks/wkb61-big-johnson",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb85",
+      "destination": "/tricks/wkb85-big-mac",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb176",
+      "destination": "/tricks/wkb176-big-worm",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb95",
+      "destination": "/tricks/wkb95-billion-dollar-baby",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb89",
+      "destination": "/tricks/wkb89-blender",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb128",
+      "destination": "/tricks/wkb128-blind-judge",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb67",
+      "destination": "/tricks/wkb67-blind-pete",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb132",
+      "destination": "/tricks/wkb132-butter-fuko",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb106",
+      "destination": "/tricks/wkb106-crook",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb50",
+      "destination": "/tricks/wkb50-crow-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb52",
+      "destination": "/tricks/wkb52-crow-mobe-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb54",
+      "destination": "/tricks/wkb54-crow-mobe-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb55",
+      "destination": "/tricks/wkb55-crow-mobe-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb60",
+      "destination": "/tricks/wkb60-diesel",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb88",
+      "destination": "/tricks/wkb88-discombobulator",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb120",
+      "destination": "/tricks/wkb120-double-back-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb118",
+      "destination": "/tricks/wkb118-double-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb121",
+      "destination": "/tricks/wkb121-double-cab-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb119",
+      "destination": "/tricks/wkb119-double-half-cab-roll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb361",
+      "destination": "/tricks/wkb361-double-heelside-roll-to-revert",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb122",
+      "destination": "/tricks/wkb122-double-roll-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb145",
+      "destination": "/tricks/wkb145-double-s-bend",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb126",
+      "destination": "/tricks/wkb126-double-toeside-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb57",
+      "destination": "/tricks/wkb57-dum-dum",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb58",
+      "destination": "/tricks/wkb58-dum-dum-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb59",
+      "destination": "/tricks/wkb59-dum-dum-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb169",
+      "destination": "/tricks/wkb169-eggroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb49",
+      "destination": "/tricks/wkb49-elephant",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb112",
+      "destination": "/tricks/wkb112-fat-chance",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb280",
+      "destination": "/tricks/wkb280-fat-chance-5",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb74",
+      "destination": "/tricks/wkb74-flavor-flip",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb117",
+      "destination": "/tricks/wkb117-front-blind-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb107",
+      "destination": "/tricks/wkb107-front-flip",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb109",
+      "destination": "/tricks/wkb109-front-flip-to-fakie",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb115",
+      "destination": "/tricks/wkb115-front-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb73",
+      "destination": "/tricks/wkb73-fruit-loop",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb68",
+      "destination": "/tricks/wkb68-g-spot",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb179",
+      "destination": "/tricks/wkb179-half-cab-switch-heelside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb110",
+      "destination": "/tricks/wkb110-half-cab-front-flip",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb79",
+      "destination": "/tricks/wkb79-half-cab-roll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb116",
+      "destination": "/tricks/wkb116-hasselhoff",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb147",
+      "destination": "/tricks/wkb147-heart-attack",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb6",
+      "destination": "/tricks/wkb6-heelside",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb17",
+      "destination": "/tricks/wkb17-heelside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb9",
+      "destination": "/tricks/wkb9-heelside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb11",
+      "destination": "/tricks/wkb11-heelside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb12",
+      "destination": "/tricks/wkb12-heelside-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb15",
+      "destination": "/tricks/wkb15-heelside-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb16",
+      "destination": "/tricks/wkb16-heelside-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb75",
+      "destination": "/tricks/wkb75-heelside-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb37",
+      "destination": "/tricks/wkb37-heelside-backside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb27",
+      "destination": "/tricks/wkb27-heelside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb28",
+      "destination": "/tricks/wkb28-heelside-backside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb30",
+      "destination": "/tricks/wkb30-heelside-backside-360-over-the-line",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb31",
+      "destination": "/tricks/wkb31-heelside-backside-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb35",
+      "destination": "/tricks/wkb35-heelside-backside-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb36",
+      "destination": "/tricks/wkb36-heelside-backside-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb348",
+      "destination": "/tricks/wkb348-heelside-chicken-salad-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb134",
+      "destination": "/tricks/wkb134-heelside-indy-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb131",
+      "destination": "/tricks/wkb131-heelside-method-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb76",
+      "destination": "/tricks/wkb76-heelside-mexican-roll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb136",
+      "destination": "/tricks/wkb136-heelside-nuclear-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb77",
+      "destination": "/tricks/wkb77-heelside-roll-to-revert",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb10",
+      "destination": "/tricks/wkb10-heelside-shifty",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb135",
+      "destination": "/tricks/wkb135-heelside-stalefish-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb133",
+      "destination": "/tricks/wkb133-heelside-tail-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb177",
+      "destination": "/tricks/wkb177-heelside-wake-jump",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb152",
+      "destination": "/tricks/wkb152-hinterberger",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb140",
+      "destination": "/tricks/wkb140-hoochie-313",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb142",
+      "destination": "/tricks/wkb142-hoochie-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb138",
+      "destination": "/tricks/wkb138-hoochie-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb141",
+      "destination": "/tricks/wkb141-hoochie-krypt",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb8",
+      "destination": "/tricks/wkb8-inside-out",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb99",
+      "destination": "/tricks/wkb99-iron-cross",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb80",
+      "destination": "/tricks/wkb80-kgb",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb83",
+      "destination": "/tricks/wkb83-kgb-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb84",
+      "destination": "/tricks/wkb84-kgb-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb129",
+      "destination": "/tricks/wkb129-krypt",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb364",
+      "destination": "/tricks/wkb364-landing-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb97",
+      "destination": "/tricks/wkb97-moby-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb98",
+      "destination": "/tricks/wkb98-moby-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb96",
+      "destination": "/tricks/wkb96-moby-dick",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb173",
+      "destination": "/tricks/wkb173-no-hander",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb164",
+      "destination": "/tricks/wkb164-oh-really",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb139",
+      "destination": "/tricks/wkb139-ohh",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb346",
+      "destination": "/tricks/wkb346-ollie",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb347",
+      "destination": "/tricks/wkb347-ollie-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb349",
+      "destination": "/tricks/wkb349-ollie-heelside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb355",
+      "destination": "/tricks/wkb355-ollie-toeside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb174",
+      "destination": "/tricks/wkb174-one-footer",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb5",
+      "destination": "/tricks/wkb5-one-wake",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb34",
+      "destination": "/tricks/wkb34-orbital-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb137",
+      "destination": "/tricks/wkb137-oriental",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb365",
+      "destination": "/tricks/wkb365-osmond",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb64",
+      "destination": "/tricks/wkb64-pete-rose",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb65",
+      "destination": "/tricks/wkb65-pete-rose-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb127",
+      "destination": "/tricks/wkb127-raley",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb114",
+      "destination": "/tricks/wkb114-remix",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb78",
+      "destination": "/tricks/wkb78-roll-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb90",
+      "destination": "/tricks/wkb90-rotary-dial",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb91",
+      "destination": "/tricks/wkb91-rotary-dial-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb143",
+      "destination": "/tricks/wkb143-s-bend",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb146",
+      "destination": "/tricks/wkb146-s-bend-7",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb48",
+      "destination": "/tricks/wkb48-scarecrow",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb51",
+      "destination": "/tricks/wkb51-skeezer",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb53",
+      "destination": "/tricks/wkb53-skeezer-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb223",
+      "destination": "/tricks/wkb223-skeezer-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb224",
+      "destination": "/tricks/wkb224-skeezer-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb165",
+      "destination": "/tricks/wkb165-skud",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb111",
+      "destination": "/tricks/wkb111-slim-chance",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb113",
+      "destination": "/tricks/wkb113-slim-chance-5",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb108",
+      "destination": "/tricks/wkb108-slowball",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb70",
+      "destination": "/tricks/wkb70-slurpee",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb148",
+      "destination": "/tricks/wkb148-s-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb69",
+      "destination": "/tricks/wkb69-special-k",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb123",
+      "destination": "/tricks/wkb123-speedball",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb105",
+      "destination": "/tricks/wkb105-spiderman",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb171",
+      "destination": "/tricks/wkb171-square-raley",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb144",
+      "destination": "/tricks/wkb144-s-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb151",
+      "destination": "/tricks/wkb151-suicide-raley",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb2",
+      "destination": "/tricks/wkb2-surface-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb3",
+      "destination": "/tricks/wkb3-surface-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb357",
+      "destination": "/tricks/wkb357-surface-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb358",
+      "destination": "/tricks/wkb358-surface-backside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb339",
+      "destination": "/tricks/wkb339-switch-009",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb320",
+      "destination": "/tricks/wkb320-switch-118",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb215",
+      "destination": "/tricks/wkb215-switch-3-to-1",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb216",
+      "destination": "/tricks/wkb216-switch-3-to-3-or-zero",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb321",
+      "destination": "/tricks/wkb321-switch-313",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb323",
+      "destination": "/tricks/wkb323-switch-315",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb330",
+      "destination": "/tricks/wkb330-switch-90210",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb297",
+      "destination": "/tricks/wkb297-switch-911",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb253",
+      "destination": "/tricks/wkb253-switch-back-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb352",
+      "destination": "/tricks/wkb352-switch-back-mobe-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb254",
+      "destination": "/tricks/wkb254-switch-back-mobe-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb322",
+      "destination": "/tricks/wkb322-switch-backside-313",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb328",
+      "destination": "/tricks/wkb328-switch-batwing-blind-3",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb327",
+      "destination": "/tricks/wkb327-switch-batwing-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb326",
+      "destination": "/tricks/wkb326-switch-batwing",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb317",
+      "destination": "/tricks/wkb317-switch-bee-sting",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb334",
+      "destination": "/tricks/wkb334-switch-bel-air",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb335",
+      "destination": "/tricks/wkb335-switch-bel-air-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb230",
+      "destination": "/tricks/wkb230-switch-big-johnson",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb252",
+      "destination": "/tricks/wkb252-switch-big-mac",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb342",
+      "destination": "/tricks/wkb342-switch-big-worm",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb262",
+      "destination": "/tricks/wkb262-switch-billion-dollar-baby",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb256",
+      "destination": "/tricks/wkb256-switch-blender",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb295",
+      "destination": "/tricks/wkb295-switch-blind-judge",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb236",
+      "destination": "/tricks/wkb236-switch-blind-pete",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb299",
+      "destination": "/tricks/wkb299-switch-butter-fuko",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb273",
+      "destination": "/tricks/wkb273-switch-crook",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb229",
+      "destination": "/tricks/wkb229-switch-diesel",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb255",
+      "destination": "/tricks/wkb255-switch-discombobulator",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb287",
+      "destination": "/tricks/wkb287-switch-double-back-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb285",
+      "destination": "/tricks/wkb285-switch-double-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb289",
+      "destination": "/tricks/wkb289-switch-double-roll-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb312",
+      "destination": "/tricks/wkb312-switch-double-s-bend",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb293",
+      "destination": "/tricks/wkb293-switch-double-toeside-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb226",
+      "destination": "/tricks/wkb226-switch-dum-dum",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb227",
+      "destination": "/tricks/wkb227-switch-dum-dum-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb228",
+      "destination": "/tricks/wkb228-switch-dum-dum-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb336",
+      "destination": "/tricks/wkb336-switch-eggroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb218",
+      "destination": "/tricks/wkb218-switch-elephant",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb243",
+      "destination": "/tricks/wkb243-switch-flavor-flip",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb284",
+      "destination": "/tricks/wkb284-switch-front-blind-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb274",
+      "destination": "/tricks/wkb274-switch-front-flip",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb276",
+      "destination": "/tricks/wkb276-switch-front-flip-to-fakie",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb282",
+      "destination": "/tricks/wkb282-switch-front-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb242",
+      "destination": "/tricks/wkb242-switch-fruit-loop",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb237",
+      "destination": "/tricks/wkb237-switch-g-spot",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb314",
+      "destination": "/tricks/wkb314-switch-heart-attack",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb183",
+      "destination": "/tricks/wkb183-switch-heelside",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb192",
+      "destination": "/tricks/wkb192-switch-heelside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb186",
+      "destination": "/tricks/wkb186-switch-heelside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb188",
+      "destination": "/tricks/wkb188-switch-heelside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb189",
+      "destination": "/tricks/wkb189-switch-heelside-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb190",
+      "destination": "/tricks/wkb190-switch-heelside-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb191",
+      "destination": "/tricks/wkb191-switch-heelside-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb244",
+      "destination": "/tricks/wkb244-switch-heelside-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb208",
+      "destination": "/tricks/wkb208-switch-heelside-backside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb201",
+      "destination": "/tricks/wkb201-switch-heelside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb202",
+      "destination": "/tricks/wkb202-switch-heelside-backside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb203",
+      "destination": "/tricks/wkb203-switch-heelside-backside-360-over-the-line",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb204",
+      "destination": "/tricks/wkb204-switch-heelside-backside-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb206",
+      "destination": "/tricks/wkb206-switch-heelside-backside-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb207",
+      "destination": "/tricks/wkb207-switch-heelside-backside-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb301",
+      "destination": "/tricks/wkb301-switch-heelside-indy-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb298",
+      "destination": "/tricks/wkb298-switch-heelside-method-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb245",
+      "destination": "/tricks/wkb245-switch-heelside-mexican-roll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb303",
+      "destination": "/tricks/wkb303-switch-heelside-nuclear-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb246",
+      "destination": "/tricks/wkb246-switch-heelside-roll-to-revert",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb187",
+      "destination": "/tricks/wkb187-switch-heelside-shifty",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb302",
+      "destination": "/tricks/wkb302-switch-heelside-stalefish-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb300",
+      "destination": "/tricks/wkb300-switch-heelside-tail-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb343",
+      "destination": "/tricks/wkb343-switch-heelside-wake-jump",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb319",
+      "destination": "/tricks/wkb319-switch-hinterberger",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb307",
+      "destination": "/tricks/wkb307-switch-hoochie-313",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb309",
+      "destination": "/tricks/wkb309-switch-hoochie-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb305",
+      "destination": "/tricks/wkb305-switch-hoochie-glide",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb308",
+      "destination": "/tricks/wkb308-switch-hoochie-krypt",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb185",
+      "destination": "/tricks/wkb185-switch-inside-out",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb266",
+      "destination": "/tricks/wkb266-switch-iron-cross",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb249",
+      "destination": "/tricks/wkb249-switch-kgb",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb250",
+      "destination": "/tricks/wkb250-switch-kgb-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb251",
+      "destination": "/tricks/wkb251-switch-kgb-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb296",
+      "destination": "/tricks/wkb296-switch-krypt",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb264",
+      "destination": "/tricks/wkb264-switch-moby-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb265",
+      "destination": "/tricks/wkb265-switch-moby-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb263",
+      "destination": "/tricks/wkb263-switch-moby-dick",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb340",
+      "destination": "/tricks/wkb340-switch-no-hander",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb331",
+      "destination": "/tricks/wkb331-switch-oh-really",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb306",
+      "destination": "/tricks/wkb306-switch-ohh",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb354",
+      "destination": "/tricks/wkb354-switch-ollie",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb353",
+      "destination": "/tricks/wkb353-switch-ollie-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb350",
+      "destination": "/tricks/wkb350-switch-ollie-heelside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb356",
+      "destination": "/tricks/wkb356-switch-ollie-toeside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb341",
+      "destination": "/tricks/wkb341-switch-one-footer",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb182",
+      "destination": "/tricks/wkb182-switch-one-wake",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb205",
+      "destination": "/tricks/wkb205-switch-orbital-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb304",
+      "destination": "/tricks/wkb304-switch-oriental",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb233",
+      "destination": "/tricks/wkb233-switch-pete-rose",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb234",
+      "destination": "/tricks/wkb234-switch-pete-rose-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb294",
+      "destination": "/tricks/wkb294-switch-raley",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb281",
+      "destination": "/tricks/wkb281-switch-remix",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb247",
+      "destination": "/tricks/wkb247-switch-roll-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb257",
+      "destination": "/tricks/wkb257-switch-rotary-dial",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb258",
+      "destination": "/tricks/wkb258-switch-rotary-dial-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb310",
+      "destination": "/tricks/wkb310-switch-s-bend",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb313",
+      "destination": "/tricks/wkb313-switch-s-bend-7",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb217",
+      "destination": "/tricks/wkb217-switch-scarecrow",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb275",
+      "destination": "/tricks/wkb275-switch-slowball",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb239",
+      "destination": "/tricks/wkb239-switch-slurpee",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb315",
+      "destination": "/tricks/wkb315-switch-s-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb238",
+      "destination": "/tricks/wkb238-switch-special-k",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb290",
+      "destination": "/tricks/wkb290-switch-speedball",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb272",
+      "destination": "/tricks/wkb272-switch-spiderman",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb338",
+      "destination": "/tricks/wkb338-switch-square-raley",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb311",
+      "destination": "/tricks/wkb311-switch-s-to-blind",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb318",
+      "destination": "/tricks/wkb318-switch-suicide-raley",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb180",
+      "destination": "/tricks/wkb180-switch-surface-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb181",
+      "destination": "/tricks/wkb181-switch-surface-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb359",
+      "destination": "/tricks/wkb359-switch-surface-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb360",
+      "destination": "/tricks/wkb360-switch-surface-backside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb259",
+      "destination": "/tricks/wkb259-switch-tantrum",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb260",
+      "destination": "/tricks/wkb260-switch-tantrum-to-blind-or-switch-t-to-b",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb261",
+      "destination": "/tricks/wkb261-switch-tantrum-to-normal",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb291",
+      "destination": "/tricks/wkb291-switch-temper-tantrum",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb184",
+      "destination": "/tricks/wkb184-switch-toeside",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb200",
+      "destination": "/tricks/wkb200-switch-toeside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb193",
+      "destination": "/tricks/wkb193-switch-toeside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb333",
+      "destination": "/tricks/wkb333-switch-toeside-313-back",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb195",
+      "destination": "/tricks/wkb195-switch-toeside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb196",
+      "destination": "/tricks/wkb196-switch-toeside-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb197",
+      "destination": "/tricks/wkb197-switch-toeside-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb199",
+      "destination": "/tricks/wkb199-switch-toeside-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb231",
+      "destination": "/tricks/wkb231-switch-toeside-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb232",
+      "destination": "/tricks/wkb232-switch-toeside-backroll-to-normal",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb214",
+      "destination": "/tricks/wkb214-switch-toeside-backside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb209",
+      "destination": "/tricks/wkb209-switch-toeside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb210",
+      "destination": "/tricks/wkb210-switch-toeside-backside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb211",
+      "destination": "/tricks/wkb211-switch-toeside-backside-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb212",
+      "destination": "/tricks/wkb212-switch-toeside-backside-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb213",
+      "destination": "/tricks/wkb213-switch-toeside-backside-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb325",
+      "destination": "/tricks/wkb325-switch-toeside-blind-judge",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb240",
+      "destination": "/tricks/wkb240-switch-toeside-front-flip",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb241",
+      "destination": "/tricks/wkb241-switch-toeside-front-flip-to-normal",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb198",
+      "destination": "/tricks/wkb198-switch-toeside-frontroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb329",
+      "destination": "/tricks/wkb329-switch-toeside-krypt",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb324",
+      "destination": "/tricks/wkb324-switch-toeside-raley",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb194",
+      "destination": "/tricks/wkb194-switch-toeside-shifty",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb363",
+      "destination": "/tricks/wkb363-switch-toeside-underflip",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb344",
+      "destination": "/tricks/wkb344-switch-toeside-wake-jump",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb225",
+      "destination": "/tricks/wkb225-switch-tootsie-roll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb292",
+      "destination": "/tricks/wkb292-switch-trifecta",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb337",
+      "destination": "/tricks/wkb337-switch-tweetybird",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb316",
+      "destination": "/tricks/wkb316-switch-vulcan",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb268",
+      "destination": "/tricks/wkb268-switch-whirlybird",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb269",
+      "destination": "/tricks/wkb269-switch-whirlybird-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb270",
+      "destination": "/tricks/wkb270-switch-whirlybird-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb271",
+      "destination": "/tricks/wkb271-switch-whirlydick",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb267",
+      "destination": "/tricks/wkb267-switch-wrecking-ball",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb92",
+      "destination": "/tricks/wkb92-tantrum",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb93",
+      "destination": "/tricks/wkb93-tantrum-to-blind-or-t-to-b",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb94",
+      "destination": "/tricks/wkb94-tantrum-to-fakie",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb124",
+      "destination": "/tricks/wkb124-temper-tantrum",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb7",
+      "destination": "/tricks/wkb7-toeside",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb26",
+      "destination": "/tricks/wkb26-toeside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb18",
+      "destination": "/tricks/wkb18-toeside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb166",
+      "destination": "/tricks/wkb166-toeside-313-back",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb20",
+      "destination": "/tricks/wkb20-toeside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb21",
+      "destination": "/tricks/wkb21-toeside-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb23",
+      "destination": "/tricks/wkb23-toeside-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb25",
+      "destination": "/tricks/wkb25-toeside-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb62",
+      "destination": "/tricks/wkb62-toeside-backroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb63",
+      "destination": "/tricks/wkb63-toeside-backroll-to-revert",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb45",
+      "destination": "/tricks/wkb45-toeside-backside-1080",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb38",
+      "destination": "/tricks/wkb38-toeside-backside-180",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb40",
+      "destination": "/tricks/wkb40-toeside-backside-360",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb42",
+      "destination": "/tricks/wkb42-toeside-backside-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb43",
+      "destination": "/tricks/wkb43-toeside-backside-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb44",
+      "destination": "/tricks/wkb44-toeside-backside-900",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb158",
+      "destination": "/tricks/wkb158-toeside-blind-judge",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb71",
+      "destination": "/tricks/wkb71-toeside-front-flip",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb72",
+      "destination": "/tricks/wkb72-toeside-front-flip-to-fakie",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb24",
+      "destination": "/tricks/wkb24-toeside-frontroll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb162",
+      "destination": "/tricks/wkb162-toeside-krypt",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb157",
+      "destination": "/tricks/wkb157-toeside-raley",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb19",
+      "destination": "/tricks/wkb19-toeside-shifty",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb362",
+      "destination": "/tricks/wkb362-toeside-underflip",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb178",
+      "destination": "/tricks/wkb178-toeside-wake-jump",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb56",
+      "destination": "/tricks/wkb56-tootsie-roll",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb125",
+      "destination": "/tricks/wkb125-trifecta",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb170",
+      "destination": "/tricks/wkb170-tweetybird",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb149",
+      "destination": "/tricks/wkb149-vulcan",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb101",
+      "destination": "/tricks/wkb101-whirlybird",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb102",
+      "destination": "/tricks/wkb102-whirlybird-540",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb103",
+      "destination": "/tricks/wkb103-whirlybird-720",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb104",
+      "destination": "/tricks/wkb104-whirlydick",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb100",
+      "destination": "/tricks/wkb100-wrecking-ball",
+      "permanent": true
+    },
+    {
+      "source": "/tricks/wkb66",
+      "destination": "/tricks/wkb66-x-mobe",
+      "permanent": true
     }
   ]
 }
