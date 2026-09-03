@@ -48,10 +48,20 @@ export function SiteFooter() {
         </div>
         <div style={{ display: "flex", gap: 22, fontSize: 13, color: "#64748b" }}>
           <a href={APP_URL} className="footer-link">Open the app</a>
-          <a href="https://wakeboard.co.uk" className="footer-link">WakeboardUK</a>
+          <a href="https://www.wakeboard.co.uk" className="footer-link">WakeboardUK</a>
           <a href="mailto:hello@wakeboard.com" className="footer-link">Contact</a>
         </div>
-        <p style={{ margin: 0, fontSize: 12, color: "#64748b" }}>© 2026 wakeboard.com</p>
+        <p style={{ margin: 0, fontSize: 12, color: "#64748b" }}>© 2026 Jeremy Nevill &amp; Mark Osmond</p>
+      </div>
+
+      {/* Provenance — the Global Trick List's origin and creators. Quiet, sitewide. */}
+      <div className="container" style={{ paddingBottom: 40, marginTop: -20 }}>
+        <p style={{ margin: 0, paddingTop: 20, borderTop: "1px solid #e2e8f0", fontSize: 12, lineHeight: 1.5, color: "#94a3b8", maxWidth: 620 }}>
+          THE WAKEBOARD TRICK LIST at wakeboard.com is created by{" "}
+          <a href="https://www.wakeboard.co.uk/Competitors/Details/2046" className="footer-link" style={{ color: "#64748b", fontWeight: 600 }}>Jeremy Nevill</a>
+          {" & "}
+          <a href="https://www.wakeboard.co.uk/Competitors/Details/865" className="footer-link" style={{ color: "#64748b", fontWeight: 600 }}>Mark Osmond</a>.
+        </p>
       </div>
     </footer>
   );

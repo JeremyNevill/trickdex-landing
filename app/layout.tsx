@@ -86,6 +86,21 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
     >
+      <head>
+        {/* Privacy-friendly analytics by Plausible — placed in <head> per
+            Plausible's setup so the first pageview is captured. The inline
+            init must render before the external script reads its queue. */}
+        <script
+          defer
+          src="https://plausible.io/js/pa-fLUsMP8Jxqcaf9vRw-s2u.js"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()",
+          }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
