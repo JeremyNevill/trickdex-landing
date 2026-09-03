@@ -68,7 +68,8 @@ export default async function Page() {
             WebkitMaskImage: "radial-gradient(120% 100% at 50% 0%, #000 30%, transparent 78%)",
           }}
         />
-        <div className="container" style={{ position: "relative", padding: "56px 0 48px", maxWidth: 780 }}>
+        <div className="container" style={{ position: "relative", padding: "56px 0 48px" }}>
+         <div style={{ maxWidth: 780 }}>
           <p style={{ margin: 0, display: "inline-flex", alignItems: "center", gap: 8, fontFamily: FONT_MONO, fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--td-primary)", fontWeight: 600 }}>
             <span aria-hidden="true" style={{ width: 6, height: 6, borderRadius: 999, background: "var(--td-primary)", boxShadow: "0 0 0 4px color-mix(in oklch, var(--td-primary) 18%, transparent)" }} />
             The wakeboard trick list
@@ -101,6 +102,7 @@ export default async function Page() {
               </li>
             ))}
           </ul>
+         </div>
         </div>
       </section>
 

@@ -13,6 +13,13 @@ import {
 import { relatedTricks } from "@/lib/related";
 import { FONT_DISPLAY, FONT_MONO, Icon, appTrickUrl } from "@/components/ui";
 import { SiteHeader, SiteFooter } from "@/components/chrome";
+import { accentByFamily } from "@/lib/trickColor";
+
+// Reading-column width for the trick detail article. The page frame is the full
+// 1180px container (like the header and home page); the article is left-pinned
+// to this narrower width so it keeps a comfortable line length while sharing the
+// same left edge as the logo and the rest of the site.
+const COLUMN = 760;
 
 // Emit one static page per trick at build time.
 export async function generateStaticParams() {
@@ -119,7 +126,8 @@ export default async function TrickPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLdScript(jsonLd) }}
       />
-      <main className="container" style={{ padding: "40px 0 96px", maxWidth: 760 }}>
+      <main className="container" style={{ padding: "40px 0 96px" }}>
+       <div style={{ maxWidth: COLUMN }}>
         <a
           href="/"
           className="footer-link"
@@ -269,6 +277,7 @@ export default async function TrickPage({
                     style={{
                       display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10,
                       padding: "12px 16px", borderRadius: 12, border: "1px solid #e2e8f0",
+                      borderLeft: `4px solid ${accentByFamily(r).border}`,
                       background: "#fff", textDecoration: "none",
                     }}
                   >
@@ -290,6 +299,7 @@ export default async function TrickPage({
             </ul>
           </div>
         )}
+       </div>
       </main>
       <SiteFooter />
     </>

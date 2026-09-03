@@ -1,11 +1,16 @@
 import { FONT_DISPLAY, FONT_MONO } from "./ui";
 import { trickPath, type Trick } from "@/lib/tricks";
+import { accentByFamily } from "@/lib/trickColor";
 
 /**
  * A single trick link — real static <a> so it's crawlable and works with JS off.
  * data-search feeds the progressive-enhancement filter (TrickSearch).
+ *
+ * A coloured left border codes the trick's inferred family (see trickColor.ts),
+ * echoing the app's colour-coded cells.
  */
 export function TrickCard({ trick }: { trick: Trick }) {
+  const accent = accentByFamily(trick);
   const searchHay = [
     trick.displayName,
     `wkb${trick.trickId}`,
@@ -23,7 +28,8 @@ export function TrickCard({ trick }: { trick: Trick }) {
         href={trickPath(trick.trickId, trick.slug)}
         style={{
           display: "block", padding: "16px 18px", borderRadius: 14,
-          border: "1px solid #e2e8f0", background: "#fff", textDecoration: "none",
+          border: "1px solid #e2e8f0", borderLeft: `4px solid ${accent.border}`,
+          background: "#fff", textDecoration: "none",
           height: "100%",
         }}
       >
