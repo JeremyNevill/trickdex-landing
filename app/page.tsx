@@ -108,7 +108,11 @@ export default async function Page() {
 
       <div style={{ height: 32 }} />
 
-      <section className="container" style={{ padding: "8px 0 96px" }}>
+      {/* Keep the container's horizontal gutter (24px / 20px on mobile) — only
+          set vertical padding. Using the `padding` shorthand here would zero the
+          left/right gutter, pushing cards to the viewport edge and making the
+          full-bleed .az-bar overflow the screen. */}
+      <section className="container" style={{ paddingTop: 8, paddingBottom: 96 }}>
         <TrickSearch total={tricks.length} />
 
         {/* Start here — well-known classics for first-time visitors. */}
@@ -118,7 +122,7 @@ export default async function Page() {
               <h2 style={{ margin: 0, fontFamily: FONT_DISPLAY, fontSize: 20, fontWeight: 700, letterSpacing: "-0.02em", color: "#0f172a" }}>
                 Start here
               </h2>
-              <span style={{ fontFamily: FONT_MONO, fontSize: 11, letterSpacing: "0.08em", color: "#94a3b8", textTransform: "uppercase" }}>
+              <span style={{ fontFamily: FONT_MONO, fontSize: 11, letterSpacing: "0.08em", color: "#64748b", textTransform: "uppercase" }}>
                 the classics
               </span>
             </div>
@@ -135,7 +139,7 @@ export default async function Page() {
           <h2 className="letter-head" style={{ margin: 0, paddingBottom: 8, fontFamily: FONT_DISPLAY, fontSize: 20, fontWeight: 700, letterSpacing: "-0.02em", color: "#0f172a" }}>
             All tricks A–Z
           </h2>
-          <span style={{ fontFamily: FONT_MONO, fontSize: 12, letterSpacing: "0.08em", color: "#94a3b8", textTransform: "uppercase" }}>
+          <span style={{ fontFamily: FONT_MONO, fontSize: 12, letterSpacing: "0.08em", color: "#64748b", textTransform: "uppercase" }}>
             {tricks.length} tricks
           </span>
         </div>

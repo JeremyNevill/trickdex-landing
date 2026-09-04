@@ -176,7 +176,7 @@ export default async function TrickPage({
         )}
 
         {trick.landedByCount > 0 && (
-          <p style={{ margin: "20px 0 0", fontFamily: FONT_MONO, fontSize: 12, letterSpacing: "0.06em", color: "#94a3b8", textTransform: "uppercase" }}>
+          <p style={{ margin: "20px 0 0", fontFamily: FONT_MONO, fontSize: 12, letterSpacing: "0.06em", color: "#64748b", textTransform: "uppercase" }}>
             Landed by {trick.landedByCount} rider{trick.landedByCount === 1 ? "" : "s"}
           </p>
         )}
@@ -187,7 +187,7 @@ export default async function TrickPage({
               const m = rm.media;
               const caption =
                 m.title || m.photographer ? (
-                  <figcaption style={{ margin: "8px 2px 0", fontSize: 12, color: "#94a3b8" }}>
+                  <figcaption style={{ margin: "8px 2px 0", fontSize: 12, color: "#64748b" }}>
                     {m.title}
                     {m.photographer ? ` — ${m.photographer}` : ""}
                   </figcaption>
@@ -250,7 +250,7 @@ export default async function TrickPage({
             className="btn-primary"
             href={appTrickUrl(trick.trickId)}
             style={{
-              display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 20px",
+              display: "inline-flex", alignItems: "center", gap: 8, padding: "14px 20px",
               background: "var(--td-primary)", color: "#fff", borderRadius: 999,
               fontSize: 14, fontWeight: 700, textDecoration: "none",
               boxShadow: "0 6px 16px rgba(37, 99, 235, 0.22)",
@@ -286,7 +286,7 @@ export default async function TrickPage({
                     </span>
                     <span
                       style={{
-                        fontFamily: FONT_MONO, fontSize: 10, fontWeight: 600, color: "#64748b",
+                        fontFamily: FONT_MONO, fontSize: 10, fontWeight: 600, color: "#475569",
                         background: "#f1f5f9", border: "1px solid #e8edf3",
                         padding: "2px 6px", borderRadius: 999, whiteSpace: "nowrap", flexShrink: 0,
                       }}

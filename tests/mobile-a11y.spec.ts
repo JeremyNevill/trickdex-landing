@@ -33,6 +33,11 @@ async function axeViolations(page: Page) {
   const results = await new AxeBuilder({ page })
     // WCAG AA is the practical bar; scope to the rules a viewport check owns.
     .withTags(["wcag2a", "wcag2aa"])
+    // Exclude embedded iframes — the trick pages embed YouTube/Vimeo players
+    // whose internal DOM (e.g. #movie_player, .ytmVideoInfoVideoTitle) has its
+    // own ARIA issues we can't fix and aren't responsible for. We only audit
+    // our own markup.
+    .exclude("iframe")
     .analyze();
   return results.violations;
 }
