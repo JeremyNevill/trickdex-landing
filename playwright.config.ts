@@ -17,10 +17,11 @@ import { defineConfig, devices } from "@playwright/test";
  * on-phone check for iOS-Safari-only quirks (dynamic 100vh, safe-area insets,
  * momentum scroll). It's the cheap 90% that runs on every PR.
  *
- * DEVICES: seeded with common defaults (smallest current iPhone, a mid iPhone,
- * an iPad, a small Android). Once we pull the real device split from Plausible
- * for wakeboard.com, swap these descriptors for the top devices covering ~90%
- * of traffic — the projects below are the only thing to edit.
+ * DEVICES: chosen from the real Plausible split (Sep 2026) — iOS ~57% +
+ * Mac ~12% = ~69% Apple/WebKit, Android ~17%, iPadOS <1% (27 visitors). So:
+ * two iOS WebKit projects (small + mainstream viewport) as the primary gate,
+ * one Android Chromium for the ~17% slice, and NO iPad (tablet ~1% — not worth
+ * maintaining a multi-column layout). Revisit if the traffic mix shifts.
  */
 const PORT = 4321;
 
@@ -57,12 +58,7 @@ export default defineConfig({
       use: { ...devices["iPhone 14"] },
     },
     {
-      name: "tablet-safari", // iPad — where the layout crosses to multi-column
-      testMatch: /mobile-a11y\.spec\.ts/,
-      use: { ...devices["iPad (gen 7)"] },
-    },
-    {
-      name: "mobile-chrome", // small Android, WebKit's counterpart
+      name: "mobile-chrome", // Android ~17% of traffic — the non-WebKit side
       testMatch: /mobile-a11y\.spec\.ts/,
       use: { ...devices["Pixel 5"] },
     },
