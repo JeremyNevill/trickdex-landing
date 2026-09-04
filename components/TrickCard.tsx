@@ -39,7 +39,7 @@ export function TrickCard({ trick }: { trick: Trick }) {
           </span>
           <span
             style={{
-              fontFamily: FONT_MONO, fontSize: 10.5, fontWeight: 600, color: "#64748b",
+              fontFamily: FONT_MONO, fontSize: 10.5, fontWeight: 600, color: "#475569",
               background: "#f1f5f9", border: "1px solid #e8edf3",
               padding: "2px 7px", borderRadius: 999, whiteSpace: "nowrap", flexShrink: 0,
             }}

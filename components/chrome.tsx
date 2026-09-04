@@ -21,7 +21,7 @@ export function SiteHeader() {
           className="btn-primary"
           href={APP_URL}
           style={{
-            display: "inline-flex", alignItems: "center", gap: 8, padding: "9px 16px",
+            display: "inline-flex", alignItems: "center", gap: 8, padding: "14px 18px",
             background: "var(--td-primary)", color: "#fff", borderRadius: 999,
             fontSize: 13, fontWeight: 700, textDecoration: "none", whiteSpace: "nowrap",
           }}
@@ -42,7 +42,7 @@ export function SiteFooter() {
       >
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
           <Logo size={18} />
-          <span style={{ fontFamily: FONT_MONO, fontSize: 11, color: "#64748b", letterSpacing: "0.08em", whiteSpace: "nowrap" }}>
+          <span style={{ fontFamily: FONT_MONO, fontSize: 11, color: "#64748b", letterSpacing: "0.08em" }}>
             the wakeboard trick list
           </span>
         </div>
@@ -56,7 +56,7 @@ export function SiteFooter() {
 
       {/* Provenance — the Global Trick List's origin and creators. Quiet, sitewide. */}
       <div className="container" style={{ paddingBottom: 40, marginTop: -20 }}>
-        <p style={{ margin: 0, paddingTop: 20, borderTop: "1px solid #e2e8f0", fontSize: 12, lineHeight: 1.5, color: "#94a3b8", maxWidth: 620 }}>
+        <p style={{ margin: 0, paddingTop: 20, borderTop: "1px solid #e2e8f0", fontSize: 12, lineHeight: 1.5, color: "#64748b", maxWidth: 620 }}>
           THE WAKEBOARD TRICK LIST at wakeboard.com is created by{" "}
           <a href="https://www.wakeboard.co.uk/Competitors/Details/2046" className="footer-link" style={{ color: "#64748b", fontWeight: 600 }}>Jeremy Nevill</a>
           {" & "}
