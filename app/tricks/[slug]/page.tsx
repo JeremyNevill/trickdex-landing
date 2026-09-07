@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import {
   getAllTricks,
   getTrick,
+  formatWkbId,
   isExcludedTrick,
   jsonLdScript,
   resolveMedia,
@@ -52,7 +53,7 @@ export async function generateMetadata({
   const title = `${trick.displayName} — wakeboard.com trick list`;
   const description =
     trick.description ??
-    `${trick.displayName} — wakeboard trick WKB${trick.trickId} on the wakeboard.com trick list.`;
+    `${trick.displayName} — wakeboard trick ${formatWkbId(trick.trickId)} on the wakeboard.com trick list.`;
   const canonical = trickPath(trick.trickId, trick.slug);
   return {
     title,
@@ -101,7 +102,7 @@ export default async function TrickPage({
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: trick.displayName,
-    identifier: `WKB${trick.trickId}`,
+    identifier: formatWkbId(trick.trickId),
     description: trick.description ?? undefined,
     alternateName: trick.aliases.length ? trick.aliases : undefined,
     about: {
@@ -153,7 +154,7 @@ export default async function TrickPage({
               padding: "4px 10px", borderRadius: 999, whiteSpace: "nowrap",
             }}
           >
-            WKB{trick.trickId}
+            {formatWkbId(trick.trickId)}
           </span>
         </div>
 
@@ -291,7 +292,7 @@ export default async function TrickPage({
                         padding: "2px 6px", borderRadius: 999, whiteSpace: "nowrap", flexShrink: 0,
                       }}
                     >
-                      WKB{r.trickId}
+                      {formatWkbId(r.trickId)}
                     </span>
                   </a>
                 </li>

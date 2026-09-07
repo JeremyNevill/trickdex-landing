@@ -1,5 +1,5 @@
 import { FONT_DISPLAY, FONT_MONO } from "./ui";
-import { trickPath, type Trick } from "@/lib/tricks";
+import { trickPath, formatWkbId, type Trick } from "@/lib/tricks";
 import { accentByFamily } from "@/lib/trickColor";
 
 /**
@@ -44,7 +44,7 @@ export function TrickCard({ trick }: { trick: Trick }) {
               padding: "2px 7px", borderRadius: 999, whiteSpace: "nowrap", flexShrink: 0,
             }}
           >
-            WKB{trick.trickId}
+            {formatWkbId(trick.trickId)}
           </span>
         </div>
         {trick.aliases.length > 0 && (

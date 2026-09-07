@@ -164,6 +164,15 @@ export function toSlug(displayName: string): string {
   return s || "trick";
 }
 
+/**
+ * Canonical public trick ID for all user-visible display and copy/share
+ * strings: uppercase WKB + the numeric trickId, unpadded (WKB74, WKB127).
+ * URL slugs stay lowercase (see trickPath) — this is display chrome only.
+ */
+export function formatWkbId(trickId: number): string {
+  return `WKB${trickId}`;
+}
+
 /** Canonical trick path: /tricks/wkb{id}-{slug} (id is the stable ISBN). */
 export function trickPath(trickId: number, slug: string): string {
   return `/tricks/wkb${trickId}-${slug}`;
