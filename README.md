@@ -1,5 +1,7 @@
 # wakeboard.com — Landing Page
 
+Security review and remediation guidance: [SECURITY.md](SECURITY.md).
+
 Marketing landing page for **www.wakeboard.com** — the top of the funnel for
 TrickDex. It lures riders in, then hands off to the app at
 **app.wakeboard.com** (every CTA points there).
