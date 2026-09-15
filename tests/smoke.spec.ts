@@ -162,7 +162,11 @@ test.describe("Parked /Compares (old boat compare)", () => {
     expect(html).toMatch(
       /<link rel="canonical" href="https:\/\/www\.wakeboard\.com\/Compares"/,
     );
-    expect(html).not.toContain("We couldn’t find that trick");
+    // Next.js also ships the 404 UI in the RSC payload as a client fallback —
+    // assert the visible <main>, not the whole document.
+    const visibleMain = html.match(/<main[\s\S]*?<\/main>/)?.[0] ?? "";
+    expect(visibleMain).toContain("Boat compare used to live here");
+    expect(visibleMain).not.toContain("We couldn’t find that trick");
 
     await page.goto("/Compares");
     await expect(
