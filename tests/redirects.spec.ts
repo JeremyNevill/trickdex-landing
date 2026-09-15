@@ -96,11 +96,29 @@ test.describe("redirect map — generation", () => {
     }
   });
 
-  test("/Compares and /Products are NOT redirected (they still rank)", () => {
+  test("/Compares is NOT redirected (parked page still ranks)", () => {
     for (const r of redirects) {
       expect(r.source.startsWith("/Compares")).toBe(false);
-      expect(r.source.startsWith("/Products")).toBe(false);
+      expect(r.source.startsWith("/compares")).toBe(false);
     }
+  });
+
+  test("old /Products URLs 308 to the parked /Compares page, both cases", () => {
+    expect(bySource.get("/Products")?.destination).toBe("/Compares");
+    expect(bySource.get("/products")?.destination).toBe("/Compares");
+    expect(bySource.get("/Products/Details/:id")?.destination).toBe("/Compares");
+    expect(bySource.get("/products/details/:id")?.destination).toBe("/Compares");
+    expect(bySource.get("/Products")?.permanent).toBe(true);
+    expect(bySource.get("/Products/Details/:id")?.permanent).toBe(true);
+  });
+
+  test("lowercase /compares is a 200 rewrite onto the parked page, not a 308", () => {
+    const rewrites: { source: string; destination: string }[] =
+      vercel.rewrites ?? [];
+    expect(rewrites).toContainEqual({
+      source: "/compares",
+      destination: "/Compares",
+    });
   });
 });
 

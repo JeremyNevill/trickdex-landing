@@ -4,6 +4,12 @@
   "buildCommand": "node scripts/gen-redirects.mjs && next build",
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/compares",
+      "destination": "/Compares"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -5125,6 +5131,26 @@
     {
       "source": "/tricks/wkb66",
       "destination": "/tricks/wkb66-x-mobe",
+      "permanent": true
+    },
+    {
+      "source": "/Products",
+      "destination": "/Compares",
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/Compares",
+      "permanent": true
+    },
+    {
+      "source": "/Products/Details/:id",
+      "destination": "/Compares",
+      "permanent": true
+    },
+    {
+      "source": "/products/details/:id",
+      "destination": "/Compares",
       "permanent": true
     }
   ]
