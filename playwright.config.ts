@@ -1,9 +1,14 @@
 import { defineConfig, devices } from "@playwright/test";
+import { remoteBaseURL } from "./tests/env";
 
 /**
- * Tests run against the actual static export in ./out — the exact artifact that
- * ships to Vercel — served by `npx serve`. `next build` must have run first;
- * the `test` npm script builds then tests. `serve` is started by webServer.
+ * Default: tests run against the actual static export in ./out — the exact
+ * artifact that ships to Vercel — served by `npx serve`. `next build` must
+ * have run first; the `test` npm script builds then tests. `serve` is started
+ * by webServer.
+ *
+ * Remote: set PREVIEW_URL or BASE_URL to a Vercel preview (CI does this after
+ * the preview is Ready). webServer is skipped; Playwright hits that origin.
  *
  * Philosophy: assert STRUCTURE and INVARIANTS, not specific trick data (names
  * change, tricks get added/removed). e.g. ">= 300 trick links", not "338".
@@ -24,15 +29,17 @@ import { defineConfig, devices } from "@playwright/test";
  * maintaining a multi-column layout). Revisit if the traffic mix shifts.
  */
 const PORT = 4321;
+const remote = remoteBaseURL();
+const baseURL = remote ?? `http://localhost:${PORT}`;
 
 export default defineConfig({
   testDir: "./tests",
   timeout: 30000,
   fullyParallel: true,
-  retries: 0,
+  retries: process.env.CI ? 2 : 0,
   reporter: [["html", { open: "never" }], ["list"]],
   use: {
-    baseURL: `http://localhost:${PORT}`,
+    baseURL,
     trace: "retain-on-failure",
   },
   projects: [
@@ -63,12 +70,17 @@ export default defineConfig({
       use: { ...devices["Pixel 5"] },
     },
   ],
-  webServer: {
-    // Serve the static export exactly as a static host would. -s single-serves
-    // so clean URLs (/tricks/wkb..) resolve to the .html files.
-    command: `npx serve out -l ${PORT} --no-clipboard`,
-    url: `http://localhost:${PORT}`,
-    timeout: 30000,
-    reuseExistingServer: true,
-  },
+  ...(remote
+    ? {}
+    : {
+        webServer: {
+          // Serve the static export exactly as a static host would. -s
+          // single-serves so clean URLs (/tricks/wkb..) resolve to the .html
+          // files. Skipped when PREVIEW_URL / BASE_URL points at a live host.
+          command: `npx serve out -l ${PORT} --no-clipboard`,
+          url: `http://localhost:${PORT}`,
+          timeout: 30000,
+          reuseExistingServer: true,
+        },
+      }),
 });

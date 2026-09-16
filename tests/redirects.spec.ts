@@ -9,6 +9,7 @@ import path from "node:path";
 // "up to date" check re-runs it via node and diffs the output instead.)
 import { toSlug, parseAliases, isExcludedTrick } from "../lib/tricks";
 import snapshot from "../data/tricks.json";
+import { remoteBaseURL } from "./env";
 
 /**
  * The old ASP.NET URLs (/Tricks, /Tricks/Details/{id}) that Google indexed must
@@ -125,9 +126,14 @@ test.describe("redirect map — generation", () => {
 test.describe("redirect map — destinations are real built pages", () => {
   // The static export writes /tricks/wkb{id}-{slug}.html into out/. Every
   // non-home destination must exist on disk — this is the real 404 guard.
+  // Preview CI does not rebuild ./out; live HTTP coverage is in the block below.
   const outDir = path.join(ROOT, "out");
 
   test("every trick destination has a built HTML file", () => {
+    test.skip(
+      !fs.existsSync(outDir),
+      "no local ./out — preview runs hit Vercel instead of a static export",
+    );
     const destinations = new Set(
       redirects.map((r) => r.destination).filter((d) => d !== "/"),
     );
@@ -137,5 +143,61 @@ test.describe("redirect map — destinations are real built pages", () => {
       if (!fs.existsSync(file)) missing.push(d);
     }
     expect(missing, `destinations with no built page:\n${missing.join("\n")}`).toEqual([]);
+  });
+});
+
+/**
+ * Real 308s only exist on Vercel. Local `npx serve out` has no redirect map,
+ * so these stay skipped unless PREVIEW_URL / BASE_URL points at a live host.
+ */
+test.describe("live Vercel redirects", () => {
+  const remote = remoteBaseURL();
+
+  test.skip(
+    !remote,
+    "set PREVIEW_URL or BASE_URL to a Vercel origin to observe real 308s",
+  );
+
+  function locationPath(location: string | undefined): string {
+    if (!location) return "";
+    try {
+      return new URL(location, "https://www.wakeboard.com").pathname;
+    } catch {
+      return location;
+    }
+  }
+
+  test("/Compares is 200 parked — not a redirect to /", async ({ request }) => {
+    const res = await request.get("/Compares", { maxRedirects: 0 });
+    expect(res.status()).toBe(200);
+    const html = await res.text();
+    expect(html).toContain("<title>Wakeboard boat compare — wakeboard.com</title>");
+  });
+
+  test("/compares is a 200 rewrite onto the parked page", async ({ request }) => {
+    const res = await request.get("/compares", { maxRedirects: 0 });
+    expect(res.status()).toBe(200);
+    const html = await res.text();
+    expect(html).toContain("Boat compare used to live here");
+  });
+
+  test("/Products/Details/28 308s to /Compares", async ({ request }) => {
+    const res = await request.get("/Products/Details/28", { maxRedirects: 0 });
+    expect([301, 308]).toContain(res.status());
+    expect(locationPath(res.headers()["location"])).toBe("/Compares");
+  });
+
+  test("/products 308s to /Compares", async ({ request }) => {
+    const res = await request.get("/products", { maxRedirects: 0 });
+    expect([301, 308]).toContain(res.status());
+    expect(locationPath(res.headers()["location"])).toBe("/Compares");
+  });
+
+  test("/Tricks/Details/74 still 308s to Flavor Flip", async ({ request }) => {
+    const res = await request.get("/Tricks/Details/74", { maxRedirects: 0 });
+    expect([301, 308]).toContain(res.status());
+    expect(locationPath(res.headers()["location"])).toBe(
+      "/tricks/wkb74-flavor-flip",
+    );
   });
 });
