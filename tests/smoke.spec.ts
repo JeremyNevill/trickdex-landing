@@ -53,7 +53,7 @@ test.describe("Homepage — crawlable catalog", () => {
 
 test.describe("Security invariants", () => {
   test("JSON-LD is HTML-escaped (no raw </script> breakout)", async ({ request }) => {
-    for (const path of ["/", "/tricks/wkb80-kgb"]) {
+    for (const path of ["/", "/tricks/wkb80-kgb", "/Compares"]) {
       const html = await request.get(path).then((r) => r.text());
       const block = html.match(
         /<script type="application\/ld\+json">(.*?)<\/script>/s,
@@ -78,7 +78,12 @@ test.describe("Security invariants", () => {
   test("internal 'TrickDex' codename never appears in user-facing HTML", async ({
     request,
   }) => {
-    for (const path of ["/", "/tricks/wkb80-kgb", "/tricks/wkb50-crow-mobe"]) {
+    for (const path of [
+      "/",
+      "/tricks/wkb80-kgb",
+      "/tricks/wkb50-crow-mobe",
+      "/Compares",
+    ]) {
       const html = await request.get(path).then((r) => r.text());
       expect(html.toLowerCase(), `codename on ${path}`).not.toContain("trickdex");
     }
@@ -130,6 +135,7 @@ test.describe("SEO plumbing", () => {
     const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
     expect(urls.length).toBeGreaterThanOrEqual(MIN_TRICKS + 1);
     expect(urls).toContain("https://www.wakeboard.com/");
+    expect(urls).toContain("https://www.wakeboard.com/Compares");
     expect(urls.filter((u) => u.includes("/tricks/wkb")).length).toBeGreaterThanOrEqual(
       MIN_TRICKS,
     );
@@ -141,6 +147,37 @@ test.describe("SEO plumbing", () => {
     const txt = await request.get("/robots.txt").then((r) => r.text());
     expect(txt).toMatch(/Allow: \//);
     expect(txt).toContain("sitemap.xml");
+  });
+});
+
+test.describe("Parked /Compares (old boat compare)", () => {
+  test("serves 200 with boat-compare title and quiet CTAs", async ({
+    page,
+    request,
+  }) => {
+    const res = await request.get("/Compares");
+    expect(res.status()).toBe(200);
+    const html = await res.text();
+    expect(html).toContain("<title>Wakeboard boat compare — wakeboard.com</title>");
+    expect(html).toMatch(
+      /<link rel="canonical" href="https:\/\/www\.wakeboard\.com\/Compares"/,
+    );
+    // Next.js also ships the 404 UI in the RSC payload as a client fallback —
+    // assert the visible <main>, not the whole document.
+    const visibleMain = html.match(/<main[\s\S]*?<\/main>/)?.[0] ?? "";
+    expect(visibleMain).toContain("Boat compare used to live here");
+    expect(visibleMain).not.toContain("We couldn’t find that trick");
+
+    await page.goto("/Compares");
+    await expect(
+      page.getByRole("heading", { name: /boat compare used to live here/i }),
+    ).toBeVisible();
+    await expect(
+      page.getByRole("link", { name: /browse the trick list/i }),
+    ).toHaveAttribute("href", "/");
+    await expect(
+      page.getByRole("link", { name: /open the app/i }).first(),
+    ).toHaveAttribute("href", "https://app.wakeboard.com");
   });
 });
 

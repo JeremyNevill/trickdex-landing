@@ -26,6 +26,7 @@ const MIN_TAP_PX = 44;
 const PAGES = [
   { name: "home", path: "/" },
   { name: "trick detail", path: "/tricks/wkb127-raley" },
+  { name: "parked compares", path: "/Compares" },
 ];
 
 /** Run axe against the current page and return violations (contrast + names). */

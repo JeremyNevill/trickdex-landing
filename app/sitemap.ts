@@ -10,6 +10,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const tricks = await getAllTricks();
   return [
     { url: `${SITE}/`, changeFrequency: "weekly", priority: 1 },
+    {
+      url: `${SITE}/Compares`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
     ...tricks.map((t) => ({
       url: `${SITE}${trickPath(t.trickId, t.slug)}`,
       changeFrequency: "monthly" as const,

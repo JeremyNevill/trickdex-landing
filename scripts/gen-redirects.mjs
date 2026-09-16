@@ -24,12 +24,15 @@
  * is case-SENSITIVE and does not lowercase paths. Vercel `source` is
  * path-to-regexp, which has no reliable inline (?i) flag — so we emit BOTH the
  * PascalCase (as Google indexed them) and lowercase variant of each old URL as
- * explicit entries rather than gamble on case-folding. Count stays ~1018, well
+ * explicit entries rather than gamble on case-folding. Count stays ~1022, well
  * under Vercel's 2048 redirect cap.
  *
+ * /Compares is a real parked page (old boat compare still ranks there). Do NOT
+ * 308 it to /. Old /Products and /Products/Details/:id URLs 308 into it.
+ *
  * This script REGENERATES the `redirects` array in vercel.json and leaves every
- * other key (headers/CSP, cleanUrls, framework…) untouched. Wired into `build`
- * so it can never drift from data/tricks.json.
+ * other key (headers/CSP, rewrites, cleanUrls, framework…) untouched. Wired into
+ * `build` so it can never drift from data/tricks.json.
  *
  * Run: node scripts/gen-redirects.mjs   (build does this automatically)
  */
@@ -138,6 +141,31 @@ export function buildRedirects(snapshot) {
     });
   }
 
+  // 5) Old boat-compare product URLs. /Compares itself is a parked 200 page
+  //    (it still ranks) — never redirect it. /Products and /Products/Details/:id
+  //    308 there, Pascal + lowercase like the trick rules. :id is a path
+  //    param so we don't emit one rule per old boat id.
+  redirects.push({
+    source: "/Products",
+    destination: "/Compares",
+    permanent: true,
+  });
+  redirects.push({
+    source: "/products",
+    destination: "/Compares",
+    permanent: true,
+  });
+  redirects.push({
+    source: "/Products/Details/:id",
+    destination: "/Compares",
+    permanent: true,
+  });
+  redirects.push({
+    source: "/products/details/:id",
+    destination: "/Compares",
+    permanent: true,
+  });
+
   return redirects;
 }
 
@@ -164,7 +192,7 @@ function main() {
   const excluded = snapshot.tricks.length - included;
   console.log(
     `Wrote ${redirects.length} redirects to vercel.json ` +
-      `(${included} trick pages, ${excluded} BB drills → /, +slugless +index).`,
+      `(${included} trick pages, ${excluded} BB drills → /, +slugless +index +products).`,
   );
 }
 
