@@ -219,10 +219,46 @@ export async function getTrick(trickId: number): Promise<Trick> {
   return enrich(detail);
 }
 
+/**
+ * Catalog A–Z sort key. Leading stance words — `switch`, `heelside`,
+ * `toeside` — are ignored so related tricks cluster by family (Backroll,
+ * Raley, 180, …) instead of scattering under S / H / T. Display titles are
+ * unchanged; only this key (and `alphaKey`, which reads it) affect order.
+ *
+ * Only *leading* tokens are stripped, and only while a remainder remains —
+ * a trick whose name is just "Heelside" still sorts as Heelside. Tokens are
+ * matched case-insensitively at a word boundary.
+ *
+ * Common abbreviations (HS, TS, SW, H/S, T/S) were checked against the
+ * committed snapshot and do not appear as leading name tokens, so they are
+ * not stripped. If they show up later, add them here so www and the app
+ * stay on the same catalog order.
+ */
+const LEADING_STANCE = /^(?:switch|heelside|toeside) /i;
+
+export function catalogSortKey(displayName: string): string {
+  let key = displayName.replace(/\s+/g, " ").trim();
+  while (LEADING_STANCE.test(key)) {
+    const next = key.replace(LEADING_STANCE, "");
+    if (!next) break;
+    key = next;
+  }
+  return key;
+}
+
+/** localeCompare on the catalog sort key; display name is the tie-breaker. */
+export function compareCatalogOrder(a: string, b: string): number {
+  const byKey = catalogSortKey(a).localeCompare(catalogSortKey(b), "en", {
+    numeric: true,
+  });
+  if (byKey !== 0) return byKey;
+  return a.localeCompare(b, "en", { numeric: true });
+}
+
 /** All tricks with detail — for the index and for generateStaticParams. */
 export async function getAllTricks(): Promise<Trick[]> {
   return INCLUDED.map(enrich).sort((a, b) =>
-    a.displayName.localeCompare(b.displayName, "en", { numeric: true }),
+    compareCatalogOrder(a.displayName, b.displayName),
   );
 }
 
@@ -258,15 +294,19 @@ export function pickClassics(all: Trick[]): Trick[] {
   );
 }
 
-/** First-letter group key for the A–Z index (non-letters bucket under "#"). */
+/**
+ * First-letter group key for the A–Z index (non-letters bucket under "#").
+ * Uses the catalog sort key so "Switch Backroll" lands under B, not S.
+ */
 export function alphaKey(displayName: string): string {
-  const c = displayName.trim().charAt(0).toUpperCase();
+  const c = catalogSortKey(displayName).charAt(0).toUpperCase();
   return /[A-Z]/.test(c) ? c : "#";
 }
 
 /**
  * Group an alphabetically-sorted trick list into A–Z sections. Returns groups
  * in order, plus the list of letters that actually have tricks (for jump links).
+ * Letter membership uses {@link catalogSortKey} (via {@link alphaKey}).
  */
 export function groupAlphabetically(all: Trick[]): {
   groups: { letter: string; tricks: Trick[] }[];
