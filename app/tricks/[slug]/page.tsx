@@ -269,7 +269,7 @@ export default async function TrickPage({
             <h2 style={{ margin: "0 0 16px", fontFamily: FONT_MONO, fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--td-primary)", fontWeight: 600 }}>
               Related tricks
             </h2>
-            <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 10 }}>
+            <ul className="trick-grid" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))" }}>
               {related.map((r) => (
                 <li key={r.trickId}>
                   <a

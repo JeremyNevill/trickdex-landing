@@ -5,11 +5,13 @@
   --td-ink: #0f172a;
   --td-muted: #64748b;
   --td-line: #e2e8f0;
-  /* Card hairline. --td-line (#e2e8f0) is only ~1.2:1 against the #f8fafc page,
-     so a 1px stroke disappears on iPhone Safari and the card reads as flush —
-     only the coloured family accent survives. This step sits between slate-300
-     and slate-400: obvious on a phone, still a light frame on desktop. */
-  --td-card-border: #b0bdce;
+  /* Card frame. --td-line and the earlier #b0bdce hairline both disappear
+     against #f8fafc on an iPhone, so stacked cards read as one flush surface.
+     This is a mid slate (~3.3:1 on white): a clear edge, still a 1px line. */
+  --td-card-border: #7c8da1;
+  /* Tight lift. The shared --td-shadow-sm (4% alpha) does not paint on iOS,
+     and a wide blur would fill the 12px gap between cards. */
+  --td-card-shadow: 0 1px 2px rgba(15, 23, 42, 0.10), 0 2px 6px rgba(15, 23, 42, 0.07);
   /* Reusable elevation tokens so cards/inputs/buttons share one shadow language. */
   --td-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
   --td-shadow-md: 0 6px 18px rgba(15, 23, 42, 0.08);
@@ -85,7 +87,7 @@ input:focus-visible,
   background-clip: padding-box;
   -webkit-background-clip: padding-box;
   border: 1px solid var(--td-card-border);
-  box-shadow: var(--td-shadow-sm);
+  box-shadow: var(--td-card-shadow);
   transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
 }
 .card-link:hover {
@@ -94,12 +96,22 @@ input:focus-visible,
   border-top-color: color-mix(in oklch, var(--td-primary) 55%, var(--td-card-border)) !important;
   border-right-color: color-mix(in oklch, var(--td-primary) 55%, var(--td-card-border)) !important;
   border-bottom-color: color-mix(in oklch, var(--td-primary) 55%, var(--td-card-border)) !important;
-  box-shadow: var(--td-shadow-md);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.10);
   transform: translateY(-2px);
 }
 .card-link:active {
   transform: translateY(0);
-  box-shadow: var(--td-shadow-sm);
+  box-shadow: var(--td-card-shadow);
+}
+
+/* Stacked trick cards. 12px of page shows between them — a hairline border
+   alone reads as flush on a light phone. */
+.trick-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
 }
 
 /* Search input — soft resting shadow, primary focus ring. */

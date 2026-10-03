@@ -44,10 +44,9 @@ test.describe("Homepage — crawlable catalog", () => {
     expect(await page.locator("[data-letter-section]").count()).toBeGreaterThan(5);
   });
 
-  test("trick cards keep a visible frame and the family accent", async ({ page }) => {
-    // --td-card-border (#b0bdce). Darker than --td-line so the 1px frame
-    // survives on a #f8fafc page in mobile Safari.
-    const FRAME = "rgb(176, 189, 206)";
+  test("trick cards keep a visible frame, a 12px gap, and the family accent", async ({ page }) => {
+    // --td-card-border (#7c8da1). Dark enough to read on #f8fafc in mobile Safari.
+    const FRAME = "rgb(124, 141, 161)";
 
     const frameOf = async (locator: ReturnType<typeof page.locator>) =>
       locator.evaluate((el) => {
@@ -62,10 +61,12 @@ test.describe("Homepage — crawlable catalog", () => {
           // The background shorthand resets this to border-box, and the white
           // fill then covers the hairline on fractional device pixels.
           clip: s.backgroundClip,
+          shadow: s.boxShadow,
         };
       });
 
     await page.goto("/");
+    await expect(page.locator("#classics-strip .trick-grid")).toHaveCSS("gap", "12px");
     const classic = page.locator('#classics-strip a[href="/tricks/wkb75-heelside-backroll"]');
     await expect(classic).toBeVisible();
     const home = await frameOf(classic);
@@ -75,15 +76,19 @@ test.describe("Homepage — crawlable catalog", () => {
     expect(home.right).toBe(FRAME);
     expect(home.bottom).toBe(FRAME);
     expect(home.clip).toBe("padding-box");
+    // Resting shadow is the card token, not the 4% shadow iOS drops.
+    expect(home.shadow).toContain("6px");
     // Invert family accent stays; it is not the same colour as the frame.
     expect(home.left).not.toBe(FRAME);
 
+    await expect(page.locator("[data-letter-section] .trick-grid").first()).toHaveCSS("gap", "12px");
     const listed = page.locator("[data-letter-section] .card-link").first();
     const list = await frameOf(listed);
     expect(list.top).toBe(FRAME);
     expect(list.leftWidth).toBe("4px");
 
     await page.goto("/tricks/wkb159-batwing");
+    await expect(page.locator(".trick-grid")).toHaveCSS("gap", "12px");
     const related = page.locator('a.card-link[href="/tricks/wkb157-toeside-raley"]');
     await expect(related).toBeVisible();
     const chip = await frameOf(related);

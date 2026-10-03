@@ -10,12 +10,7 @@ import { TrickCard } from "@/components/TrickCard";
 import { TrickSearch } from "@/components/TrickSearch";
 
 const GRID: React.CSSProperties = {
-  margin: 0,
-  padding: 0,
-  listStyle: "none",
-  display: "grid",
   gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-  gap: 12,
 };
 
 export default async function Page() {
@@ -126,7 +121,7 @@ export default async function Page() {
                 the classics
               </span>
             </div>
-            <ul style={GRID}>
+            <ul className="trick-grid" style={GRID}>
               {classics.map((t) => (
                 <TrickCard key={t.trickId} trick={t} />
               ))}
@@ -174,7 +169,7 @@ export default async function Page() {
             <p aria-hidden="true" className="letter-head" style={{ margin: "0 0 16px", fontFamily: FONT_DISPLAY, fontSize: 26, fontWeight: 700, letterSpacing: "-0.02em", color: "#0f172a", borderBottom: "1px solid #e2e8f0", paddingBottom: 10 }}>
               {g.letter === "#" ? "0–9" : g.letter}
             </p>
-            <ul style={GRID}>
+            <ul className="trick-grid" style={GRID}>
               {g.tricks.map((t) => (
                 <TrickCard key={t.trickId} trick={t} />
               ))}
