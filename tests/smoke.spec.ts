@@ -44,6 +44,58 @@ test.describe("Homepage — crawlable catalog", () => {
     expect(await page.locator("[data-letter-section]").count()).toBeGreaterThan(5);
   });
 
+  test("trick cards keep a visible frame and the family accent", async ({ page }) => {
+    // --td-card-border (#b0bdce). Darker than --td-line so the 1px frame
+    // survives on a #f8fafc page in mobile Safari.
+    const FRAME = "rgb(176, 189, 206)";
+
+    const frameOf = async (locator: ReturnType<typeof page.locator>) =>
+      locator.evaluate((el) => {
+        const s = getComputedStyle(el);
+        return {
+          top: s.borderTopColor,
+          right: s.borderRightColor,
+          bottom: s.borderBottomColor,
+          left: s.borderLeftColor,
+          topWidth: s.borderTopWidth,
+          leftWidth: s.borderLeftWidth,
+          // The background shorthand resets this to border-box, and the white
+          // fill then covers the hairline on fractional device pixels.
+          clip: s.backgroundClip,
+        };
+      });
+
+    await page.goto("/");
+    const classic = page.locator('#classics-strip a[href="/tricks/wkb75-heelside-backroll"]');
+    await expect(classic).toBeVisible();
+    const home = await frameOf(classic);
+    expect(home.topWidth).toBe("1px");
+    expect(home.leftWidth).toBe("4px");
+    expect(home.top).toBe(FRAME);
+    expect(home.right).toBe(FRAME);
+    expect(home.bottom).toBe(FRAME);
+    expect(home.clip).toBe("padding-box");
+    // Invert family accent stays; it is not the same colour as the frame.
+    expect(home.left).not.toBe(FRAME);
+
+    const listed = page.locator("[data-letter-section] .card-link").first();
+    const list = await frameOf(listed);
+    expect(list.top).toBe(FRAME);
+    expect(list.leftWidth).toBe("4px");
+
+    await page.goto("/tricks/wkb159-batwing");
+    const related = page.locator('a.card-link[href="/tricks/wkb157-toeside-raley"]');
+    await expect(related).toBeVisible();
+    const chip = await frameOf(related);
+    expect(chip.topWidth).toBe("1px");
+    expect(chip.leftWidth).toBe("4px");
+    expect(chip.top).toBe(FRAME);
+    expect(chip.right).toBe(FRAME);
+    expect(chip.bottom).toBe(FRAME);
+    expect(chip.clip).toBe("padding-box");
+    expect(chip.left).not.toBe(FRAME);
+  });
+
   test("has canonical + CollectionPage JSON-LD", async ({ request }) => {
     const html = await request.get("/").then((r) => r.text());
     expect(html).toMatch(/<link rel="canonical" href="https:\/\/www\.wakeboard\.com/);

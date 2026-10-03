@@ -277,9 +277,14 @@ export default async function TrickPage({
                     href={trickPath(r.trickId, r.slug)}
                     style={{
                       display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10,
-                      padding: "12px 16px", borderRadius: 12, border: "1px solid #e2e8f0",
+                      padding: "12px 16px", borderRadius: 12,
+                      // Frame colour is .card-link (--td-card-border). Only the
+                      // family accent is inline, so it stays thicker and coloured.
+                      // backgroundColor, not the background shorthand: the shorthand
+                      // resets background-clip and the white fill then paints over
+                      // the 1px frame on iPhone.
                       borderLeft: `4px solid ${accentByFamily(r).border}`,
-                      background: "#fff", textDecoration: "none",
+                      backgroundColor: "#fff", textDecoration: "none",
                     }}
                   >
                     <span style={{ fontFamily: FONT_DISPLAY, fontSize: 15, fontWeight: 700, letterSpacing: "-0.01em", color: "#0f172a" }}>
