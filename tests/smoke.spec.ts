@@ -101,6 +101,30 @@ test.describe("Homepage — crawlable catalog", () => {
     expect(chip.left).not.toBe(FRAME);
   });
 
+  test("narrow viewports keep the container side gutters", async ({ page }) => {
+    // Below the 1180px container max-width, a padding shorthand of "16px 0"
+    // on .container zeros the 24px/20px side gutters and content kisses the edge.
+    await page.setViewportSize({ width: 800, height: 900 });
+    await page.goto("/");
+    const sides = (selector: string) =>
+      page.locator(selector).evaluate((el) => {
+        const s = getComputedStyle(el);
+        return { left: parseFloat(s.paddingLeft), right: parseFloat(s.paddingRight) };
+      });
+    for (const selector of ["header .container", "section .container", "section.container"]) {
+      const pad = await sides(selector);
+      expect(pad.left, selector).toBeGreaterThanOrEqual(20);
+      expect(pad.right, selector).toBeGreaterThanOrEqual(20);
+    }
+    const logoX = await page.locator('header a[href="/"]').evaluate((el) => el.getBoundingClientRect().x);
+    expect(logoX).toBeGreaterThanOrEqual(20);
+
+    await page.goto("/tricks/wkb159-batwing");
+    const article = await sides("main.container");
+    expect(article.left).toBeGreaterThanOrEqual(20);
+    expect(article.right).toBeGreaterThanOrEqual(20);
+  });
+
   test("has canonical + CollectionPage JSON-LD", async ({ request }) => {
     const html = await request.get("/").then((r) => r.text());
     expect(html).toMatch(/<link rel="canonical" href="https:\/\/www\.wakeboard\.com/);

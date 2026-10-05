@@ -127,7 +127,7 @@ export default async function TrickPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLdScript(jsonLd) }}
       />
-      <main className="container" style={{ padding: "40px 0 96px" }}>
+      <main className="container" style={{ paddingTop: 40, paddingBottom: 96 }}>
        <div style={{ maxWidth: COLUMN }}>
         <a
           href="/"

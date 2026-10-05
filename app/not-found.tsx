@@ -11,7 +11,7 @@ export default function NotFound() {
   return (
     <>
       <SiteHeader />
-      <main className="container" style={{ padding: "80px 0 120px", maxWidth: 640, textAlign: "center" }}>
+      <main className="container" style={{ paddingTop: 80, paddingBottom: 120, maxWidth: 640, textAlign: "center" }}>
         <p style={{ margin: 0, fontFamily: FONT_MONO, fontSize: 12, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--td-primary)", fontWeight: 600 }}>
           404
         </p>
