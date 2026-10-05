@@ -14,7 +14,12 @@ export function SiteHeader() {
     >
       <div
         className="container"
-        style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "16px 0" }}
+        style={{
+          display: "flex", alignItems: "center", justifyContent: "space-between",
+          // Longhands only. The padding shorthand would zero .container's
+          // side gutters, so the logo sits on the viewport edge below 1180px.
+          paddingTop: 16, paddingBottom: 16,
+        }}
       >
         <a href="/" style={{ textDecoration: "none" }}><Logo /></a>
         <a
@@ -38,7 +43,7 @@ export function SiteFooter() {
     <footer style={{ background: "#f8fafc", borderTop: "1px solid #e2e8f0" }}>
       <div
         className="container"
-        style={{ padding: "40px 0", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}
+        style={{ paddingTop: 40, paddingBottom: 40, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 16 }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
           <Logo size={18} />

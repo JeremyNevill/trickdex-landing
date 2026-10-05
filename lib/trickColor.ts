@@ -11,8 +11,9 @@
 
 export type Accent = { border: string; label: string };
 
-// Neutral (no family matched) — the default slate card border.
-const NEUTRAL: Accent = { border: "#e2e8f0", label: "" };
+// Neutral (no family matched) — same token as the card frame (--td-card-border
+// in globals.css), so an unmatched trick is just a thicker edge, not a second colour.
+const NEUTRAL: Accent = { border: "var(--td-card-border)", label: "" };
 
 /**
  * Inferred family → accent, using the app's palette. First match wins, so

@@ -69,7 +69,7 @@ export default function ComparesPage() {
       />
       <main
         className="container"
-        style={{ padding: "80px 0 120px", maxWidth: 640 }}
+        style={{ paddingTop: 80, paddingBottom: 120, maxWidth: 640 }}
       >
         <p
           style={{

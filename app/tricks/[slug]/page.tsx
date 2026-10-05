@@ -127,7 +127,7 @@ export default async function TrickPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLdScript(jsonLd) }}
       />
-      <main className="container" style={{ padding: "40px 0 96px" }}>
+      <main className="container" style={{ paddingTop: 40, paddingBottom: 96 }}>
        <div style={{ maxWidth: COLUMN }}>
         <a
           href="/"
@@ -269,7 +269,7 @@ export default async function TrickPage({
             <h2 style={{ margin: "0 0 16px", fontFamily: FONT_MONO, fontSize: 11, letterSpacing: "0.16em", textTransform: "uppercase", color: "var(--td-primary)", fontWeight: 600 }}>
               Related tricks
             </h2>
-            <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 10 }}>
+            <ul className="trick-grid" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))" }}>
               {related.map((r) => (
                 <li key={r.trickId}>
                   <a
@@ -277,9 +277,14 @@ export default async function TrickPage({
                     href={trickPath(r.trickId, r.slug)}
                     style={{
                       display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10,
-                      padding: "12px 16px", borderRadius: 12, border: "1px solid #e2e8f0",
+                      padding: "12px 16px", borderRadius: 12,
+                      // Frame colour is .card-link (--td-card-border). Only the
+                      // family accent is inline, so it stays thicker and coloured.
+                      // backgroundColor, not the background shorthand: the shorthand
+                      // resets background-clip and the white fill then paints over
+                      // the 1px frame on iPhone.
                       borderLeft: `4px solid ${accentByFamily(r).border}`,
-                      background: "#fff", textDecoration: "none",
+                      backgroundColor: "#fff", textDecoration: "none",
                     }}
                   >
                     <span style={{ fontFamily: FONT_DISPLAY, fontSize: 15, fontWeight: 700, letterSpacing: "-0.01em", color: "#0f172a" }}>
