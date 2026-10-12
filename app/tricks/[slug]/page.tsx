@@ -212,6 +212,28 @@ export default async function TrickPage({
                 );
               }
 
+              if (rm.kind === "hosted") {
+                // Mostly portrait phone clips, so the ratio comes from the stored
+                // dimensions, not the 16:9 box the embeds use. The height is capped
+                // so a portrait clip still fits a laptop screen; it letterboxes.
+                const aspectRatio =
+                  m.width && m.height ? `${m.width} / ${m.height}` : "16 / 9";
+                return (
+                  <figure key={m.mediaId} style={{ margin: "0 0 24px" }}>
+                    <video
+                      controls
+                      playsInline
+                      preload="metadata"
+                      poster={m.posterUri ?? undefined}
+                      src={rm.src}
+                      title={m.title ?? trick.displayName}
+                      style={{ display: "block", width: "100%", aspectRatio, maxHeight: "80vh", background: "#000", borderRadius: 16, border: "1px solid #e2e8f0" }}
+                    />
+                    {caption}
+                  </figure>
+                );
+              }
+
               if (rm.kind === "photo") {
                 return (
                   <figure key={m.mediaId} style={{ margin: "0 0 24px" }}>
