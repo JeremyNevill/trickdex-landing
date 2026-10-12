@@ -5,6 +5,13 @@
   --td-ink: #0f172a;
   --td-muted: #64748b;
   --td-line: #e2e8f0;
+  /* Card frame. --td-line and the earlier #b0bdce hairline both disappear
+     against #f8fafc on an iPhone, so stacked cards read as one flush surface.
+     This is a mid slate (~3.3:1 on white): a clear edge, still a 1px line. */
+  --td-card-border: #7c8da1;
+  /* Tight lift. The shared --td-shadow-sm (4% alpha) does not paint on iOS,
+     and a wide blur would fill the 12px gap between cards. */
+  --td-card-shadow: 0 1px 2px rgba(15, 23, 42, 0.10), 0 2px 6px rgba(15, 23, 42, 0.07);
   /* Reusable elevation tokens so cards/inputs/buttons share one shadow language. */
   --td-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
   --td-shadow-md: 0 6px 18px rgba(15, 23, 42, 0.08);
@@ -71,25 +78,40 @@ input:focus-visible,
   color: var(--td-primary);
 }
 
-/* Card-style links (trick cards, related chips, A–Z jump links) — hover/active
-   feedback so the card grid reads as interactive. */
+/* Trick list cards and related-trick chips. The family accent is an inline
+   border-left; the shared frame lives here so both surfaces stay in sync.
+   padding-box keeps the white fill from painting over the 1px stroke — WebKit
+   on iOS will otherwise eat a light hairline next to a thicker left accent. */
 .card-link {
   position: relative;
-  box-shadow: var(--td-shadow-sm);
+  background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  border: 1px solid var(--td-card-border);
+  box-shadow: var(--td-card-shadow);
   transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
 }
 .card-link:hover {
   /* Recolour only three sides so a coloured left accent (trick-family bar on
      the trick cards) survives hover. */
-  border-top-color: color-mix(in oklch, var(--td-primary) 55%, var(--td-line)) !important;
-  border-right-color: color-mix(in oklch, var(--td-primary) 55%, var(--td-line)) !important;
-  border-bottom-color: color-mix(in oklch, var(--td-primary) 55%, var(--td-line)) !important;
-  box-shadow: var(--td-shadow-md);
+  border-top-color: color-mix(in oklch, var(--td-primary) 55%, var(--td-card-border)) !important;
+  border-right-color: color-mix(in oklch, var(--td-primary) 55%, var(--td-card-border)) !important;
+  border-bottom-color: color-mix(in oklch, var(--td-primary) 55%, var(--td-card-border)) !important;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.10);
   transform: translateY(-2px);
 }
 .card-link:active {
   transform: translateY(0);
-  box-shadow: var(--td-shadow-sm);
+  box-shadow: var(--td-card-shadow);
+}
+
+/* Stacked trick cards. 12px of page shows between them — a hairline border
+   alone reads as flush on a light phone. */
+.trick-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
 }
 
 /* Search input — soft resting shadow, primary focus ring. */

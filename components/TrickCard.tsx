@@ -28,8 +28,13 @@ export function TrickCard({ trick }: { trick: Trick }) {
         href={trickPath(trick.trickId, trick.slug)}
         style={{
           display: "block", padding: "16px 18px", borderRadius: 14,
-          border: "1px solid #e2e8f0", borderLeft: `4px solid ${accent.border}`,
-          background: "#fff", textDecoration: "none",
+          // Frame colour is .card-link (--td-card-border). Only the family
+          // accent is inline, so it stays thicker and coloured.
+          // backgroundColor, not the background shorthand: the shorthand resets
+          // background-clip and the white fill then paints over the 1px frame
+          // on iPhone.
+          borderLeft: `4px solid ${accent.border}`,
+          backgroundColor: "#fff", textDecoration: "none",
           height: "100%",
         }}
       >

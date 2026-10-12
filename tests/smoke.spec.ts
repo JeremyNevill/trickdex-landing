@@ -44,6 +44,87 @@ test.describe("Homepage — crawlable catalog", () => {
     expect(await page.locator("[data-letter-section]").count()).toBeGreaterThan(5);
   });
 
+  test("trick cards keep a visible frame, a 12px gap, and the family accent", async ({ page }) => {
+    // --td-card-border (#7c8da1). Dark enough to read on #f8fafc in mobile Safari.
+    const FRAME = "rgb(124, 141, 161)";
+
+    const frameOf = async (locator: ReturnType<typeof page.locator>) =>
+      locator.evaluate((el) => {
+        const s = getComputedStyle(el);
+        return {
+          top: s.borderTopColor,
+          right: s.borderRightColor,
+          bottom: s.borderBottomColor,
+          left: s.borderLeftColor,
+          topWidth: s.borderTopWidth,
+          leftWidth: s.borderLeftWidth,
+          // The background shorthand resets this to border-box, and the white
+          // fill then covers the hairline on fractional device pixels.
+          clip: s.backgroundClip,
+          shadow: s.boxShadow,
+        };
+      });
+
+    await page.goto("/");
+    await expect(page.locator("#classics-strip .trick-grid")).toHaveCSS("gap", "12px");
+    const classic = page.locator('#classics-strip a[href="/tricks/wkb75-heelside-backroll"]');
+    await expect(classic).toBeVisible();
+    const home = await frameOf(classic);
+    expect(home.topWidth).toBe("1px");
+    expect(home.leftWidth).toBe("4px");
+    expect(home.top).toBe(FRAME);
+    expect(home.right).toBe(FRAME);
+    expect(home.bottom).toBe(FRAME);
+    expect(home.clip).toBe("padding-box");
+    // Resting shadow is the card token, not the 4% shadow iOS drops.
+    expect(home.shadow).toContain("6px");
+    // Invert family accent stays; it is not the same colour as the frame.
+    expect(home.left).not.toBe(FRAME);
+
+    await expect(page.locator("[data-letter-section] .trick-grid").first()).toHaveCSS("gap", "12px");
+    const listed = page.locator("[data-letter-section] .card-link").first();
+    const list = await frameOf(listed);
+    expect(list.top).toBe(FRAME);
+    expect(list.leftWidth).toBe("4px");
+
+    await page.goto("/tricks/wkb159-batwing");
+    await expect(page.locator(".trick-grid")).toHaveCSS("gap", "12px");
+    const related = page.locator('a.card-link[href="/tricks/wkb157-toeside-raley"]');
+    await expect(related).toBeVisible();
+    const chip = await frameOf(related);
+    expect(chip.topWidth).toBe("1px");
+    expect(chip.leftWidth).toBe("4px");
+    expect(chip.top).toBe(FRAME);
+    expect(chip.right).toBe(FRAME);
+    expect(chip.bottom).toBe(FRAME);
+    expect(chip.clip).toBe("padding-box");
+    expect(chip.left).not.toBe(FRAME);
+  });
+
+  test("narrow viewports keep the container side gutters", async ({ page }) => {
+    // Below the 1180px container max-width, a padding shorthand of "16px 0"
+    // on .container zeros the 24px/20px side gutters and content kisses the edge.
+    await page.setViewportSize({ width: 800, height: 900 });
+    await page.goto("/");
+    const sides = (selector: string) =>
+      page.locator(selector).evaluate((el) => {
+        const s = getComputedStyle(el);
+        return { left: parseFloat(s.paddingLeft), right: parseFloat(s.paddingRight) };
+      });
+    for (const selector of ["header .container", "section .container", "section.container"]) {
+      const pad = await sides(selector);
+      expect(pad.left, selector).toBeGreaterThanOrEqual(20);
+      expect(pad.right, selector).toBeGreaterThanOrEqual(20);
+    }
+    const logoX = await page.locator('header a[href="/"]').evaluate((el) => el.getBoundingClientRect().x);
+    expect(logoX).toBeGreaterThanOrEqual(20);
+
+    await page.goto("/tricks/wkb159-batwing");
+    const article = await sides("main.container");
+    expect(article.left).toBeGreaterThanOrEqual(20);
+    expect(article.right).toBeGreaterThanOrEqual(20);
+  });
+
   test("has canonical + CollectionPage JSON-LD", async ({ request }) => {
     const html = await request.get("/").then((r) => r.text());
     expect(html).toMatch(/<link rel="canonical" href="https:\/\/www\.wakeboard\.com/);

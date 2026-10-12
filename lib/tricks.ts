@@ -34,6 +34,11 @@ export type TrickMedia = {
   uri: string;
   mediaType: string;
   photographer: string | null;
+  // Self-hosted video only (mediaType "Hosted"); absent on older snapshots.
+  posterUri?: string | null;
+  width?: number | null;
+  height?: number | null;
+  durationSeconds?: number | null;
 };
 
 export type TrickDetail = TrickListItem & {
@@ -96,6 +101,7 @@ export function vimeoId(uri: string): string | null {
 export type ResolvedMedia =
   | { kind: "youtube"; embed: string; media: TrickMedia }
   | { kind: "vimeo"; embed: string; media: TrickMedia }
+  | { kind: "hosted"; src: string; media: TrickMedia }
   | { kind: "photo"; src: string; media: TrickMedia }
   | { kind: "pdf"; href: string; media: TrickMedia };
 
@@ -124,6 +130,11 @@ export function resolveMedia(media: TrickMedia[]): ResolvedMedia[] {
     const vim = vimeoId(m.uri);
     if (vim) {
       out.push({ kind: "vimeo", embed: `https://player.vimeo.com/video/${vim}`, media: m });
+      continue;
+    }
+    // Self-hosted MP4 on our media CDN — played with a native <video>, no embed.
+    if (m.mediaType === "Hosted" || /\.mp4(\?|$)/i.test(m.uri)) {
+      out.push({ kind: "hosted", src: m.uri, media: m });
       continue;
     }
     if (m.mediaType === "Photo" || /\.(jpe?g|png|webp|gif)(\?|$)/i.test(m.uri)) {
