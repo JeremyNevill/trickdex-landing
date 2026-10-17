@@ -100,6 +100,26 @@ export default function RootLayout({
               "window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()",
           }}
         />
+        {/* "Log this trick" → app conversion. Calls the queue above so a click
+            before the deferred script loads is still recorded. Does not
+            preventDefault: the link keeps navigating. Props are the public
+            trick id, slug, and page type — nothing that identifies a rider. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.addEventListener("click",function(event){
+  var node=event.target;
+  if(node&&node.nodeType!==1)node=node.parentElement;
+  if(!node||!node.closest)return;
+  var link=node.closest("a.trick-log-link");
+  if(!link||typeof window.plausible!=="function")return;
+  var trickId=link.getAttribute("data-trick-id");
+  var trickSlug=link.getAttribute("data-trick-slug");
+  var pageType=link.getAttribute("data-page-type");
+  if(!trickId||!trickSlug||!pageType)return;
+  window.plausible("Log Trick Click",{props:{trickId:trickId,trickSlug:trickSlug,pageType:pageType}});
+});`,
+          }}
+        />
       </head>
       <body>{children}</body>
     </html>

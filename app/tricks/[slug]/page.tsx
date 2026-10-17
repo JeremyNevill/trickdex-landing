@@ -178,9 +178,17 @@ export default async function TrickPage({
 
         {/* Slim log link sits under the definition, above the clips, so it is
             on screen before the hosted player. Wording avoids the internal
-            codename (see the smoke test). The pill CTA below the media stays. */}
+            codename (see the smoke test). The pill CTA below the media stays.
+            data-* is the Plausible "Log Trick Click" payload (public catalog
+            fields only); the listener lives next to the plausible queue. */}
         <div style={{ marginTop: 12 }}>
-          <a className="trick-log-link" href={appTrickUrl(trick.trickId)}>
+          <a
+            className="trick-log-link"
+            href={appTrickUrl(trick.trickId)}
+            data-trick-id={trick.trickId}
+            data-trick-slug={trick.slug}
+            data-page-type="trick"
+          >
             Log this trick {Icon.arrow(13)}
           </a>
         </div>
