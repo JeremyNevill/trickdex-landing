@@ -114,6 +114,34 @@ input:focus-visible,
   gap: 12px;
 }
 
+/* Search moves matching cards here. Author `display: grid` would otherwise
+   beat the UA `[hidden]` rule and leave an empty grid on the page. */
+#search-results {
+  margin: 0 0 28px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+#search-results[hidden] {
+  display: none !important;
+}
+
+/* Text link under a trick definition. Not .btn-primary — the pill CTA below
+   the clips stays the tap-sized button. */
+.trick-log-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--td-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.trick-log-link:hover {
+  color: var(--td-primary-dark);
+}
+
 /* Search input — soft resting shadow, primary focus ring. */
 .search-input {
   box-shadow: var(--td-shadow-sm);

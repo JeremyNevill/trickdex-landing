@@ -1,0 +1,6 @@
+{
+  "_note": "Curated search terms keyed by trick id. `npm run snapshot` rewrites data/tricks.json only — edit aliases here so they survive a re-fetch. `aliases` are real alternate names (merged with any \"(or …)\" parenthetical and shown on the page). `misspellings` are search-only and are not shown as names.",
+  "86": { "aliases": ["Mobius"] },
+  "127": { "misspellings": ["Railey"] },
+  "253": { "aliases": ["Mobius"] }
+}

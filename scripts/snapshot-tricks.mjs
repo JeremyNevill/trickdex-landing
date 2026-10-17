@@ -8,6 +8,10 @@
  *   npm run snapshot
  *
  * This is the ONLY place that talks to the API. The build reads the JSON.
+ *
+ * Curated search aliases and misspellings live in data/aliases.json, NOT in
+ * this snapshot. Re-running the snapshot rewrites data/tricks.json only —
+ * do not fold aliases into the trick records or a re-fetch will drop them.
  */
 
 import fs from "node:fs";
@@ -77,6 +81,7 @@ async function main() {
   const outFile = path.join(outDir, "tricks.json");
   fs.writeFileSync(outFile, JSON.stringify(snapshot, null, 2) + "\n");
   console.log(`Wrote ${details.length} tricks to ${path.relative(ROOT, outFile)}`);
+  console.log("Left data/aliases.json untouched (curated aliases survive a re-fetch).");
 }
 
 main().catch((err) => {

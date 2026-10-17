@@ -4,25 +4,24 @@ import { accentByFamily } from "@/lib/trickColor";
 
 /**
  * A single trick link — real static <a> so it's crawlable and works with JS off.
- * data-search feeds the progressive-enhancement filter (TrickSearch).
+ * data-name / data-aliases / data-misspellings / data-description feed search.
  *
  * A coloured left border codes the trick's inferred family (see trickColor.ts),
  * echoing the app's colour-coded cells.
  */
 export function TrickCard({ trick }: { trick: Trick }) {
   const accent = accentByFamily(trick);
-  const searchHay = [
-    trick.displayName,
-    `wkb${trick.trickId}`,
-    String(trick.trickId),
-    ...trick.aliases,
-    trick.description ?? "",
-  ]
-    .join(" ")
-    .toLowerCase();
 
   return (
-    <li data-trick data-search={searchHay}>
+    <li
+      data-trick
+      data-name={trick.displayName}
+      data-aliases={trick.aliases.join("|")}
+      data-misspellings={trick.misspellings.join("|")}
+      data-wkb={`wkb${trick.trickId}`}
+      data-trick-id={trick.trickId}
+      data-description={trick.description ?? ""}
+    >
       <a
         className="card-link"
         href={trickPath(trick.trickId, trick.slug)}
