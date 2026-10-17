@@ -110,6 +110,10 @@ export default async function Page() {
       <section className="container" style={{ paddingTop: 8, paddingBottom: 96 }}>
         <TrickSearch total={tricks.length} />
 
+        {/* The A–Z catalog. Search hides this whole block and reorders the
+            cards into #search-results so an exact name can rank above a
+            description hit that sorts earlier in the alphabet. */}
+        <div id="catalog">
         {/* Start here — well-known classics for first-time visitors. */}
         {classics.length > 0 && (
           <div id="classics-strip" style={{ marginBottom: 44 }}>
@@ -176,6 +180,7 @@ export default async function Page() {
             </ul>
           </section>
         ))}
+        </div>
       </section>
 
       <SiteFooter />

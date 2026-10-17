@@ -9,6 +9,7 @@
  */
 
 import snapshotJson from "@/data/tricks.json";
+import aliasOverlayJson from "@/data/aliases.json";
 
 // "BB …" entries are coaching/drill programme items (e.g. "BB - Floaty heelside
 // jumps", "BB - Switch landing drill"), not named tricks — keep them off the
@@ -49,7 +50,8 @@ export type TrickDetail = TrickListItem & {
 export type Trick = TrickDetail & {
   slug: string; // wkb{id}-{slug}
   displayName: string; // name with the "(or …)" alias stripped
-  aliases: string[]; // parsed from "(or Mobius)" etc.
+  aliases: string[]; // shown names: "(or …)" parenthetical + curated aliases
+  misspellings: string[]; // search-only; never shown as a name
 };
 
 type Snapshot = {
@@ -208,9 +210,55 @@ export function trickIdFromSlug(routeSlug: string): number | null {
   return m ? Number(m[1]) : null;
 }
 
+type AliasEntry = { aliases?: string[]; misspellings?: string[] };
+type AliasOverlay = Record<string, AliasEntry | string>;
+
+const ALIAS_OVERLAY = aliasOverlayJson as AliasOverlay;
+
+function overlayEntry(trickId: number): AliasEntry {
+  const raw = ALIAS_OVERLAY[String(trickId)];
+  if (!raw || typeof raw === "string") return {};
+  return raw;
+}
+
+function cleanTerms(values: string[] | undefined): string[] {
+  if (!values) return [];
+  return values.map((value) => value.trim()).filter(Boolean);
+}
+
+/** Case-insensitive de-dupe, keeping the first spelling. */
+function dedupeTerms(values: string[]): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const value of values) {
+    const key = value.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(value);
+  }
+  return out;
+}
+
+/**
+ * Display aliases come from the trick name ("Back Mobe (or Mobius)") plus
+ * data/aliases.json. Misspellings stay search-only so a typo like "Railey"
+ * is findable without being published as an alternate name. The overlay file
+ * is not part of the API snapshot, so `npm run snapshot` cannot wipe it.
+ */
 function enrich(detail: TrickDetail): Trick {
-  const { displayName, aliases } = parseAliases(detail.name);
-  return { ...detail, displayName, aliases, slug: toSlug(displayName) };
+  const parsed = parseAliases(detail.name);
+  const extra = overlayEntry(detail.trickId);
+  const aliases = dedupeTerms([...parsed.aliases, ...cleanTerms(extra.aliases)]);
+  const misspellings = dedupeTerms(cleanTerms(extra.misspellings)).filter(
+    (term) => !aliases.some((alias) => alias.toLowerCase() === term.toLowerCase()),
+  );
+  return {
+    ...detail,
+    displayName: parsed.displayName,
+    aliases,
+    misspellings,
+    slug: toSlug(parsed.displayName),
+  };
 }
 
 // All snapshot tricks minus the excluded (BB drill) entries.

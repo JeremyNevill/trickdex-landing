@@ -186,11 +186,14 @@ test.describe("Trick pages", () => {
       await page.goto(s.path);
       await expect(page.locator("h1")).toBeVisible();
       await expect(page.getByText(s.wkb, { exact: false }).first()).toBeVisible();
-      // Deep-link to the app on this trick's id.
+      // Deep-link to the app on this trick's id. The slim "Log this trick"
+      // link under the definition and the pill CTA under the clips both
+      // point at the same URL.
       const id = s.wkb.replace("WKB", "");
-      await expect(
-        page.locator(`a[href="https://app.wakeboard.com/tricks/${id}"]`),
-      ).toBeVisible();
+      const deepLinks = page.locator(`a[href="https://app.wakeboard.com/tricks/${id}"]`);
+      await expect(deepLinks).toHaveCount(2);
+      await expect(deepLinks.nth(0)).toBeVisible();
+      await expect(deepLinks.nth(1)).toBeVisible();
     });
   }
 

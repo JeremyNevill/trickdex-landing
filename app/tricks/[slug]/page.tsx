@@ -176,6 +176,15 @@ export default async function TrickPage({
           </p>
         )}
 
+        {/* Slim log link sits under the definition, above the clips, so it is
+            on screen before the hosted player. Wording avoids the internal
+            codename (see the smoke test). The pill CTA below the media stays. */}
+        <div style={{ marginTop: 12 }}>
+          <a className="trick-log-link" href={appTrickUrl(trick.trickId)}>
+            Log this trick {Icon.arrow(13)}
+          </a>
+        </div>
+
         {trick.landedByCount > 0 && (
           <p style={{ margin: "20px 0 0", fontFamily: FONT_MONO, fontSize: 12, letterSpacing: "0.06em", color: "#64748b", textTransform: "uppercase" }}>
             Landed by {trick.landedByCount} rider{trick.landedByCount === 1 ? "" : "s"}
