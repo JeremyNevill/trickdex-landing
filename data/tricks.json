@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T15:55:54.405Z",
+  "generatedAt": "2026-10-17T08:08:10.989Z",
   "apiBase": "https://www.wakeboard.co.uk/api/v1",
   "sportId": 1,
   "count": 359,
@@ -4778,14 +4778,26 @@
     },
     {
       "landedByCount": 0,
-      "media": [],
+      "media": [
+        {
+          "mediaId": 5619,
+          "title": "Travis Beaton — Switch Toeside Underflip",
+          "uri": "https://media.wakeboard.co.uk/web/media/videos/2025/img-040920250615travisbeatontoesideunderflipatldbwakeschoolbymarkosmond-81ce50cc.mp4",
+          "mediaType": "Hosted",
+          "photographer": "Mark Osmond",
+          "posterUri": "https://media.wakeboard.co.uk/web/media/videos/2025/img-040920250615travisbeatontoesideunderflipatldbwakeschoolbymarkosmond-81ce50cc-poster.jpg",
+          "width": 1080,
+          "height": 1920,
+          "durationSeconds": 5.438767
+        }
+      ],
       "trickId": 363,
       "name": "Switch Toeside Underflip",
       "description": "Switch Toeside Backside 180 to Frontroll.  This has the same components as a Tootsie but looks different with the direction of the Frontroll seeming more backwards (as opposed to forwards for the Tootsie)  ",
       "shortCode": null,
       "sportId": 1,
       "sportName": "Wakeboard",
-      "mediaCount": 0
+      "mediaCount": 1
     },
     {
       "landedByCount": 0,
@@ -5661,26 +5673,14 @@
     },
     {
       "landedByCount": 0,
-      "media": [
-        {
-          "mediaId": 5619,
-          "title": "Travis Beaton — Toeside Underflip",
-          "uri": "https://media.wakeboard.co.uk/web/media/videos/2025/img-040920250615travisbeatontoesideunderflipatldbwakeschoolbymarkosmond-81ce50cc.mp4",
-          "mediaType": "Hosted",
-          "photographer": "Mark Osmond",
-          "posterUri": "https://media.wakeboard.co.uk/web/media/videos/2025/img-040920250615travisbeatontoesideunderflipatldbwakeschoolbymarkosmond-81ce50cc-poster.jpg",
-          "width": 1080,
-          "height": 1920,
-          "durationSeconds": 5.438767
-        }
-      ],
+      "media": [],
       "trickId": 362,
       "name": "Toeside Underflip",
       "description": "Toeside Backside 180 to Frontroll.  This has the same components as a Tootsie but looks different with the direction of the Frontroll seeming more backwards (as opposed to forwards for the Tootsie).  ",
       "shortCode": null,
       "sportId": 1,
       "sportName": "Wakeboard",
-      "mediaCount": 1
+      "mediaCount": 0
     },
     {
       "landedByCount": 1,
